@@ -1,5 +1,4 @@
 import TopNavBar from './top-nav-bar';
-import BookACall from './book-a-call';
 import PropTypes from 'prop-types';
 import logo from '../assets/logo.svg';
 
@@ -20,13 +19,10 @@ const Header = ({ className = '' }) => {
         <div className='flex flex-col items-start justify-start py-[0rem] pr-[2.5rem] pl-[0rem] box-border max-w-full'>
           <TopNavBar />
         </div>
-        <div className='flex flex-col items-start justify-end pt-[0rem] px-[0rem] pb-[0.812rem] text-black'>
-          <div className='relative leading-[150%] font-medium inline-block min-w-[6.438rem] whitespace-nowrap'>
-            Book a call
-          </div>
+        <div className='flex flex-col items-center justify-center py-[1rem] px-[2rem] bg-white text-black rounded-[10rem]'>
+          Book A Call
         </div>
       </div>
-      <BookACall />
     </header>
   );
 };
