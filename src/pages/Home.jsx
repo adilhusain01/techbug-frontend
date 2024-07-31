@@ -23,6 +23,8 @@ const HomeLandingPage = () => {
           backgroundPosition: 'center',
           position: 'relative',
           padding: '4rem',
+          height: '1080px',
+          width: '1920px',
         }}
       >
         <div
@@ -35,26 +37,33 @@ const HomeLandingPage = () => {
             backgroundColor: 'rgba(0, 0, 0, 0.6)', // Adjust opacity (0.3 for 30% darkness)
           }}
         />
-        <div className="flex-1 flex flex-col items-start justify-start pt-[3rem] px-[3.75rem] pb-[21.093rem] box-border gap-[14.531rem] bg-[url('/public/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq800:gap-[7.25rem] mq800:pt-[1.25rem] mq800:px-[1.875rem] mq800:pb-[8.875rem] mq800:box-border mq450:gap-[3.625rem] mq1125:pt-[1.938rem] mq1125:pb-[13.688rem] mq1125:box-border">
+        <div className="flex-1 flex flex-col items-start justify-start pt-[3rem] px-[3.75rem] pb-[21.093rem] box-border gap-[14.531rem] bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq800:gap-[7.25rem] mq800:pt-[1.25rem] mq800:px-[1.875rem] mq800:pb-[8.875rem] mq800:box-border mq450:gap-[3.625rem] mq1125:pt-[1.938rem] mq1125:pb-[13.688rem] mq1125:box-border">
           <Header />
           <HeroContent />
         </div>
       </section>
-      <section className='w-[86.313rem] flex flex-row items-start justify-start pt-[0rem] px-[3.75rem] pb-[10rem] box-border max-w-full shrink-0 text-left text-[3.25rem] text-white font-plus-jakarta-sans mq800:pb-[6.5rem] mq800:box-border mq1325:pl-[1.875rem] mq1325:pr-[1.875rem] mq1325:box-border'>
-        <div className='flex-1 flex flex-row items-start justify-start gap-[6.187rem] max-w-full mq800:gap-[3.063rem] mq450:gap-[1.563rem] mq1125:flex-wrap'>
-          <img
-            className='h-[36.938rem] flex-1 relative rounded-[60px] max-w-full overflow-hidden object-cover min-w-[25.938rem] mq800:min-w-full'
-            loading='lazy'
-            alt=''
-            src={office}
-          />
-          <h1 className='m-0 w-[32.75rem] relative text-inherit leading-[150%] font-normal font-inherit flex items-center shrink-0 min-w-[32.75rem] max-w-full mq800:text-[2.625rem] mq800:leading-[3.875rem] mq800:min-w-full mq450:text-[1.938rem] mq450:leading-[2.938rem] mq1125:flex-1'>
-            Delivering pioneer digital solutions and top-notch design support to
-            ambitious startups and leading corporations since 2018
-          </h1>
+
+      <section className='py-32'>
+        <div className='grid grid-cols-2 gap-1'>
+          <div className='flex flex-col items-center justify-center'>
+            <img
+              className='h-[600px] w-[600px] rounded-[60px] object-cover'
+              loading='lazy'
+              alt=''
+              src={office}
+            />
+          </div>
+
+          <div className='p-24'>
+            <h1 className='text-37xl font-medium text-white tracking-wider leading-relaxed'>
+              Delivering pioneer digital solutions and top-notch design support
+              to ambitious startups and leading corporations since 2018
+            </h1>
+          </div>
         </div>
       </section>
-      <div className='w-[3.063rem] h-[2.188rem] relative overflow-hidden shrink-0 hidden z-[2]' />
+
+      <div />
       <Expertise />
       <section className='w-[55.688rem] h-[55.688rem] absolute !m-[0] right-[-27.875rem] bottom-[117.625rem] [filter:blur(500px)] rounded-[50%] bg-slateblue' />
       <section className='w-[55.688rem] h-[55.688rem] absolute !m-[0] top-[154.313rem] left-[-27.562rem] [filter:blur(500px)] rounded-[50%] bg-slateblue' />
