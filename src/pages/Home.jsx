@@ -12,7 +12,7 @@ import Footer from '../components/footer';
 import hero_img from '../assets/hero_img.jpg';
 import office from '../assets/office.png';
 
-const HomeLandingPage = () => {
+const Home = () => {
   return (
     <div className='w-full h-[376.5rem] relative bg-gray overflow-hidden flex flex-col items-start justify-start pt-[0rem] px-[0rem] pb-[20.687rem] box-border gap-[0.187rem] leading-[normal] tracking-[normal] mq1125:h-auto'>
       <section
@@ -83,4 +83,4 @@ const HomeLandingPage = () => {
   );
 };
 
-export default HomeLandingPage;
+export default Home;
