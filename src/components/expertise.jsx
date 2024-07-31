@@ -42,33 +42,37 @@ const Expertise = ({ className = '' }) => {
           </div>
         </div>
 
-        <div className='self-stretch flex flex-row items-start justify-center pt-[0rem] px-[2.5rem] pb-[3rem] gap-[1.5rem] z-[1] mt-[-6rem] text-[1.25rem] text-white mq1325:flex-wrap'>
+        <div className='self-stretch flex flex-row items-start justify-center pb-[3rem] gap-[4rem] z-[1] mt-[-6rem] text-[1.25rem] text-white mq1325:flex-wrap'>
           <Box
             title='Web Development & Design'
-            icon={table_top}
+            icon={'web_icon'}
             propOverflow='hidden'
           />
           <Box
             title='App Development & Design'
-            icon={table_top}
+            icon={'app_icon'}
             propOverflow='hidden'
           />
           <Box
             title='Digital Marketing'
-            icon={table_top}
+            icon={'marketing_icon'}
             propOverflow='hidden'
           />
           <Box
             title='Smart Business Cards'
-            icon={table_top}
+            icon={'cards_icon'}
             propOverflow='hidden'
           />
           <Box
             title='Business Automations'
-            icon={table_top}
+            icon={'automation_icon'}
             propOverflow='hidden'
           />
-          <Box title='Custom Services' icon={table_top} propOverflow='hidden' />
+          <Box
+            title='Custom Services'
+            icon={'services_icon'}
+            propOverflow='hidden'
+          />
         </div>
       </div>
     </section>

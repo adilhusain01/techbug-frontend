@@ -1,8 +1,36 @@
 import { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import table_top from '../assets/table_top.jpg';
+import web_icon from '../assets/web_icon.svg';
+import marketing_icon from '../assets/marketing_icon.svg';
+import cards_icon from '../assets/cards_icon.svg';
+import automation_icon from '../assets/automation_icon.svg';
+import services_icon from '../assets/services_icon.svg';
 
 const Box = ({ className = '', title, icon, propOverflow }) => {
+  let iconImage;
+  switch (icon) {
+    case 'web_icon':
+      iconImage = web_icon;
+      break;
+    case 'app_icon':
+      iconImage = web_icon;
+      break;
+    case 'marketing_icon':
+      iconImage = marketing_icon;
+      break;
+    case 'cards_icon':
+      iconImage = cards_icon;
+      break;
+    case 'automation_icon':
+      iconImage = automation_icon;
+      break;
+    case 'services_icon':
+      iconImage = services_icon;
+      break;
+    default:
+      iconImage = null;
+  }
+
   const iconsStyle = useMemo(() => {
     return {
       overflow: propOverflow,
@@ -11,19 +39,17 @@ const Box = ({ className = '', title, icon, propOverflow }) => {
 
   return (
     <div
-      className={`flex-1 rounded-11xl [background:linear-gradient(233.07deg,_#1e1e1e_10.96%,_#5f5f5f)] overflow-hidden flex flex-row items-start justify-start p-[0.25rem] box-border gap-[0.75rem] min-w-[12.688rem] max-w-[12.938rem] min-h-[12.75rem] text-center text-[1.25rem] text-white font-plus-jakarta-sans mq1325:min-h-[auto] ${className}`}
+      className={`rounded-11xl [background:linear-gradient(233.07deg,_#1e1e1e_10.96%,_#5f5f5f)] flex flex-col items-center justify-center p-[0.25rem] box-border w-[13rem] h-[13rem] text-center mq1325:min-h-[auto] ${className}`}
     >
-      <div className='h-[3.5rem] w-[11.919rem] flex flex-col items-start justify-start pt-[0.625rem] px-[0rem] pb-[0rem] box-border shrink-0'>
-        <div className='self-stretch relative leading-[140%] font-semibold mq450:text-[1rem] mq450:leading-[1.375rem]'>
-          <p className='m-0'>{title}</p>
-        </div>
-      </div>
       <img
         className='h-[6.25rem] w-[6.25rem] relative object-contain shrink-0'
         alt=''
-        src={icon}
+        src={iconImage}
         style={iconsStyle}
       />
+      <h1 className=' text-[1.25rem] text-white font-plus-jakarta-sans'>
+        {title}
+      </h1>
     </div>
   );
 };
