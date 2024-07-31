@@ -1,8 +1,8 @@
-import { useCallback } from "react";
-import NavigationPill from "./navigation-pill";
-import PropTypes from "prop-types";
+import { useCallback } from 'react';
+import NavigationPill from './navigation-pill';
+import PropTypes from 'prop-types';
 
-const TopNavBar = ({ className = "" }) => {
+const TopNavBar = ({ className = '' }) => {
   const onNavigationPillContainerClick = useCallback(() => {
     // Please sync "Portfolio" to the project
   }, []);
@@ -11,28 +11,39 @@ const TopNavBar = ({ className = "" }) => {
     <div
       className={`rounded-11xl bg-white flex flex-row items-start justify-start p-[0.375rem] gap-[0.25rem] text-left text-[1.25rem] text-text-default-default font-plus-jakarta-sans mq1325:hidden ${className}`}
     >
-      <button className="cursor-pointer [border:none] py-[0.75rem] px-[2.5rem] bg-gold rounded-3xl flex flex-row items-start justify-start hover:bg-goldenrod-200">
-        <div className="relative text-[1.25rem] leading-[100%] font-semibold font-plus-jakarta-sans text-text-default-default text-left inline-block min-w-[3.688rem]">
+      <button className='cursor-pointer [border:none] py-[0.75rem] px-[2.5rem] bg-gold rounded-3xl flex flex-row items-start justify-start hover:bg-goldenrod-200'>
+        <div className='relative text-[1.25rem] leading-[100%] font-semibold font-plus-jakarta-sans text-text-default-default text-left inline-block min-w-[3.688rem]'>
           Home
         </div>
       </button>
       <NavigationPill
-        title="Work"
-        propPadding="0.75rem 2.75rem"
-        propMinWidth="3.188rem"
+        title='Work'
+        propPadding='0.75rem 2.75rem'
+        propMinWidth='3.188rem'
         onNavigationPillContainerClick={onNavigationPillContainerClick}
+        to={'/work'}
       />
       <NavigationPill
-        title="Services"
-        propPadding="0.75rem 1.75rem"
-        propMinWidth="5.188rem"
+        title='Services'
+        propPadding='0.75rem 1.75rem'
+        propMinWidth='5.188rem'
+        onNavigationPillContainerClick={onNavigationPillContainerClick}
+        to={'/services'}
       />
       <NavigationPill
-        title="Blog"
-        propPadding="0.75rem 2.937rem"
-        propMinWidth="2.813rem"
+        title='Blog'
+        propPadding='0.75rem 2.937rem'
+        propMinWidth='2.813rem'
+        onNavigationPillContainerClick={onNavigationPillContainerClick}
+        to={'/blog'}
       />
-      <NavigationPill title="About" />
+      <NavigationPill
+        title='About'
+        propPadding='0.75rem 2.937rem'
+        propMinWidth='2.813rem'
+        onNavigationPillContainerClick={onNavigationPillContainerClick}
+        to={'/about'}
+      />
     </div>
   );
 };

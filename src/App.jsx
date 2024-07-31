@@ -1,11 +1,15 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import {
   Routes,
   Route,
   useNavigationType,
   useLocation,
-} from "react-router-dom";
-import HomeLandingPage from "./pages/home-landing-page";
+} from 'react-router-dom';
+import Home from './pages/Home';
+import Work from './pages/Work';
+import Services from './pages/Services';
+import Blog from './pages/Blog';
+import About from './pages/About';
 
 function App() {
   const action = useNavigationType();
@@ -13,19 +17,19 @@ function App() {
   const pathname = location.pathname;
 
   useEffect(() => {
-    if (action !== "POP") {
+    if (action !== 'POP') {
       window.scrollTo(0, 0);
     }
   }, [action, pathname]);
 
   useEffect(() => {
-    let title = "";
-    let metaDescription = "";
+    let title = '';
+    let metaDescription = '';
 
     switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
+      case '/':
+        title = '';
+        metaDescription = '';
         break;
     }
 
@@ -45,7 +49,11 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomeLandingPage />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/work' element={<Work />} />
+      <Route path='/services' element={<Services />} />
+      <Route path='/blog' element={<Blog />} />
+      <Route path='/about' element={<About />} />
     </Routes>
   );
 }
