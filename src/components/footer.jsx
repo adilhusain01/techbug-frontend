@@ -1,15 +1,24 @@
 import PropTypes from 'prop-types';
 
+//images
+import logo from '../assets/logo.svg';
+import phone from '../assets/phone.svg';
+import email from '../assets/email.svg';
+import twitter from '../assets/twitter.svg';
+import instagram from '../assets/instagram.svg';
+import youtube from '../assets/youtube.svg';
+import linkedin from '../assets/linkedin.svg';
+
 const Footer = ({ className = '' }) => {
   return (
-    <footer
+    <div
       className={`self-stretch bg-gray overflow-hidden flex flex-col items-start justify-end py-[5.5rem] px-[3.75rem] box-border gap-[1.5rem] max-w-full shrink-0 text-left text-[1rem] text-darkgray font-plus-jakarta-sans mq800:pl-[1.875rem] mq800:pr-[1.875rem] mq800:box-border ${className}`}
     >
       <img
         className='w-[15rem] h-[3.063rem] relative overflow-hidden shrink-0'
         loading='lazy'
         alt=''
-        src='/techbug-logo.svg'
+        src={logo}
       />
       <div className='self-stretch flex flex-row items-end justify-between max-w-full gap-[1.25rem] mq800:flex-wrap'>
         <div className='flex flex-row items-start justify-start gap-[1.5rem] max-w-full mq800:flex-wrap'>
@@ -18,7 +27,7 @@ const Footer = ({ className = '' }) => {
               className='h-[2rem] w-[2rem] relative overflow-hidden shrink-0'
               loading='lazy'
               alt=''
-              src='/phonefill.svg'
+              src={email}
             />
             <div className='flex flex-col items-start justify-center gap-[0.25rem]'>
               <div className='relative inline-block min-w-[8.063rem]'>
@@ -32,7 +41,7 @@ const Footer = ({ className = '' }) => {
               className='h-[2rem] w-[2rem] relative overflow-hidden shrink-0'
               loading='lazy'
               alt=''
-              src='/phonefill1.svg'
+              src={phone}
             />
             <div className='flex flex-col items-start justify-center gap-[0.25rem]'>
               <div className='relative inline-block min-w-[5.25rem]'>
@@ -49,25 +58,25 @@ const Footer = ({ className = '' }) => {
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
             alt=''
-            src='/twitterx@2x.png'
+            src={twitter}
           />
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
             alt=''
-            src='/instagram@2x.png'
+            src={instagram}
           />
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
             alt=''
-            src='/youtube@2x.png'
+            src={youtube}
           />
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
             alt=''
-            src='/linkedin@2x.png'
+            src={linkedin}
           />
         </div>
       </div>
@@ -84,7 +93,7 @@ const Footer = ({ className = '' }) => {
           © 2024, All Rights Reserved
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 
