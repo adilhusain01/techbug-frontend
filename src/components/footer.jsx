@@ -11,7 +11,7 @@ import linkedin from '../assets/linkedin.svg';
 
 const Footer = ({ className = '' }) => {
   return (
-    <div
+    <footer
       className={`self-stretch bg-gray overflow-hidden flex flex-col items-start justify-end py-[5.5rem] px-[3.75rem] box-border gap-[1.5rem] max-w-full shrink-0 text-left text-[1rem] text-darkgray font-plus-jakarta-sans mq800:pl-[1.875rem] mq800:pr-[1.875rem] mq800:box-border ${className}`}
     >
       <img
@@ -93,7 +93,7 @@ const Footer = ({ className = '' }) => {
           © 2024, All Rights Reserved
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
