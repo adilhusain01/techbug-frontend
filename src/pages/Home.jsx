@@ -54,7 +54,7 @@ const HomeLandingPage = () => {
             />
           </div>
 
-          <div className='p-24'>
+          <div className='py-8 px-32'>
             <h1 className='text-37xl font-medium text-white tracking-wider leading-relaxed'>
               Delivering pioneer digital solutions and top-notch design support
               to ambitious startups and leading corporations since 2018
@@ -63,8 +63,11 @@ const HomeLandingPage = () => {
         </div>
       </section>
 
-      <div />
+      {/* <div className='w-[3.063rem] h-[2.188rem] relative overflow-hidden shrink-0 hidden z-[2]' />
+       */}
+
       <Expertise />
+
       <section className='w-[55.688rem] h-[55.688rem] absolute !m-[0] right-[-27.875rem] bottom-[117.625rem] [filter:blur(500px)] rounded-[50%] bg-slateblue' />
       <section className='w-[55.688rem] h-[55.688rem] absolute !m-[0] top-[154.313rem] left-[-27.562rem] [filter:blur(500px)] rounded-[50%] bg-slateblue' />
       <section className='self-stretch flex flex-row items-start justify-start pt-[0rem] px-[3.75rem] pb-[11.5rem] box-border max-w-full shrink-0 mq800:pl-[1.875rem] mq800:pr-[1.875rem] mq800:pb-[4.875rem] mq800:box-border mq1325:pb-[7.5rem] mq1325:box-border'>
