@@ -47,6 +47,7 @@ const Box = ({ className = '', title, icon, propOverflow }) => {
         alt=''
         src={iconImage}
         style={iconsStyle}
+        loading='lazy'
       />
       <h1 className=' text-[1.25rem] text-white font-plus-jakarta-sans'>
         {title}

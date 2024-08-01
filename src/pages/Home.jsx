@@ -14,7 +14,7 @@ const Home = () => {
       <section
         className='self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[10rem] box-border max-w-full shrink-0 mq800:pb-[4.25rem] mq800:box-border mq1325:pb-[6.5rem] mq1325:box-border'
         style={{
-          backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/garbzcely5qah6brmflg)`,
+          backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/zedaquuziqtgm1iporvx)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           position: 'relative',
