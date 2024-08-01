@@ -1,6 +1,5 @@
 import Box from './box';
 import PropTypes from 'prop-types';
-import table_top from '../assets/table_top.jpg';
 
 const Expertise = ({ className = '' }) => {
   return (
@@ -11,7 +10,7 @@ const Expertise = ({ className = '' }) => {
         <div
           className="w-[88.625rem] rounded-13xl flex flex-col items-center justify-start pt-[2.5rem] px-[1.25rem] pb-[10.687rem] box-border bg-[url('/public/our-expertise@3x.png')] bg-cover bg-no-repeat bg-[top] min-h-[23.188rem] max-w-full mq450:pt-[1.625rem] mq450:pb-[6.938rem] mq450:box-border"
           style={{
-            backgroundImage: `url(${table_top})`,
+            backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/sr9yjt9w41typvkajumb)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             position: 'relative',

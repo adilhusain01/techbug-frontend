@@ -1,6 +1,5 @@
 import TopNavBar from './top-nav-bar';
 import PropTypes from 'prop-types';
-import logo from '../assets/logo.svg';
 
 const Header = ({ className = '' }) => {
   return (
@@ -13,7 +12,7 @@ const Header = ({ className = '' }) => {
             className='self-stretch flex-1 relative max-w-full overflow-hidden max-h-full object-cover'
             loading='lazy'
             alt=''
-            src={logo}
+            src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/techbug_logo'
           />
         </div>
         <div className='flex flex-col items-start justify-start py-[0rem] pr-[2.5rem] pl-[0rem] box-border max-w-full'>

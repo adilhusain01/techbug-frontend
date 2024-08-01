@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import arrowrightupline from '../assets/arrowrightupline.svg';
 
 const SendButton = ({ className = '' }) => {
   return (
@@ -9,7 +8,7 @@ const SendButton = ({ className = '' }) => {
       <img
         className='h-[3rem] w-[3rem] relative rounded-117xl overflow-hidden shrink-0'
         alt=''
-        src={arrowrightupline}
+        src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ytryrgkpxv17uwjulsye'
       />
       <div className='h-[1.563rem] flex flex-col items-start justify-start pt-[0.625rem] px-[0rem] pb-[0rem] box-border'>
         <div className='relative text-[1.25rem] font-medium font-plus-jakarta-sans text-white text-left mq450:text-[1rem]'>

@@ -1,14 +1,5 @@
 import PropTypes from 'prop-types';
 
-//images
-import logo from '../assets/logo.svg';
-import phone from '../assets/phone.svg';
-import email from '../assets/email.svg';
-import twitter from '../assets/twitter.svg';
-import instagram from '../assets/instagram.svg';
-import youtube from '../assets/youtube.svg';
-import linkedin from '../assets/linkedin.svg';
-
 const Footer = ({ className = '' }) => {
   return (
     <footer
@@ -18,7 +9,7 @@ const Footer = ({ className = '' }) => {
         className='w-[15rem] h-[3.063rem] relative overflow-hidden shrink-0'
         loading='lazy'
         alt=''
-        src={logo}
+        src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/techbug_logo'
       />
       <div className='self-stretch flex flex-row items-end justify-between max-w-full gap-[1.25rem] mq800:flex-wrap'>
         <div className='flex flex-row items-start justify-start gap-[1.5rem] max-w-full mq800:flex-wrap'>
@@ -27,7 +18,7 @@ const Footer = ({ className = '' }) => {
               className='h-[2rem] w-[2rem] relative overflow-hidden shrink-0'
               loading='lazy'
               alt=''
-              src={email}
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/dx1ruiicql3ybkjepewn'
             />
             <div className='flex flex-col items-start justify-center gap-[0.25rem]'>
               <div className='relative inline-block min-w-[8.063rem]'>
@@ -41,7 +32,7 @@ const Footer = ({ className = '' }) => {
               className='h-[2rem] w-[2rem] relative overflow-hidden shrink-0'
               loading='lazy'
               alt=''
-              src={phone}
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/dfensk6qbd5yogbwoghg'
             />
             <div className='flex flex-col items-start justify-center gap-[0.25rem]'>
               <div className='relative inline-block min-w-[5.25rem]'>
@@ -58,25 +49,25 @@ const Footer = ({ className = '' }) => {
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
             alt=''
-            src={twitter}
+            src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/ffhbq1vdrm87fd9xnkhr'
           />
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
             alt=''
-            src={instagram}
+            src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/xxtxxdtd5s24v9gdohaj'
           />
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
             alt=''
-            src={youtube}
+            src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/gz2akfvqeoinmxmxcxlm'
           />
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
             alt=''
-            src={linkedin}
+            src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/ejf1cub7byf8xl8bbakt'
           />
         </div>
       </div>

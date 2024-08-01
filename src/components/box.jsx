@@ -1,31 +1,32 @@
 import { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import web_icon from '../assets/web_icon.svg';
-import marketing_icon from '../assets/marketing_icon.svg';
-import cards_icon from '../assets/cards_icon.svg';
-import automation_icon from '../assets/automation_icon.svg';
-import services_icon from '../assets/services_icon.svg';
 
 const Box = ({ className = '', title, icon, propOverflow }) => {
   let iconImage;
   switch (icon) {
     case 'web_icon':
-      iconImage = web_icon;
+      iconImage =
+        'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/icons/r8kmiebkbamkeweuxwy4';
       break;
     case 'app_icon':
-      iconImage = web_icon;
+      iconImage =
+        'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/icons/r8kmiebkbamkeweuxwy4';
       break;
     case 'marketing_icon':
-      iconImage = marketing_icon;
+      iconImage =
+        'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/icons/mivt8wjv2oonnsmkvahm';
       break;
     case 'cards_icon':
-      iconImage = cards_icon;
+      iconImage =
+        'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/icons/q0otq4teqsomedhq6scc';
       break;
     case 'automation_icon':
-      iconImage = automation_icon;
+      iconImage =
+        'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/icons/gpvponqoecugwgirbapn';
       break;
     case 'services_icon':
-      iconImage = services_icon;
+      iconImage =
+        'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/icons/u9nsdvsinmmjwavxlqi9';
       break;
     default:
       iconImage = null;

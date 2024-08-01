@@ -1,9 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-//images
-import pic from '../assets/pic.png';
-
 const FrameComponent = ({ className = '' }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -82,7 +79,7 @@ const FrameComponent = ({ className = '' }) => {
                   className='w-[7.313rem] h-[7.313rem] relative rounded-[50%] object-cover'
                   loading='lazy'
                   alt=''
-                  src={pic}
+                  src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/flqrvbhpjdzwjboll2qu'
                 />
                 <div className='self-stretch flex flex-col items-center justify-start'>
                   <div className='relative font-semibold mq450:text-[1rem]'>
@@ -106,7 +103,7 @@ const FrameComponent = ({ className = '' }) => {
                 <img
                   className='w-[7.313rem] h-[7.313rem] relative rounded-[50%] object-cover'
                   alt=''
-                  src={pic}
+                  src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/flqrvbhpjdzwjboll2qu'
                 />
                 <div className='self-stretch flex flex-col items-center justify-start'>
                   <div className='relative font-semibold mq450:text-[1rem]'>
@@ -130,7 +127,7 @@ const FrameComponent = ({ className = '' }) => {
                 <img
                   className='w-[7.313rem] h-[7.313rem] relative rounded-[50%] object-cover'
                   alt=''
-                  src={pic}
+                  src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/flqrvbhpjdzwjboll2qu'
                 />
                 <div className='self-stretch flex flex-col items-center justify-start gap-[0.125rem]'>
                   <div className='self-stretch h-[1.563rem] relative font-semibold inline-block mq450:text-[1rem]'>
@@ -154,7 +151,7 @@ const FrameComponent = ({ className = '' }) => {
                 <img
                   className='w-[7.313rem] h-[7.313rem] relative rounded-[50%] object-cover'
                   alt=''
-                  src={pic}
+                  src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/flqrvbhpjdzwjboll2qu'
                 />
                 <div className='self-stretch flex flex-col items-center justify-start'>
                   <div className='self-stretch h-[1.563rem] relative font-semibold inline-block mq450:text-[1rem]'>
