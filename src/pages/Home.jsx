@@ -3,7 +3,7 @@ import HeroContent from '../components/hero-content';
 import Expertise from '../components/expertise';
 import ProgressContent from '../components/progress-content';
 
-import FrameComponent from '../components/frame-component';
+import Testimonials from '../components/testimonials';
 import DesktopTablet from '../components/desktop-tablet';
 import FormContact from '../components/form-contact';
 import Footer from '../components/footer';
@@ -67,7 +67,7 @@ const Home = () => {
         </div>
       </section>
 
-      <FrameComponent />
+      <Testimonials />
 
       <section className='overflow-hidden flex flex-row items-start justify-start pt-[2.75rem] pb-[3.25rem] pr-[0rem] pl-[1rem] box-border min-w-full shrink-0'>
         <DesktopTablet />
