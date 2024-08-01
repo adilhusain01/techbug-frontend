@@ -23,12 +23,13 @@ const FormContact = ({ className = '' }) => {
       ...prevData,
       [name]: value,
     }));
+    setSuccessMessage('');
+    setErrorMessage('');
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log('Submitting form data:', formData);
       const response = await axios.post('/contact', formData);
       if (response.status === 201) {
         setSuccessMessage('Your message has been sent successfully!');
@@ -44,7 +45,6 @@ const FormContact = ({ className = '' }) => {
         setErrorMessage('Unexpected response from the server.');
         setSuccessMessage('');
       }
-      console.log(response);
     } catch (error) {
       setErrorMessage(
         'There was an error sending your message. Please try again.'
@@ -66,6 +66,12 @@ const FormContact = ({ className = '' }) => {
         className='flex flex-col items-center justify-center relative max-w-full text-left text-[1rem] font-body-base'
         onSubmit={handleSubmit}
       >
+        {successMessage && (
+          <div className='mt-4 text-green-500'>{successMessage}</div>
+        )}
+        {errorMessage && (
+          <div className='mt-4 text-red-500'>{errorMessage}</div>
+        )}
         <div className='w-[51.5rem] flex flex-row flex-wrap items-start justify-start gap-[0.687rem_1.5rem] min-h-[34rem] max-w-full z-[1]'>
           <InputField
             label='Name '
