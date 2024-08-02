@@ -73,12 +73,18 @@ const Footer = () => {
       </div>
       <div className='self-stretch flex flex-row items-start justify-between max-w-full gap-[1.25rem] mq1125:flex-wrap'>
         <div className='flex flex-row items-start justify-start py-[0rem] pr-[0.937rem] pl-[0rem] gap-[1.437rem]'>
-          <a className='[text-decoration:none] relative leading-[1.5rem] text-[inherit] inline-block min-w-[6.563rem]'>
+          <a
+            href=''
+            className='[text-decoration:none] relative leading-[1.5rem] text-[inherit] inline-block min-w-[6.563rem]'
+          >
             Privacy policy
           </a>
-          <div className='relative leading-[1.5rem] inline-block min-w-[6.063rem]'>
+          <a
+            href=''
+            className='relative leading-[1.5rem] inline-block min-w-[6.063rem]'
+          >
             Terms of Use
-          </div>
+          </a>
         </div>
         <div className='w-[46.688rem] relative leading-[1.5rem] text-right inline-block shrink-0 max-w-full'>
           © 2024, All Rights Reserved
