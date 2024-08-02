@@ -3,8 +3,9 @@ import InputField from './input-field';
 import TextareaField from './textarea-field';
 import SendButton from './send-button';
 import axios from '../api/axios';
+import PropTypes from 'prop-types';
 
-const FormContact = () => {
+const FormContact = ({ theme }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -52,12 +53,41 @@ const FormContact = () => {
     }
   };
 
+  const themeStyles = {
+    black: {
+      bg: '#ffffff',
+      h1Color: '#1e1e1e',
+      labelColor: '#1e1e1e',
+      inputBg: '#313131',
+      inputTextColor: '#e8e8e8',
+      inputBorderColor: '#d9d9d9',
+      buttonColor: '#1e1e1e',
+    },
+    white: {
+      bg: '#171717',
+      h1Color: '#FFFFFF',
+      labelColor: '#ffffff',
+      inputBg: '#b3b3b3',
+      inputTextColor: '#696565',
+      inputBorderColor: '#d9d9d9',
+      buttonColor: '#ffffff',
+    },
+  };
+
+  const currentTheme = themeStyles[theme] || themeStyles.black;
+
   return (
     <section
-      className={`mt-24 py-10 w-full overflow-hidden flex flex-col items-center justify-center box-border min-w-[20rem] max-w-full shrink-0 text-center text-[2.5rem] text-white font-plus-jakarta-sans mq800:gap-[1.25rem] mq800:pl-[9.625rem] mq800:pr-[9.625rem] mq800:box-border mq450:py-[1.938rem] mq450:px-[1.25rem] mq450:box-border mq1125:pt-[3rem] mq1125:pb-[3rem] mq1125:box-borde`}
+      className={`mt-24 py-10 w-full overflow-hidden flex flex-col items-center justify-center box-border min-w-[20rem] max-w-full shrink-0 text-center text-[2.5rem] font-plus-jakarta-sans mq800:gap-[1.25rem] mq800:pl-[9.625rem] mq800:pr-[9.625rem] mq800:box-border mq450:py-[1.938rem] mq450:px-[1.25rem] mq450:box-border mq1125:pt-[3rem] mq1125:pb-[3rem] mq1125:box-border`}
+      style={{
+        backgroundColor: currentTheme.bg,
+      }}
     >
       <div className='w-[35.938rem] flex flex-row items-center justify-center max-w-full'>
-        <h1 className='m-0 relative text-inherit font-medium font-inherit mq800:text-[2rem] mq450:text-[1.5rem]'>
+        <h1
+          className='m-0 relative text-inherit font-medium font-inherit mq800:text-[2rem] mq450:text-[1.5rem]'
+          style={{ color: currentTheme.h1Color }}
+        >
           Let’s get in touch
         </h1>
       </div>
@@ -78,6 +108,7 @@ const FormContact = () => {
             name='name'
             value={formData.name}
             onChange={handleChange}
+            theme={currentTheme}
           />
           <InputField
             label='Email'
@@ -85,6 +116,7 @@ const FormContact = () => {
             name='email'
             value={formData.email}
             onChange={handleChange}
+            theme={currentTheme}
           />
           <InputField
             label='Phone no.'
@@ -92,6 +124,7 @@ const FormContact = () => {
             name='phone'
             value={formData.phone}
             onChange={handleChange}
+            theme={currentTheme}
           />
           <InputField
             label='Company (Optional)'
@@ -99,16 +132,18 @@ const FormContact = () => {
             name='company'
             value={formData.company}
             onChange={handleChange}
+            theme={currentTheme}
           />
           <TextareaField
             label='Message'
             name='message'
             value={formData.message}
             onChange={handleChange}
+            theme={currentTheme}
           />
         </div>
         <div className='w-[33.813rem] flex flex-row items-center justify-center max-w-full'>
-          <SendButton />
+          <SendButton color={currentTheme.buttonColor} />
         </div>
       </form>
     </section>
@@ -116,3 +151,7 @@ const FormContact = () => {
 };
 
 export default FormContact;
+
+FormContact.propTypes = {
+  theme: PropTypes.string.isRequired,
+};

@@ -49,7 +49,7 @@ const Home = () => {
         />
       </section>
 
-      <FormContact />
+      <FormContact theme={'white'} />
       <Footer />
     </main>
   );

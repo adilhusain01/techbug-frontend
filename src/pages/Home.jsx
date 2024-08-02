@@ -72,7 +72,7 @@ const Home = () => {
         <DesktopTablet />
       </section>
 
-      <FormContact />
+      <FormContact theme={'white'} />
       <Footer />
     </main>
   );
