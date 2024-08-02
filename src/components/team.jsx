@@ -1,7 +1,7 @@
 function Team() {
   return (
     <section className='mt-[-1rem] pt-24 pb-24 bg-white w-full flex flex-col items-center justify-between max-w-full shrink-0'>
-      <h1 className='text-35xl font-semibold font-[inherit] inline-block z-[2] mq800:text-[3.188rem] mq450:text-[2.375rem] font-plus-jakarta-sans'>
+      <h1 className='text-35xl font-semibold inline-block z-[2] mq800:text-[3.188rem] mq450:text-[2.375rem] font-plus-jakarta-sans'>
         Our Team
       </h1>
       <div className='mt-8 flex-1 flex flex-col items-start justify-start shrink-0 max-w-full '>

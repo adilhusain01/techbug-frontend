@@ -10,7 +10,12 @@ import Footer from '../components/footer';
 
 const Home = () => {
   return (
-    <main className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal] mq1125:h-auto'>
+    <main
+      className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal] mq1125:h-auto'
+      style={{
+        userSelect: 'none',
+      }}
+    >
       <section
         className='self-stretch flex flex-row items-start justify-start pb-[10rem] box-border max-w-full shrink-0 mq800:pb-[4.25rem] mq800:box-border mq1325:pb-[6.5rem] mq1325:box-border'
         style={{

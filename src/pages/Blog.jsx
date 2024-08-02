@@ -1,7 +1,15 @@
 import React from 'react';
 
 function Blog() {
-  return <div>Blog</div>;
+  return (
+    <div
+      style={{
+        userSelect: 'none',
+      }}
+    >
+      Blog
+    </div>
+  );
 }
 
 export default Blog;

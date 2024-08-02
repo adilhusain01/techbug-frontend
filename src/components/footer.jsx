@@ -81,7 +81,7 @@ const Footer = () => {
           </a>
           <a
             href=''
-            className='relative leading-[1.5rem] inline-block min-w-[6.063rem]'
+            className='[text-decoration:none] relative leading-[1.5rem] text-[inherit] inline-block min-w-[6.563rem]'
           >
             Terms of Use
           </a>

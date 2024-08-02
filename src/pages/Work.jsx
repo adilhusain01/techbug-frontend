@@ -1,7 +1,15 @@
 import React from 'react';
 
 function Work() {
-  return <div>Work</div>;
+  return (
+    <div
+      style={{
+        userSelect: 'none',
+      }}
+    >
+      Work
+    </div>
+  );
 }
 
 export default Work;
