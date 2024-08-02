@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const TopNavBar = ({ menu }) => {
   const onNavigationPillContainerClick = useCallback(() => {
-    // Please sync "Portfolio" to the project
+    // have to sync "Portfolio" to the project
   }, []);
 
   return (

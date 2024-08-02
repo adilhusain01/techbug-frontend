@@ -1,15 +1,17 @@
-import { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import {
   Routes,
   Route,
   useNavigationType,
   useLocation,
 } from 'react-router-dom';
-import Home from './pages/Home';
-import Work from './pages/Work';
-import Services from './pages/Services';
-import Blog from './pages/Blog';
-import About from './pages/About';
+import LoadingSpinner from '../src/components/loading-spinner';
+
+const Home = lazy(() => import('./pages/Home'));
+const Work = lazy(() => import('./pages/Work'));
+const Services = lazy(() => import('./pages/Services'));
+const Blog = lazy(() => import('./pages/Blog'));
+const About = lazy(() => import('./pages/About'));
 
 function App() {
   const action = useNavigationType();
@@ -28,8 +30,28 @@ function App() {
 
     switch (pathname) {
       case '/':
-        title = '';
-        metaDescription = '';
+        title = 'Home';
+        metaDescription = 'Welcome to the Home page';
+        break;
+      case '/work':
+        title = 'Work';
+        metaDescription = 'Our Work';
+        break;
+      case '/services':
+        title = 'Services';
+        metaDescription = 'Our Services';
+        break;
+      case '/blog':
+        title = 'Blog';
+        metaDescription = 'Our Blog';
+        break;
+      case '/about':
+        title = 'About';
+        metaDescription = 'About Us';
+        break;
+      default:
+        title = 'Website';
+        metaDescription = 'Website Description';
         break;
     }
 
@@ -48,13 +70,16 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/work' element={<Work />} />
-      <Route path='/services' element={<Services />} />
-      <Route path='/blog' element={<Blog />} />
-      <Route path='/about' element={<About />} />
-    </Routes>
+    <Suspense fallback={<LoadingSpinner />}>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/work' element={<Work />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </Suspense>
   );
 }
+
 export default App;
