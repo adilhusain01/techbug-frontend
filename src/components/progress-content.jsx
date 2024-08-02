@@ -1,9 +1,8 @@
 import axios from '../api/axios';
-import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import ProgressCard from './progress-card';
 
-const ProgressContent = ({ className = '' }) => {
+const ProgressContent = () => {
   const [cards, setCards] = useState([]);
 
   const getCards = async () => {
@@ -24,7 +23,7 @@ const ProgressContent = ({ className = '' }) => {
   return (
     <div>
       <div
-        className={`self-stretch grid grid-cols-2 flex-wrap items-start justify-start gap-[1.5rem] max-w-full text-left text-[2.375rem] text-white font-plus-jakarta-sans ${className}`}
+        className={`self-stretch grid grid-cols-2 flex-wrap items-start justify-start gap-[1.5rem] max-w-full text-left text-[2.375rem] text-white font-plus-jakarta-sans`}
       >
         {cards.slice(0, 4).map((card) => (
           <ProgressCard
@@ -37,10 +36,6 @@ const ProgressContent = ({ className = '' }) => {
       </div>
     </div>
   );
-};
-
-ProgressContent.propTypes = {
-  className: PropTypes.string,
 };
 
 export default ProgressContent;

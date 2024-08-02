@@ -12,13 +12,12 @@ const Home = () => {
   return (
     <main className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal] mq1125:h-auto'>
       <section
-        className='self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[10rem] box-border max-w-full shrink-0 mq800:pb-[4.25rem] mq800:box-border mq1325:pb-[6.5rem] mq1325:box-border'
+        className='self-stretch flex flex-row items-start justify-start pb-[10rem] box-border max-w-full shrink-0 mq800:pb-[4.25rem] mq800:box-border mq1325:pb-[6.5rem] mq1325:box-border'
         style={{
           backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/zedaquuziqtgm1iporvx)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           position: 'relative',
-          padding: '4rem',
           height: '1080px',
           width: '1920px',
         }}
@@ -30,11 +29,11 @@ const Home = () => {
             left: 0,
             width: '100%',
             height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0.6)', // Adjust opacity (0.3 for 30% darkness)
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
           }}
         />
-        <div className="flex-1 flex flex-col items-start justify-start pt-[3rem] px-[3.75rem] pb-[21.093rem] box-border gap-[14.531rem] bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq800:gap-[7.25rem] mq800:pt-[1.25rem] mq800:px-[1.875rem] mq800:pb-[8.875rem] mq800:box-border mq450:gap-[3.625rem] mq1125:pt-[1.938rem] mq1125:pb-[13.688rem] mq1125:box-border">
-          <Header />
+        <div className="flex-1 flex flex-col items-start justify-start px-[3.75rem] pb-[21.093rem] box-border gap-[14.531rem] bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq800:gap-[7.25rem] mq800:pt-[1.25rem] mq800:px-[1.875rem] mq800:pb-[8.875rem] mq800:box-border mq450:gap-[3.625rem] mq1125:pt-[1.938rem] mq1125:pb-[13.688rem] mq1125:box-border">
+          <Header menu={'Home'} />
           <HeroContent />
         </div>
       </section>

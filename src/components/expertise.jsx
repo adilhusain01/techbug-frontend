@@ -1,10 +1,9 @@
 import Box from './box';
-import PropTypes from 'prop-types';
 
-const Expertise = ({ className = '' }) => {
+const Expertise = () => {
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[9rem] box-border max-w-full shrink-0 text-center text-[4.25rem] text-gray font-plus-jakarta-sans mq800:pb-[5.875rem] mq800:box-border ${className}`}
+      className={`self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[9rem] box-border max-w-full shrink-0 text-center text-[4.25rem] text-gray font-plus-jakarta-sans mq800:pb-[5.875rem] mq800:box-border`}
     >
       <div className='flex-1 flex flex-col items-center justify-start max-w-full'>
         <div
@@ -76,10 +75,6 @@ const Expertise = ({ className = '' }) => {
       </div>
     </section>
   );
-};
-
-Expertise.propTypes = {
-  className: PropTypes.string,
 };
 
 export default Expertise;

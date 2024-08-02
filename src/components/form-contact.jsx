@@ -2,10 +2,9 @@ import { useState } from 'react';
 import InputField from './input-field';
 import TextareaField from './textarea-field';
 import SendButton from './send-button';
-import PropTypes from 'prop-types';
 import axios from '../api/axios';
 
-const FormContact = ({ className = '' }) => {
+const FormContact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,7 +54,7 @@ const FormContact = ({ className = '' }) => {
 
   return (
     <section
-      className={`mt-24 py-10 w-full overflow-hidden flex flex-col items-center justify-center box-border min-w-[20rem] max-w-full shrink-0 text-center text-[2.5rem] text-white font-plus-jakarta-sans mq800:gap-[1.25rem] mq800:pl-[9.625rem] mq800:pr-[9.625rem] mq800:box-border mq450:py-[1.938rem] mq450:px-[1.25rem] mq450:box-border mq1125:pt-[3rem] mq1125:pb-[3rem] mq1125:box-border ${className}`}
+      className={`mt-24 py-10 w-full overflow-hidden flex flex-col items-center justify-center box-border min-w-[20rem] max-w-full shrink-0 text-center text-[2.5rem] text-white font-plus-jakarta-sans mq800:gap-[1.25rem] mq800:pl-[9.625rem] mq800:pr-[9.625rem] mq800:box-border mq450:py-[1.938rem] mq450:px-[1.25rem] mq450:box-border mq1125:pt-[3rem] mq1125:pb-[3rem] mq1125:box-borde`}
     >
       <div className='w-[35.938rem] flex flex-row items-center justify-center max-w-full'>
         <h1 className='m-0 relative text-inherit font-medium font-inherit mq800:text-[2rem] mq450:text-[1.5rem]'>
@@ -114,10 +113,6 @@ const FormContact = ({ className = '' }) => {
       </form>
     </section>
   );
-};
-
-FormContact.propTypes = {
-  className: PropTypes.string,
 };
 
 export default FormContact;

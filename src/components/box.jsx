@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
-const Box = ({ className = '', title, icon, propOverflow }) => {
+const Box = ({ title, icon, propOverflow }) => {
   let iconImage;
   switch (icon) {
     case 'web_icon':
@@ -40,7 +40,7 @@ const Box = ({ className = '', title, icon, propOverflow }) => {
 
   return (
     <div
-      className={`rounded-11xl [background:linear-gradient(233deg,_#1e1e1e_33.1%,_#5f5f5f_90%)] flex flex-col items-center justify-center p-[0.25rem] box-border w-[13rem] h-[13rem] text-center mq1325:min-h-[auto] ${className}`}
+      className={`rounded-11xl [background:linear-gradient(233deg,_#1e1e1e_33.1%,_#5f5f5f_90%)] flex flex-col items-center justify-center p-[0.25rem] box-border w-[13rem] h-[13rem] text-center mq1325:min-h-[auto]`}
     >
       <img
         className='h-[6.25rem] w-[6.25rem] relative object-contain shrink-0'
@@ -57,7 +57,6 @@ const Box = ({ className = '', title, icon, propOverflow }) => {
 };
 
 Box.propTypes = {
-  className: PropTypes.string,
   title: PropTypes.string,
   icon: PropTypes.string,
 

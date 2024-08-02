@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const NavigationPill = ({
-  className = '',
   title,
   propPadding,
   propMinWidth,
   onNavigationPillContainerClick,
   to,
+  isActive,
 }) => {
   const navigationPillStyle = useMemo(() => {
     return {
       padding: propPadding,
+      backgroundColor: isActive ? 'gold' : 'white',
     };
-  }, [propPadding]);
+  }, [propPadding, isActive]);
 
   const titleStyle = useMemo(() => {
     return {
@@ -25,12 +26,12 @@ const NavigationPill = ({
   return (
     <Link
       to={to}
-      className={`no-underline rounded-3xl bg-white flex flex-row items-start justify-start py-[0.75rem] px-[2.437rem] text-left text-[1.25rem] text-text-default-default font-plus-jakarta-sans ${className}`}
-      style={navigationPillStyle}
+      className={`no-underline rounded-3xl bg-white flex flex-row items-start justify-start py-[0.75rem] px-[2.437rem] text-left text-[1.25rem] text-text-default-default font-plus-jakarta-sans}`}
       onClick={onNavigationPillContainerClick}
+      style={navigationPillStyle}
     >
       <div
-        className='relative leading-[100%] font-medium inline-block min-w-[3.75rem]'
+        className={`relative leading-[100%] font-medium inline-block min-w-[3.75rem]`}
         style={titleStyle}
       >
         {title}
@@ -40,15 +41,11 @@ const NavigationPill = ({
 };
 
 NavigationPill.propTypes = {
-  className: PropTypes.string,
   title: PropTypes.string,
-
-  /** Style props */
   propPadding: PropTypes.any,
   propMinWidth: PropTypes.any,
-
-  /** Action props */
   onNavigationPillContainerClick: PropTypes.func,
+  isActive: PropTypes.bool,
 };
 
 export default NavigationPill;

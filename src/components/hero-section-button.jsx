@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const HeroSectionButton = ({ className = '' }) => {
+const HeroSectionButton = () => {
   return (
     <button
-      className={`cursor-pointer py-[0.125rem] px-[0.25rem] bg-[transparent] w-[12.75rem] rounded-37xl box-border flex flex-row items-start justify-start gap-[0.75rem] border-[2px] border-solid border-[#F1CB47] ${className}`}
+      className={`cursor-pointer py-[0.125rem] px-[0.25rem] bg-[transparent] w-[12.75rem] rounded-37xl box-border flex flex-row items-start justify-start gap-[0.75rem] border-[2px] border-solid border-[#F1CB47] `}
     >
       <img
         className='h-[3rem] w-[3rem] relative rounded-117xl overflow-hidden shrink-0'
@@ -17,10 +17,6 @@ const HeroSectionButton = ({ className = '' }) => {
       </div>
     </button>
   );
-};
-
-HeroSectionButton.propTypes = {
-  className: PropTypes.string,
 };
 
 export default HeroSectionButton;

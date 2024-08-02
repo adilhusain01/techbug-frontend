@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const TextareaField = ({ className, label, name, value, onChange }) => {
+const TextareaField = ({ label, name, value, onChange }) => {
   return (
     <div
-      className={`w-[51.438rem] flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem] text-text-default-secondary font-body-base ${className}`}
+      className={`w-[51.438rem] flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem] text-text-default-secondary font-body-base`}
     >
       <label
         htmlFor={name}
@@ -27,7 +27,6 @@ const TextareaField = ({ className, label, name, value, onChange }) => {
 };
 
 TextareaField.propTypes = {
-  className: PropTypes.string,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,

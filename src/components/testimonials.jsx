@@ -1,9 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import axios from '../api/axios';
 import Review from './review';
 
-const Testimonials = ({ className = '' }) => {
+const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
 
   const [isDragging, setIsDragging] = useState(false);
@@ -65,7 +64,7 @@ const Testimonials = ({ className = '' }) => {
 
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start pt-[0rem] pl-[3.75rem] pb-[2.5rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white font-plus-jakarta-sans mq800:pl-[1.875rem] mq800:box-border ${className}`}
+      className={`self-stretch flex flex-row items-start justify-start pt-[0rem] pl-[3.75rem] pb-[2.5rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white font-plus-jakarta-sans mq800:pl-[1.875rem] mq800:box-border`}
     >
       <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full mq800:gap-[1rem]'>
         <div className='self-stretch flex flex-row items-start justify-center py-[0rem]'>
@@ -108,10 +107,6 @@ const Testimonials = ({ className = '' }) => {
       </div>
     </section>
   );
-};
-
-Testimonials.propTypes = {
-  className: PropTypes.string,
 };
 
 export default Testimonials;

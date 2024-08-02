@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const Footer = ({ className = '' }) => {
+const Footer = () => {
   return (
     <footer
-      className={`self-stretch bg-gray overflow-hidden flex flex-col items-start justify-end py-[5.5rem] px-[3.75rem] box-border gap-[1.5rem] max-w-full shrink-0 text-left text-[1rem] text-darkgray font-plus-jakarta-sans mq800:pl-[1.875rem] mq800:pr-[1.875rem] mq800:box-border ${className}`}
+      className={`self-stretch bg-gray overflow-hidden flex flex-col items-start justify-end py-[5.5rem] px-[3.75rem] box-border gap-[1.5rem] max-w-full shrink-0 text-left text-[1rem] text-darkgray font-plus-jakarta-sans mq800:pl-[1.875rem] mq800:pr-[1.875rem] mq800:box-border`}
     >
       <img
         className='w-[15rem] h-[3.063rem] relative overflow-hidden shrink-0'
@@ -86,10 +86,6 @@ const Footer = ({ className = '' }) => {
       </div>
     </footer>
   );
-};
-
-Footer.propTypes = {
-  className: PropTypes.string,
 };
 
 export default Footer;

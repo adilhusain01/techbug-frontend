@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const Greeting = ({ className = '' }) => {
+const Greeting = () => {
   return (
     <div
-      className={`overflow-hidden shrink-0 flex flex-row items-start justify-start pt-[0.25rem] pb-[0.187rem] pr-[3.125rem] pl-[0.625rem] box-border relative gap-[5rem] max-w-full text-left text-[6rem] text-white font-plus-jakarta-sans mq800:gap-[2.5rem] mq1325:flex-wrap mq1325:pr-[1.563rem] mq1325:box-border mq450:gap-[1.25rem] ${className}`}
+      className={`overflow-hidden shrink-0 flex flex-row items-start justify-start pt-[0.25rem] pb-[0.187rem] pr-[3.125rem] pl-[0.625rem] box-border relative gap-[5rem] max-w-full text-left text-[6rem] text-white font-plus-jakarta-sans mq800:gap-[2.5rem] mq1325:flex-wrap mq1325:pr-[1.563rem] mq1325:box-border mq450:gap-[1.25rem]`}
       style={{ userSelect: 'none' }}
     >
       <h1 className='m-0 h-[7.563rem] w-[15rem] relative text-inherit font-semibold font-inherit inline-block mq800:text-[3rem] mq450:text-[1.813rem]'>
@@ -25,10 +25,6 @@ const Greeting = ({ className = '' }) => {
       </h1>
     </div>
   );
-};
-
-Greeting.propTypes = {
-  className: PropTypes.string,
 };
 
 export default Greeting;
