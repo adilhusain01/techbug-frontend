@@ -9,8 +9,8 @@ const ProgressContent = () => {
     try {
       const response = await axios.get('/cards');
 
-      const cards = response.data;
-      setCards(cards);
+      const data = response.data;
+      setCards(data);
     } catch (error) {
       console.error(error);
     }

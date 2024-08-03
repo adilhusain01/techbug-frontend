@@ -2,14 +2,17 @@ import { useCallback } from 'react';
 import NavigationPill from './navigation-pill';
 import PropTypes from 'prop-types';
 
-const TopNavBar = ({ menu }) => {
+const TopNavBar = ({ menu, theme }) => {
   const onNavigationPillContainerClick = useCallback(() => {
     // have to sync "Portfolio" to the project
   }, []);
 
   return (
     <div
-      className={`rounded-11xl bg-white flex flex-row items-start justify-start p-[0.375rem] gap-[0.25rem] text-left text-[1.25rem] text-text-default-default font-plus-jakarta-sans mq1325:hidden`}
+      className={`rounded-11xl  flex flex-row items-start justify-start p-[0.375rem] gap-[0.25rem] text-left text-[1.25rem]  font-plus-jakarta-sans mq1325:hidden`}
+      style={{
+        backgroundColor: theme.menuBg,
+      }}
     >
       <NavigationPill
         title='Home'
@@ -18,6 +21,7 @@ const TopNavBar = ({ menu }) => {
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/'}
         isActive={menu === 'Home'}
+        theme={theme}
       />
       <NavigationPill
         title='Work'
@@ -26,6 +30,7 @@ const TopNavBar = ({ menu }) => {
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/work'}
         isActive={menu === 'Work'}
+        theme={theme}
       />
       <NavigationPill
         title='Services'
@@ -34,6 +39,7 @@ const TopNavBar = ({ menu }) => {
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/services'}
         isActive={menu === 'Services'}
+        theme={theme}
       />
       <NavigationPill
         title='Blog'
@@ -42,6 +48,7 @@ const TopNavBar = ({ menu }) => {
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/blog'}
         isActive={menu === 'Blog'}
+        theme={theme}
       />
       <NavigationPill
         title='About'
@@ -50,6 +57,7 @@ const TopNavBar = ({ menu }) => {
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/about'}
         isActive={menu === 'About'}
+        theme={theme}
       />
     </div>
   );
@@ -57,6 +65,7 @@ const TopNavBar = ({ menu }) => {
 
 TopNavBar.propTypes = {
   menu: PropTypes.string.isRequired,
+  theme: PropTypes.object.isRequired,
 };
 
 export default TopNavBar;

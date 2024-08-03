@@ -9,11 +9,14 @@ const NavigationPill = ({
   onNavigationPillContainerClick,
   to,
   isActive,
+  theme,
 }) => {
   const navigationPillStyle = useMemo(() => {
+    console.log(theme);
     return {
       padding: propPadding,
-      backgroundColor: isActive ? 'gold' : 'white',
+      backgroundColor: isActive ? `${theme.activeMenuBg}` : `${theme.menuBg}`,
+      color: isActive ? `${theme.activeTextColor}` : `${theme.textColor}`,
     };
   }, [propPadding, isActive]);
 
@@ -26,7 +29,7 @@ const NavigationPill = ({
   return (
     <Link
       to={to}
-      className={`no-underline rounded-3xl bg-white flex flex-row items-start justify-start py-[0.75rem] px-[2.437rem] text-left text-[1.25rem] text-text-default-default font-plus-jakarta-sans}`}
+      className={`no-underline rounded-3xl flex flex-row items-start justify-start py-[0.75rem] px-[2.437rem] text-left text-[1.25rem] text-text-default-default font-plus-jakarta-sans}`}
       onClick={onNavigationPillContainerClick}
       style={navigationPillStyle}
     >
@@ -46,6 +49,7 @@ NavigationPill.propTypes = {
   propMinWidth: PropTypes.any,
   onNavigationPillContainerClick: PropTypes.func,
   isActive: PropTypes.bool,
+  theme: PropTypes.object,
 };
 
 export default NavigationPill;

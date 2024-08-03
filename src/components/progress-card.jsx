@@ -1,4 +1,3 @@
-// ProgressCard.jsx
 import PropTypes from 'prop-types';
 
 const ProgressCard = ({ title, image_uri, description }) => (
