@@ -85,5 +85,5 @@ ServiceCard.propTypes = {
   image: PropTypes.string,
   description: PropTypes.string,
   features: PropTypes.array,
-  index: PropTypes.string,
+  index: PropTypes.number,
 };

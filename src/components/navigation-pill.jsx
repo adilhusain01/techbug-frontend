@@ -12,7 +12,6 @@ const NavigationPill = ({
   theme,
 }) => {
   const navigationPillStyle = useMemo(() => {
-    console.log(theme);
     return {
       padding: propPadding,
       backgroundColor: isActive ? `${theme.activeMenuBg}` : `${theme.menuBg}`,
