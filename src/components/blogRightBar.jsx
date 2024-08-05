@@ -17,7 +17,7 @@ function BlogRightBar() {
       <div className='self-stretch flex flex-col items-start justify-start gap-[3.125rem]'>
         <div className='self-stretch flex flex-col items-start justify-start gap-[1rem]'>
           <div className='self-stretch relative inline-block min-h-[11.313rem]'>
-            <p className='[margin-block-start:0] [margin-block-end:0.1px] [text-decoration:underline] font-semibold text-yellow'>
+            <p className='[margin-block-start:0] [margin-block-end:0.1px] [text-decoration:underline] font-semibold text-[#F9CA06]'>
               About Techbug
             </p>
             <p className='[margin-block-start:0] [margin-block-end:0.1px] font-medium'>
@@ -29,7 +29,7 @@ function BlogRightBar() {
             </p>
           </div>
           <div
-            className='relative text-[0.625rem] font-semibold text-yellow inline-block min-w-[4.063rem] whitespace-nowrap cursor-pointer'
+            className='relative text-[0.625rem] font-semibold text-yellow inline-block min-w-[4.063rem] whitespace-nowrap cursor-pointer text-[#F9CA06]'
             onClick={onLEARNMORETextClick}
           >
             LEARN MORE

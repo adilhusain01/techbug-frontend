@@ -6,6 +6,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 import LoadingSpinner from '../src/components/loading-spinner';
+import BlogPost from './pages/BlogPost';
 
 const Home = lazy(() => import('./pages/Home'));
 const Work = lazy(() => import('./pages/Work'));
@@ -76,6 +77,7 @@ function App() {
         <Route path='/work' element={<Work />} />
         <Route path='/services' element={<Services />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/blog/:slug' element={<BlogPost />} />
         <Route path='/about' element={<About />} />
       </Routes>
     </Suspense>
