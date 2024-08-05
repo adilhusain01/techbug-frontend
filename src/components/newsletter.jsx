@@ -190,7 +190,7 @@ function NewsLetter({ theme }) {
 }
 
 NewsLetter.propTypes = {
-  theme: PropTypes.string.isRequired;
-}
+  theme: PropTypes.string.isRequired,
+};
 
 export default NewsLetter;
