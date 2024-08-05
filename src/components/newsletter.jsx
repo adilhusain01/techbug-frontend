@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 function NewsLetter({ theme }) {
-  const theme = {
+  const selectTheme = {
     light: {
       bg: '#FFFFFF',
       titleColor: '#313D4B',
@@ -14,7 +14,7 @@ function NewsLetter({ theme }) {
     },
   };
 
-  const currentTheme = theme[theme] || theme.dark;
+  const currentTheme = selectTheme[theme] || selectTheme.dark;
 
   return (
     <section
@@ -24,7 +24,7 @@ function NewsLetter({ theme }) {
       <div className='mt-[4rem] flex flex-col items-center justify-start gap-[1rem]'>
         <h1
           className='p-0 m-0 mx-auto self-stretch  font-semibold text-[3rem]'
-          style={{ color: titleColor }}
+          style={{ color: currentTheme.titleColor }}
         >
           Subscribe to Techbug's Newsletters
         </h1>
