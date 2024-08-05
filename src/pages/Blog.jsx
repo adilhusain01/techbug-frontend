@@ -97,7 +97,7 @@ const BlogPost = () => {
         </div>
       </section>
 
-      <NewsLetter />
+      <NewsLetter theme={'light'} />
 
       <FormContact theme={'white'} />
       <Footer />

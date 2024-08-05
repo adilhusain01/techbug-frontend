@@ -1,6 +1,23 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
-const TagArticles = ({ title, posts }) => {
+const TagArticles = ({ title, tags }) => {
+  const [posts, setPosts] = useState([]);
+
+  const getBlogPost = async () => {
+    try {
+      const response = await axios.get(`/blogposts/posts/${tags}`);
+      const data = response.data;
+      setPosts(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getBlogPost();
+  }, []);
+
   return (
     <section>
       <div className='flex flex-row px-[8rem] py-0'>
@@ -44,7 +61,7 @@ const TagArticles = ({ title, posts }) => {
 
 TagArticles.propTypes = {
   title: PropTypes.string.isRequired,
-  posts: PropTypes.array.isRequired,
+  tags: PropTypes.string.isRequired,
 };
 
 export default TagArticles;

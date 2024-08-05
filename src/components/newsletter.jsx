@@ -18,10 +18,10 @@ function NewsLetter({ theme }) {
 
   return (
     <section
-      className='w-full self-stretch  overflow-hidden shrink-0 text-[2.438rem]'
+      className='w-full self-stretch overflow-hidden shrink-0 text-[2.5rem] py-[5rem]'
       style={{ backgroundColor: currentTheme.bg }}
     >
-      <div className='mt-[4rem] flex flex-col items-center justify-start gap-[1rem]'>
+      <div className='flex flex-col items-center justify-start gap-[1rem]'>
         <h1
           className='p-0 m-0 mx-auto self-stretch  font-semibold text-[3rem]'
           style={{ color: currentTheme.titleColor }}
@@ -149,7 +149,10 @@ function NewsLetter({ theme }) {
 
         <div className='w-[23.5rem] flex flex-col items-start justify-start gap-[1rem] text-[1rem] text-text-brand-on-brand-secondary'>
           <div className='self-stretch h-[6rem] flex flex-col items-start justify-start gap-space-200'>
-            <div className='self-stretch relative text-[1.25rem] leading-[140%] font-semibold text-white'>
+            <div
+              className='self-stretch relative text-[1.25rem] leading-[140%] font-semibold'
+              style={{ color: currentTheme.emailColor }}
+            >
               Email
             </div>
 

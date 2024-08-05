@@ -17,14 +17,18 @@ const BlogPost = () => {
   const { slug } = useParams();
   const [blogpost, setBlogpost] = useState({});
   const [relatedPostsMeta, setRelatedPostsMeta] = useState([]);
+  const [tags, setTags] = useState('');
 
   const getBlogPost = async () => {
     try {
       const response = await axios.get(`/blogposts/posts/slug/${slug}`);
-      const tags = response.data.tags;
-      const response2 = await axios.post('/blogposts/meta', { tags });
-      setBlogpost(response.data);
-      setRelatedPostsMeta(response2.data);
+      const data = response.data;
+      const tagsArray = data.tags;
+      const tagsString = tagsArray.join('-');
+      setTags(tagsString);
+      // const response2 = await axios.post('/blogposts/meta', { tags });
+      setBlogpost(data);
+      // setRelatedPostsMeta(response2.data);
     } catch (error) {
       console.log(error);
     }
@@ -88,12 +92,12 @@ const BlogPost = () => {
             </div>
           </div>
 
-          <TagArticles title={'Related Articles'} posts={relatedPostsMeta} />
+          <TagArticles title={'Related Articles'} tags={tags} />
           <LatestArticles />
         </div>
       </section>
 
-      <NewsLetter />
+      <NewsLetter theme={'dark'} />
 
       <FormContact theme={'white'} />
       <Footer />
