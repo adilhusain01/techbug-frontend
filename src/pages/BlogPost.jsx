@@ -50,7 +50,7 @@ const BlogPost = () => {
         <div className="flex-1 flex flex-col items-start justify-start px-[3.75rem]  box-border bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq800:gap-[7.25rem] mq800:pt-[1.25rem] mq800:px-[1.875rem] mq800:pb-[8.875rem] mq800:box-border mq450:gap-[3.625rem] mq1125:pt-[1.938rem] mq1125:pb-[13.688rem] mq1125:box-border">
           <Header menu={'Blog'} theme={'dark'} />
 
-          <div className='mt-[8rem] flex flex-row items-start justify-start py-[0rem] px-[5rem] box-border max-w-full'>
+          {/* <div className='mt-[8rem] flex flex-row items-start justify-start py-[0rem] px-[5rem] box-border max-w-full'>
             <div className='flex flex-col items-start justify-start gap-[0.5rem] max-w-full'>
               <div className='text-white text-2xl flex flex-row items-start justify-start gap-[2rem] lg:flex-wrap'>
                 <div className='relative font-medium text-[#F9CA06] inline-block min-w-[5.063rem] z-[1] mq450:text-[1rem]'>
@@ -74,7 +74,7 @@ const BlogPost = () => {
               </div>
               <div className='w-[5.438rem] h-[0.125rem] relative border-[#F9CA06] border-t-[2px] border-solid box-border z-[1]' />
             </div>
-          </div>
+          </div> */}
           <BlogPostHead post={blogpost} />
         </div>
       </section>
