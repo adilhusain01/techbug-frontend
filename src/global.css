@@ -12,6 +12,19 @@ body {
   border-width: 0;
 }
 
+.transition-container {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.transition-container.collapsed {
+  max-height: 0;
+}
+
+.transition-container.expanded {
+  max-height: 1000px; /* Adjust this value based on your content */
+}
+
 /* ---------- Spinner ------------ */
 
 .dot-spinner {

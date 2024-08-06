@@ -26,9 +26,7 @@ const BlogPost = () => {
       const tagsArray = data.tags;
       const tagsString = tagsArray.join('-');
       setTags(tagsString);
-      // const response2 = await axios.post('/blogposts/meta', { tags });
       setBlogpost(data);
-      // setRelatedPostsMeta(response2.data);
     } catch (error) {
       console.log(error);
     }
@@ -36,7 +34,7 @@ const BlogPost = () => {
 
   useEffect(() => {
     getBlogPost();
-  }, []);
+  }, [slug]);
 
   return (
     <main
