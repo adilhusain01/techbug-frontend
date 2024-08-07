@@ -1,7 +1,7 @@
-import Header from '../components/header';
-import FormContact from '../components/form-contact';
-import Footer from '../components/footer';
-import WorkMenu from '../components/work-menu';
+import Header from '../components/Header';
+import FormContact from '../components/FormContact';
+import Footer from '../components/Footer';
+import WorkMenu from '../components/WorkMenu';
 
 const Work = () => {
   return (

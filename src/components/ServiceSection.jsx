@@ -1,4 +1,4 @@
-import ServiceCard from './service-card';
+import ServiceCard from './ServiceCard';
 import axios from '../api/axios';
 import { useState, useEffect } from 'react';
 

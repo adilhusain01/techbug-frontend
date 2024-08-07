@@ -1,9 +1,9 @@
-import Header from '../components/header';
-import Founders from '../components/founders';
-import FormContact from '../components/form-contact';
-import Footer from '../components/footer';
-import Achievements from '../components/achievements';
-import Team from '../components/team';
+import Header from '../components/Header';
+import Founders from '../components/Founders';
+import FormContact from '../components/FormContact';
+import Footer from '../components/Footer';
+import Achievements from '../components/Achievements';
+import Team from '../components/Team';
 
 const Home = () => {
   return (

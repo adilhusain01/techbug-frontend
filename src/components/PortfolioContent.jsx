@@ -1,6 +1,6 @@
 import axios from '../api/axios';
 import { useEffect, useState } from 'react';
-import PortfolioCard from './portfolio-card';
+import PortfolioCard from './PortfolioCard';
 import PropTypes from 'prop-types';
 
 function PortfolioContent({ selectedMenu }) {

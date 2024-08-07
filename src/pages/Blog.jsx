@@ -1,13 +1,9 @@
-import { useEffect, useState } from 'react';
-import axios from '../api/axios';
-import Header from '../components/header';
-
-import LatestArticles from '../components/latestArticles';
-import TagArticles from '../components/tagArticles';
-import NewsLetter from '../components/newsletter';
-import FormContact from '../components/form-contact';
-import Footer from '../components/footer';
-import BlogHead from '../components/blogHead';
+import Header from '../components/Header';
+import TagArticles from '../components/TagArticles';
+import NewsLetter from '../components/NewsLetter';
+import FormContact from '../components/FormContact';
+import Footer from '../components/Footer';
+import BlogHead from '../components/BlogHead';
 
 const BlogPost = () => {
   return (

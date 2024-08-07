@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from '../api/axios';
 import { Helmet } from 'react-helmet';
-import Header from '../components/header';
-import BlogPostHead from '../components/blogPostHead';
-import BlogLeftBar from '../components/blogLeftBar';
-import BlogCenterBar from '../components/blogCenterBar';
-import BlogRightBar from '../components/blogRightBar';
-import LatestArticles from '../components/latestArticles';
-import TagArticles from '../components/tagArticles';
-import NewsLetter from '../components/newsletter';
-import FormContact from '../components/form-contact';
-import Footer from '../components/footer';
+import Header from '../components/Header';
+import BlogPostHead from '../components/BlogPostHead';
+import BlogLeftBar from '../components/BlogLeftBar';
+import BlogCenterBar from '../components/BlogCenterBar';
+import BlogRightBar from '../components/BlogRightBar';
+import LatestArticles from '../components/LatestArticles';
+import TagArticles from '../components/TagArticles';
+import NewsLetter from '../components/NewsLetter';
+import FormContact from '../components/FormContact';
+import Footer from '../components/Footer';
 
 const BlogPost = () => {
   const { slug } = useParams();

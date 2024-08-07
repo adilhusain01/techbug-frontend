@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import axios from '../api/axios';
-import Review from './review';
+import Review from './Review';
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);

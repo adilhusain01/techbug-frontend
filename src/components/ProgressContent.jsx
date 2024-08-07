@@ -1,6 +1,6 @@
 import axios from '../api/axios';
 import { useEffect, useState } from 'react';
-import ProgressCard from './progress-card';
+import ProgressCard from './ProgressCard';
 
 const ProgressContent = () => {
   const [cards, setCards] = useState([]);

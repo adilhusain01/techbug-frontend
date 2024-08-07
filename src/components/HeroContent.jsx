@@ -1,4 +1,4 @@
-import HeroSectionButton from './hero-section-button';
+import HeroSectionButton from './HeroSectionButton';
 
 const HeroContent = () => {
   return (

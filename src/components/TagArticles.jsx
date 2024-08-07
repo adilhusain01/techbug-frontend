@@ -19,7 +19,7 @@ const TagArticles = ({ title, tags }) => {
 
   useEffect(() => {
     getBlogPost();
-  }, []);
+  }, [tags]);
 
   const toggleShowAll = () => {
     setShowAll(!showAll);

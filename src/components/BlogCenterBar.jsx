@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 function BlogCenterBar({ post }) {
   if (!post.body) {
     return null;

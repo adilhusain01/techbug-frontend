@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import NavigationPill from './navigation-pill';
+import NavigationPill from './NavigationPill';
 import PropTypes from 'prop-types';
 
 const TopNavBar = ({ menu, theme }) => {

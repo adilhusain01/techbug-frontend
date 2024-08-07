@@ -5,7 +5,7 @@ import {
   useNavigationType,
   useLocation,
 } from 'react-router-dom';
-import LoadingSpinner from '../src/components/loading-spinner';
+import LoadingSpinner from '../src/components/LoadingSpinner';
 import BlogPost from './pages/BlogPost';
 
 const Home = lazy(() => import('./pages/Home'));

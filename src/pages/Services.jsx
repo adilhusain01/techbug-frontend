@@ -1,10 +1,9 @@
-import Header from '../components/header';
-import FormContact from '../components/form-contact';
-import Footer from '../components/footer';
-import BrandLogoGrid from '../components/brand-logo-grid';
-import Canvas from '../components/canvas';
-import ServiceSection from '../components/service-section';
-import { useState } from 'react';
+import Header from '../components/Header';
+import FormContact from '../components/FormContact';
+import Footer from '../components/Footer';
+import BrandLogoGrid from '../components/BrandLogoGrid';
+import Canvas from '../components/Canvas';
+import ServiceSection from '../components/ServiceSection';
 
 const Services = () => {
   return (

@@ -1,4 +1,4 @@
-import TopNavBar from './top-nav-bar';
+import TopNavBar from './TopNavBar';
 import PropTypes from 'prop-types';
 
 const Header = ({ menu, theme }) => {

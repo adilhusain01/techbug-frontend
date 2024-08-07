@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import InputField from './input-field';
-import TextareaField from './textarea-field';
-import SendButton from './send-button';
+import InputField from './InputField';
+import TextareaField from './TextareaField';
+import SendButton from './SendButton';
 import axios from '../api/axios';
 import PropTypes from 'prop-types';
 

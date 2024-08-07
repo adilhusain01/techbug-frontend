@@ -1,12 +1,12 @@
-import Header from '../components/header';
-import HeroContent from '../components/hero-content';
-import Expertise from '../components/expertise';
-import ProgressContent from '../components/progress-content';
+import Header from '../components/Header';
+import HeroContent from '../components/HeroContent';
+import Expertise from '../components/Expertise';
+import ProgressContent from '../components/ProgressContent';
 
-import Testimonials from '../components/testimonials';
-import DesktopTablet from '../components/desktop-tablet';
-import FormContact from '../components/form-contact';
-import Footer from '../components/footer';
+import Testimonials from '../components/Testimonials';
+import DesktopTablet from '../components/DesktopTablet';
+import FormContact from '../components/FormContact';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import NewsSlider from './newsSlider';
-import LatestArticlesGroup from './latestArticlesGroup';
+import NewsSlider from './NewsSlider';
+import LatestArticlesGroup from './LatestArticlesGroup';
 
 function BlogHead() {
   return (
