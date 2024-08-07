@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Review = ({ name, designation, image_uri, review }) => (
-  <div className='w-[43.063rem] rounded-xl bg-whitesmoke overflow-hidden shrink-0 flex flex-col items-start justify-start py-[4rem] px-[3rem] box-border max-w-full mq800:pl-[1.5rem] mq800:pr-[1.5rem] mq800:box-border'>
+  <article className='w-[43.063rem] rounded-xl bg-whitesmoke overflow-hidden shrink-0 flex flex-col items-start justify-start py-[4rem] px-[3rem] box-border max-w-full mq800:pl-[1.5rem] mq800:pr-[1.5rem] mq800:box-border'>
     <div className='self-stretch flex flex-row items-center justify-start gap-[2rem] max-w-full mq800:flex-wrap mq800:gap-[1rem]'>
       <div className='w-[10.25rem] flex flex-col items-center justify-start gap-[0.5rem] min-w-[10.25rem] mq800:flex-1'>
         <img
@@ -23,7 +23,7 @@ const Review = ({ name, designation, image_uri, review }) => (
         {review}
       </blockquote>
     </div>
-  </div>
+  </article>
 );
 
 Review.propTypes = {
