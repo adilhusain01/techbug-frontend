@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import axios from '../api/axios';
-import NewsCard from './NewsCard';
 
-const NewsSlider = () => {
-  const [news, setNews] = useState([]);
+const NewsSlider = ({ tag }) => {
+  const [posts, setPosts] = useState([]);
 
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -36,10 +37,11 @@ const NewsSlider = () => {
 
   const getNews = async () => {
     try {
-      const response = await axios.get('/news');
-
+      const endpoint =
+        tag === 'All Posts' ? '/blogposts/meta' : `/blogposts/meta/${tag}`;
+      const response = await axios.get(endpoint);
       const data = response.data;
-      setNews(data);
+      setPosts(data);
     } catch (error) {
       console.error(error);
     }
@@ -47,7 +49,7 @@ const NewsSlider = () => {
 
   useEffect(() => {
     getNews();
-  }, []);
+  }, [tag]);
 
   useEffect(() => {
     const preventScroll = (e) => {
@@ -90,18 +92,32 @@ const NewsSlider = () => {
             onMouseLeave={handleMouseUp}
             onWheel={handleWheel}
           >
-            {news.map((news) => (
-              <NewsCard
-                key={news._id}
-                title={news.title}
-                image_uri={news.image_uri}
-              />
+            {posts.map((post) => (
+              <Link
+                className='w-[32.25rem] flex flex-col items-start justify-end box-border max-w-full shrink-0'
+                key={post._id}
+                to={`/blog/${post.slug}`}
+                style={{ cursor: 'pointer', textDecoration: 'none' }}
+              >
+                <img
+                  className='w-full h-[13rem] relative object-cover z-[1] mq800:flex-1'
+                  alt='News'
+                  src={post.thumbnail}
+                />
+                <div className='p-[0.5rem] box-border w-full bg-[#FBEBD9]'>
+                  <h2 className='text-black m-0 text-[1rem]'>{post.title}</h2>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </div>
     </section>
   );
+};
+
+NewsSlider.propTypes = {
+  tag: PropTypes.string.isRequired,
 };
 
 export default NewsSlider;

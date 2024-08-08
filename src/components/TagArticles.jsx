@@ -29,12 +29,12 @@ const TagArticles = ({ title, tags }) => {
   const remainingPosts = posts.slice(3);
 
   return (
-    <section>
+    <section className='p-0'>
       <div className='flex flex-row px-[8rem] py-0'>
-        <h1 className='min-w-[25rem] self-stretch  text-[3rem] font-semibold mq450:text-[1.813rem] mq825:text-[2.375rem]'>
+        <h2 className='p-0 min-w-fit self-stretch text-[3rem] font-semibold mq450:text-[1.813rem] mq825:text-[2.375rem]'>
           {title}
-        </h1>
-        <div className='w-full border-black border-t-[2px] border-solid box-border' />
+        </h2>
+        <div className='p-0 w-full border-black border-t-[2px] border-solid box-border' />
       </div>
       <div className='flex flex-col justify-center pb-[4rem] px-[8rem] box-border max-w-full text-left text-[1rem] text-black font-plus-jakarta-sans'>
         <h1
