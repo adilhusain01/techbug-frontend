@@ -69,12 +69,12 @@ const NewsSlider = ({ tag }) => {
       <div
         className={`self-stretch flex flex-row items-start justify-start py-[0rem] px-[5rem] box-border max-w-full text-left text-[3rem] text-[#FE8D4F] font-plus-jakarta-sans`}
       >
-        <h1 className='mt-[2rem] flex-1 relative text-inherit font-semibold font-[inherit] inline-block max-w-full z-[1] mq450:text-[1.813rem] mq825:text-[2.375rem]'>
+        <h1 className='mt-[2rem] flex-1 relative text-inherit font-semibold font-[inherit] inline-block max-w-full z-[1]'>
           Explore News, Insightful Articles and Updates.
         </h1>
       </div>
-      <div className='self-stretch flex flex-row items-start justify-start pl-[5rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white font-plus-jakarta-sans mq800:pl-[1.875rem] mq800:box-border'>
-        <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full mq800:gap-[1rem]'>
+      <div className='self-stretch flex flex-row items-start justify-start pl-[5rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white font-plus-jakarta-sans'>
+        <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full'>
           <div
             className='overflow-x-auto flex flex-row items-center justify-start py-[0rem] px-[0rem] box-border gap-[1.25rem] max-w-full text-left text-[1.25rem] text-text-default-default'
             style={{
@@ -100,7 +100,7 @@ const NewsSlider = ({ tag }) => {
                 style={{ cursor: 'pointer', textDecoration: 'none' }}
               >
                 <img
-                  className='w-full h-[13rem] relative object-cover z-[1] mq800:flex-1'
+                  className='w-full h-[13rem] relative object-cover z-[1]'
                   alt='News'
                   src={post.thumbnail}
                 />

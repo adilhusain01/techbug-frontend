@@ -12,13 +12,13 @@ const Footer = lazy(() => import('../components/Footer'));
 const Home = () => {
   return (
     <main
-      className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal] mq1125:h-auto'
+      className='w-full relative bg-gray overflow-hidden box-border'
       style={{
         userSelect: 'none',
       }}
     >
       <section
-        className='self-stretch flex flex-row items-start justify-start pb-[10rem] box-border max-w-full shrink-0 mq800:pb-[4.25rem] mq800:box-border mq1325:pb-[6.5rem] mq1325:box-border'
+        className='self-stretch flex flex-row items-start justify-start pb-[10rem] box-border max-w-full shrink-0'
         style={{
           backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/zedaquuziqtgm1iporvx)`,
           backgroundSize: 'cover',
@@ -38,7 +38,7 @@ const Home = () => {
             backgroundColor: 'rgba(0, 0, 0, 0.6)',
           }}
         />
-        <div className="flex-1 flex flex-col items-start justify-start px-[3.75rem] pb-[21.093rem] box-border gap-[14.531rem] bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq800:gap-[7.25rem] mq800:pt-[1.25rem] mq800:px-[1.875rem] mq800:pb-[8.875rem] mq800:box-border mq450:gap-[3.625rem] mq1125:pt-[1.938rem] mq1125:pb-[13.688rem] mq1125:box-border">
+        <div className='w-full flex-1 flex flex-col items-start justify-start px-[3.75rem] pb-[21.093rem] box-border gap-[12rem] md:gap-[14.5rem]'>
           <Suspense fallback={<div>Loading...</div>}>
             <Header menu={'Home'} theme={'dark'} />
             <HeroContent />
@@ -46,19 +46,19 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='py-32'>
-        <div className='grid grid-cols-2 gap-1'>
+      <section className='px-[2rem] py-[2rem] lg:py-[8rem]'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-1'>
           <div className='flex flex-col items-center justify-center'>
             <img
-              className='h-[600px] w-[600px] rounded-[60px] object-cover'
+              className='h-[300px] md:h-[400px] lg:h-[600px] w-[300px] md:w-[400px] lg:w-[600px] rounded-[20px] md:rounded-[60px] object-cover'
               loading='lazy'
               alt='office'
               src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/wgdo3slwrcib7ltszr1x'
             />
           </div>
 
-          <div className='py-8 px-32'>
-            <h1 className='text-37xl font-medium text-white tracking-wider leading-relaxed font-plus-jakarta-sans'>
+          <div className='py-[0.5rem] md:py-[2rem] px-[1rem] md:px-[2rem] lg:px-[8rem]'>
+            <h1 className='text-2xl md:text-13xl lg:text-37xl font-medium text-white tracking-tight md:tracking-normal lg:tracking-wider leading-tight md:leading-normal lg:leading-relaxed font-plus-jakarta-sans text-center'>
               Delivering pioneer digital solutions and top-notch design support
               to ambitious startups and leading corporations since 2018
             </h1>
@@ -70,7 +70,7 @@ const Home = () => {
         <Expertise />
       </Suspense>
 
-      <section className='self-stretch flex flex-row items-start justify-start pt-[0rem] px-[3.75rem] pb-[11.5rem] box-border max-w-full shrink-0 mq800:pl-[1.875rem] mq800:pr-[1.875rem] mq800:pb-[4.875rem] mq800:box-border mq1325:pb-[7.5rem] mq1325:box-border'>
+      <section className='self-stretch flex flex-row items-start justify-start pt-[0rem] px-[1.5rem] md:px-[3.75rem] pb-[3.75rem] lg:pb-[11.5rem] box-border max-w-full shrink-0'>
         <div className='flex-1 flex flex-col items-start justify-start gap-[1.5rem] max-w-full'>
           <Suspense fallback={<div>Loading...</div>}>
             <ProgressContent />

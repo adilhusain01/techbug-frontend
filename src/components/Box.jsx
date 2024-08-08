@@ -40,16 +40,16 @@ const Box = ({ title, icon, propOverflow }) => {
 
   return (
     <div
-      className={`rounded-11xl [background:linear-gradient(233deg,_#1e1e1e_33.1%,_#5f5f5f_90%)] flex flex-col items-center justify-center p-[0.25rem] box-border w-[13rem] h-[13rem] text-center mq1325:min-h-[auto]`}
+      className={`rounded-2xl md:rounded-11xl [background:linear-gradient(233deg,_#1e1e1e_33.1%,_#5f5f5f_90%)] flex flex-col items-center justify-center p-[0.5rem] box-border w-[7rem] md:w-[11rem] lg:w-[13rem] h-[7rem] md:h-[11rem] lg:h-[13rem] text-center`}
     >
       <img
-        className='h-[6.25rem] w-[6.25rem] relative object-contain shrink-0'
+        className='h-[2rem] md:h-[4rem] lg:h-[6.25rem] w-[2rem] md:w-[4rem] lg:w-[6.25rem] relative object-contain shrink-0'
         alt='icon'
         src={iconImage}
         style={iconsStyle}
         loading='lazy'
       />
-      <h1 className=' text-[1.25rem] text-white font-plus-jakarta-sans'>
+      <h1 className='text-[0.8rem] md:text-base lg:text-xl text-white font-plus-jakarta-sans'>
         {title}
       </h1>
     </div>

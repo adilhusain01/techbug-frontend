@@ -64,16 +64,15 @@ const Testimonials = () => {
 
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start pt-[0rem] pl-[3.75rem] pb-[2.5rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white font-plus-jakarta-sans mq800:pl-[1.875rem] mq800:box-border`}
+      className={`self-stretch flex flex-row items-start justify-start pt-[0rem] pl-[1.5rem] md:pl-[3.75rem] pb-[2.5rem] box-border max-w-full shrink-0 text-center text-white font-plus-jakarta-sans`}
     >
-      <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full mq800:gap-[1rem]'>
-        <div className='self-stretch flex flex-row items-start justify-center py-[0rem]'>
-          <h1 className='m-0 relative text-inherit font-medium font-inherit mq800:text-[2rem] mq450:text-[1.5rem]'>
-            Our Testimonials
-          </h1>
-        </div>
+      <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full'>
+        <h1 className='self-stretch flex flex-row items-start justify-center py-[0rem] m-0 relative text-7xl md:text-13xl lg:text-21xl font-medium'>
+          Our Testimonials
+        </h1>
+
         <div
-          className='overflow-x-auto flex flex-row items-center justify-start py-[0rem] px-[0rem] box-border gap-[1.25rem] max-w-full text-left text-[1.25rem] text-text-default-default'
+          className='overflow-x-auto flex flex-row items-center justify-start py-[0rem] px-[0rem] box-border gap-[1.25rem] w-full text-left text-[1.25rem] text-text-default-default'
           style={{
             overflowX: 'hidden',
             overflowY: 'auto',
@@ -99,10 +98,8 @@ const Testimonials = () => {
             />
           ))}
         </div>
-        <div className='self-stretch flex flex-row items-start justify-center py-[0rem] px-[1.25rem] box-border max-w-full'>
-          <div className='h-[0.5rem] w-[38.625rem] bg-whitesmoke overflow-hidden shrink-0 flex flex-row items-start justify-start max-w-full'>
-            <div className='h-[0.688rem] w-[24.5rem] relative bg-gold max-w-[calc(100%_-_0px)]' />
-          </div>
+        <div className='mx-auto h-[0.5rem] w-[20rem] md:w-[38rem] bg-whitesmoke overflow-hidden shrink-0 flex flex-row items-start justify-start max-w-full'>
+          <div className='h-[0.5rem] w-[10rem] md:w-[19rem] relative bg-gold' />
         </div>
       </div>
     </section>

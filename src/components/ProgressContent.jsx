@@ -23,7 +23,7 @@ const ProgressContent = () => {
   return (
     <div>
       <div
-        className={`self-stretch grid grid-cols-2 flex-wrap items-start justify-start gap-[1.5rem] max-w-full text-left text-[2.375rem] text-white font-plus-jakarta-sans`}
+        className={`self-stretch grid grid-cols-1 lg:grid-cols-2 flex-wrap items-start justify-start gap-[1rem] md:gap-[1.5rem] w-full text-white font-plus-jakarta-sans`}
       >
         {cards.slice(0, 4).map((card) => (
           <ProgressCard

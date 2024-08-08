@@ -1,24 +1,22 @@
 const Greeting = () => {
   return (
     <div
-      className={`overflow-hidden shrink-0 flex flex-row items-start justify-start pt-[0.25rem] pb-[0.187rem] pr-[3.125rem] pl-[0.625rem] box-border relative gap-[5rem] max-w-full text-left text-[6rem] text-white font-plus-jakarta-sans mq800:gap-[2.5rem] mq1325:flex-wrap mq1325:pr-[1.563rem] mq1325:box-border mq450:gap-[1.25rem]`}
+      className={`shrink-0 flex flex-row items-center justify-center pt-[0.25rem] pb-[0.2rem] pr-[3.2rem] pl-[0.6rem] box-border relative gap-[1rem] lg:gap-[2rem] w-full text-[6rem] text-white font-plus-jakarta-sans`}
       style={{ userSelect: 'none' }}
     >
-      <h1 className='m-0 h-[7.563rem] w-[15rem] relative text-inherit font-semibold font-inherit inline-block mq800:text-[3rem] mq450:text-[1.813rem]'>
+      <h1 className='m-0 relative text-inherit font-semibold inline-block'>
         Hello
       </h1>
-      <h1 className='m-0 h-[7.563rem] w-[26.063rem] relative text-inherit font-semibold font-inherit inline-block max-w-full mq800:text-[3rem] mq450:text-[1.813rem]'>
+      <div className='h-[1.25rem] w-[1.25rem] my-auto rounded-[50%] bg-white' />
+      <h1 className='m-0 relative text-inherit font-semibold inline-block max-w-full'>
         Namaste
       </h1>
-      <div className='h-[1.25rem] w-[1.25rem] absolute !m-[0] top-[calc(50%_-_10px)] left-[17.5rem] rounded-[50%] bg-white' />
-      <div className='h-[1.25rem] w-[1.25rem] absolute !m-[0] top-[calc(50%_-_10px)] right-[36.875rem] rounded-[50%] bg-white' />
-      <div className='h-[1.25rem] w-[1.25rem] absolute !m-[0] top-[calc(50%_-_10px)] right-[18.313rem] rounded-[50%] bg-white' />
-      <div className='h-[1.25rem] w-[1.25rem] absolute !m-[0] top-[calc(50%_-_10px)] right-[0rem] rounded-[50%] bg-white' />
-      <div className='h-[0.5rem] w-[3rem] absolute !m-[0] right-[-15.5rem] bottom-[2.063rem] box-border border-t-[8px] border-solid border-white' />
-      <h1 className='m-0 w-[13.563rem] relative text-inherit font-semibold font-inherit inline-block mq800:text-[3rem] mq450:text-[1.813rem]'>
+      <div className='h-[1.25rem] w-[1.25rem] my-auto  rounded-[50%] bg-white' />
+      <h1 className='m-0 relative text-inherit font-semibold inline-block '>
         Ciao
       </h1>
-      <h1 className='m-0 w-[13.313rem] relative text-inherit font-semibold font-inherit inline-block mq800:text-[3rem] mq450:text-[1.813rem]'>
+      <div className='h-[1.25rem] w-[1.25rem] my-auto rounded-[50%] bg-white' />
+      <h1 className='m-0 relative text-inherit font-semibold inline-block '>
         Hola
       </h1>
     </div>

@@ -9,15 +9,13 @@ const TopNavBar = ({ menu, theme }) => {
 
   return (
     <div
-      className={`rounded-11xl  flex flex-row items-start justify-start p-[0.375rem] gap-[0.25rem] text-left text-[1.25rem]  font-plus-jakarta-sans mq1325:hidden`}
+      className={`rounded-11xl flex flex-row items-start justify-start p-[0.375rem] gap-[0.25rem] text-left text-[1.25rem] font-plus-jakarta-sans`}
       style={{
         backgroundColor: theme.menuBg,
       }}
     >
       <NavigationPill
         title='Home'
-        propPadding='0.75rem 2.5rem'
-        propMinWidth='3.688rem'
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/'}
         isActive={menu === 'Home'}
@@ -25,8 +23,6 @@ const TopNavBar = ({ menu, theme }) => {
       />
       <NavigationPill
         title='Work'
-        propPadding='0.75rem 2.75rem'
-        propMinWidth='3.188rem'
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/work'}
         isActive={menu === 'Work'}
@@ -34,8 +30,6 @@ const TopNavBar = ({ menu, theme }) => {
       />
       <NavigationPill
         title='Services'
-        propPadding='0.75rem 1.75rem'
-        propMinWidth='5.188rem'
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/services'}
         isActive={menu === 'Services'}
@@ -43,8 +37,6 @@ const TopNavBar = ({ menu, theme }) => {
       />
       <NavigationPill
         title='Blog'
-        propPadding='0.75rem 2.937rem'
-        propMinWidth='2.813rem'
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/blog'}
         isActive={menu === 'Blog'}
@@ -52,8 +44,6 @@ const TopNavBar = ({ menu, theme }) => {
       />
       <NavigationPill
         title='About'
-        propPadding='0.75rem 2.937rem'
-        propMinWidth='2.813rem'
         onNavigationPillContainerClick={onNavigationPillContainerClick}
         to={'/about'}
         isActive={menu === 'About'}

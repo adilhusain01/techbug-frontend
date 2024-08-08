@@ -14,7 +14,7 @@ const InputField = ({
     >
       <label
         htmlFor={name}
-        className='self-stretch relative text-[1.25rem] leading-[140%] font-semibold font-plus-jakarta-sans mq450:text-[1rem] mq450:leading-[1.375rem]'
+        className='self-stretch relative text-[1.25rem] leading-[140%] font-semibold font-plus-jakarta-sans '
         style={{ color: theme.labelColor }}
       >
         {label}

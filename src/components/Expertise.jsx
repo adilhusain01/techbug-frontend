@@ -3,11 +3,11 @@ import Box from './Box';
 const Expertise = () => {
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[9rem] box-border max-w-full shrink-0 text-center text-[4.25rem] text-gray font-plus-jakarta-sans mq800:pb-[5.875rem] mq800:box-border`}
+      className={`self-stretch flex flex-row items-start justify-start px-[0.5rem] pb-[4rem] lg:pb-[9rem] box-border shrink-0 text-center text-gray font-plus-jakarta-sans`}
     >
-      <div className='flex-1 flex flex-col items-center justify-start max-w-full'>
+      <div className='flex-1 flex flex-col items-center justify-start w-full'>
         <div
-          className="w-[88.625rem] rounded-13xl flex flex-col items-center justify-start pt-[2.5rem] px-[1.25rem] pb-[10.687rem] box-border bg-[url('/public/our-expertise@3x.png')] bg-cover bg-no-repeat bg-[top] min-h-[23.188rem] max-w-full mq450:pt-[1.625rem] mq450:pb-[6.938rem] mq450:box-border"
+          className='w-[88rem] rounded-13xl flex flex-col items-center justify-start box-border min-h-[15rem] lg:min-h-[23rem]'
           style={{
             backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/sr9yjt9w41typvkajumb)`,
             backgroundSize: 'cover',
@@ -26,21 +26,21 @@ const Expertise = () => {
               left: 0,
               width: '100%',
               height: '100%',
-              background: 'linear-gradient(to right, #F9CA06, #ED763B)', // Adjust colors as needed
-              opacity: 0.6, // Adjust opacity (0.6 for 60% darkness)
+              background: 'linear-gradient(to right, #F9CA06, #ED763B)',
+              opacity: 0.6,
             }}
           />
-          <div className='w-[72.313rem] flex flex-col items-center justify-start gap-[1.5rem] max-w-full'>
-            <h1 className='m-0 self-stretch relative text-inherit font-semibold font-inherit mq800:text-[3.375rem] mq450:text-[2.563rem]'>
+          <div className='p-0 w-full flex flex-col items-center justify-start gap-[0.75rem] lg:gap-[1.5rem]'>
+            <h1 className='m-0 self-stretch text-13xl md:text-21xl lg:text-49xl relative font-semibold font-inherit'>
               Our Expertise
             </h1>
-            <h1 className='m-0 relative text-[2.5rem] font-medium font-inherit text-left mq800:text-[2rem] mq450:text-[1.5rem]'>
+            <h1 className='m-0 relative mx-auto text-2xl md:text-7xl lg:text-21xl font-medium font-inherit tracking-tight md:tracking-normal leading-tight md:leading-normal'>
               Techbug provides a range of services to choose from, dive in!
             </h1>
           </div>
         </div>
 
-        <div className='self-stretch flex flex-row items-start justify-center pb-[3rem] gap-[4rem] z-[1] mt-[-6rem] text-[1.25rem] text-white mq1325:flex-wrap'>
+        <div className='justify-items-center grid grid-cols-3 lg:grid-cols-6 gap-[0.3rem] md:gap-[1rem] lg:gap-[4rem] pb-[3rem] z-[1] mt-[-3rem] lg:mt-[-6rem] text-white'>
           <Box
             title='Web Development & Design'
             icon={'web_icon'}

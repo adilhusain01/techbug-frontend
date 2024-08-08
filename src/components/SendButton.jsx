@@ -13,7 +13,7 @@ const SendButton = ({ color }) => {
       />
       <div className='h-[1.563rem] flex flex-col items-start justify-start pt-[0.625rem] px-[0rem] pb-[0rem] box-border'>
         <div
-          className='relative text-[1.25rem] font-medium font-plus-jakarta-sans text-left mq450:text-[1rem]'
+          className='relative text-[1.25rem] font-medium font-plus-jakarta-sans text-left'
           style={{ color: color }}
         >
           Send your enquiry

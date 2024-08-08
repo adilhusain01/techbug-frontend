@@ -31,7 +31,7 @@ const TagArticles = ({ title, tags }) => {
   return (
     <section className='p-0'>
       <div className='flex flex-row px-[8rem] py-0'>
-        <h2 className='p-0 min-w-fit self-stretch text-[3rem] font-semibold mq450:text-[1.813rem] mq825:text-[2.375rem]'>
+        <h2 className='p-0 min-w-fit self-stretch text-[3rem] font-semibold'>
           {title}
         </h2>
         <div className='p-0 w-full border-black border-t-[2px] border-solid box-border' />

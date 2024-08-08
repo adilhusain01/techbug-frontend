@@ -92,21 +92,21 @@ const FormContact = ({ theme }) => {
 
   return (
     <section
-      className={`mt-24 mb-[-1rem] py-10 w-full overflow-hidden flex flex-col items-center justify-center box-border min-w-[20rem] max-w-full shrink-0 text-center text-[2.5rem] font-plus-jakarta-sans mq800:gap-[1.25rem] mq800:pl-[9.625rem] mq800:pr-[9.625rem] mq800:box-border mq450:py-[1.938rem] mq450:px-[1.25rem] mq450:box-border mq1125:pt-[3rem] mq1125:pb-[3rem] mq1125:box-border`}
+      className={`mt-[3rem] lg:mt-[6rem] mb-[-1rem] py-[1.25rem] lg:py-[2.5rem] w-[80%] mx-auto lg:w-full overflow-hidden flex flex-col items-center justify-center box-border shrink-0 text-center text-[2.5rem] font-plus-jakarta-sans`}
       style={{
         backgroundColor: currentTheme.bg,
       }}
     >
-      <div className='w-[35.938rem] flex flex-row items-center justify-center max-w-full'>
+      <div className='w-[35rem] flex flex-row items-center justify-center'>
         <h1
-          className='m-0 relative text-inherit font-medium font-inherit mq800:text-[2rem] mq450:text-[1.5rem]'
+          className='m-0 relative text-inherit font-medium font-inherit'
           style={{ color: currentTheme.h1Color }}
         >
           Let’s get in touch
         </h1>
       </div>
       <form
-        className='flex flex-col items-center justify-center relative max-w-full text-left text-[1rem] font-body-base'
+        className='mt-[2rem] flex flex-col items-center justify-center relative max-w-full text-left text-[1rem] font-body-base'
         onSubmit={handleSubmit}
       >
         {successMessage && (
@@ -115,7 +115,7 @@ const FormContact = ({ theme }) => {
         {errorMessage && (
           <div className='mt-4 text-red-500'>{errorMessage}</div>
         )}
-        <div className='w-[51.5rem] flex flex-row flex-wrap items-start justify-start gap-[0.687rem_1.5rem] min-h-[34rem] max-w-full z-[1]'>
+        <div className='w-[51.5rem] flex flex-row flex-wrap items-start justify-start gap-[0.65rem_1.5rem] min-h-[34rem] max-w-full z-[1]'>
           <InputField
             label='Name '
             valuePlaceholder='Enter your first name'

@@ -1,25 +1,25 @@
 import PropTypes from 'prop-types';
 
 const Review = ({ name, designation, image_uri, review }) => (
-  <article className='w-[43.063rem] rounded-xl bg-whitesmoke overflow-hidden shrink-0 flex flex-col items-start justify-start py-[4rem] px-[3rem] box-border max-w-full mq800:pl-[1.5rem] mq800:pr-[1.5rem] mq800:box-border'>
-    <div className='self-stretch flex flex-row items-center justify-start gap-[2rem] max-w-full mq800:flex-wrap mq800:gap-[1rem]'>
-      <div className='w-[10.25rem] flex flex-col items-center justify-start gap-[0.5rem] min-w-[10.25rem] mq800:flex-1'>
+  <article className='w-[20rem] md:w-[35rem] lg:w-[43rem] rounded-xl bg-whitesmoke overflow-hidden shrink-0 flex flex-col items-start justify-start py-[1rem] md:py-[2rem] lg:py-[4rem] px-[0.5rem] md:px-[2rem] lg:px-[3rem] box-border'>
+    <div className='self-stretch flex flex-row items-center justify-start gap-[0.5rem] md:gap-[2rem]'>
+      <div className='w-[5rem] md:w-[10.25rem] flex flex-col items-center justify-start gap-[0.5rem] min-w-[8rem] md:min-w-[10.25rem]'>
         <img
-          className='w-[7.313rem] h-[7.313rem] relative rounded-[50%] object-cover'
+          className='w-[4.5rem] md:w-[7.313rem] h-[4.5rem] md:h-[7.313rem] relative rounded-[50%] object-cover'
           loading='lazy'
           alt={name}
           src={image_uri}
         />
         <div className='self-stretch flex flex-col items-center justify-start gap-[0.125rem]'>
-          <div className='self-stretch h-[1.563rem] relative font-semibold inline-block mq450:text-[1rem]'>
+          <div className='text-center text-lg self-stretch relative font-semibold inline-block'>
             {name}
           </div>
-          <div className='self-stretch h-[1.25rem] relative text-[1rem] font-semibold text-dimgray-200 text-center inline-block'>
+          <div className='text-center text-[0.9rem] md:text-[1rem] self-stretch relative font-semibold text-dimgray-200 inline-block'>
             {designation}
           </div>
         </div>
       </div>
-      <blockquote className='m-0 h-[12.375rem] flex-1 relative text-[1.625rem] font-medium inline-block min-w-[16.125rem] max-w-full mq450:text-[1.313rem]'>
+      <blockquote className='m-0 my-auto flex-1 relative text-[0.9rem] md:text-xl lg:text-7xl font-medium inline-block min-w-[12rem] md:min-w-[16.125rem] tracking-tight md:tracking:normal leading-tight md:leading-normal'>
         {review}
       </blockquote>
     </div>

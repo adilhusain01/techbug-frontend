@@ -30,7 +30,7 @@ const LatestArticles = () => {
   return (
     <section className='w-full'>
       <div className='flex flex-row px-[8rem] py-0'>
-        <h1 className='min-w-[25rem] self-stretch  text-[3rem] font-semibold mq450:text-[1.813rem] mq825:text-[2.375rem]'>
+        <h1 className='min-w-[25rem] self-stretch  text-[3rem] font-semibold'>
           Latest Articles
         </h1>
         <div className='w-full border-black border-t-[2px] border-solid box-border' />

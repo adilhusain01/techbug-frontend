@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer
-      className={`self-stretch bg-gray overflow-hidden flex flex-col items-start justify-end py-[5.5rem] px-[3.75rem] box-border gap-[1.5rem] max-w-full shrink-0 text-left text-[1rem] text-darkgray font-plus-jakarta-sans mq800:pl-[1.875rem] mq800:pr-[1.875rem] mq800:box-border`}
+      className={`self-stretch bg-gray overflow-hidden flex flex-col items-start justify-end py-[5.5rem] px-[3.75rem] box-border gap-[1.5rem] max-w-full shrink-0 text-left text-[1rem] text-darkgray font-plus-jakarta-sans`}
     >
       <img
         className='w-[15rem] h-[3.063rem] relative overflow-hidden shrink-0'
@@ -9,8 +9,8 @@ const Footer = () => {
         alt='logo'
         src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/techbug_logo'
       />
-      <div className='self-stretch flex flex-row items-end justify-between max-w-full gap-[1.25rem] mq800:flex-wrap'>
-        <div className='flex flex-row items-start justify-start gap-[1.5rem] max-w-full mq800:flex-wrap'>
+      <div className='self-stretch flex flex-row items-end justify-between max-w-full gap-[1.25rem] '>
+        <div className='flex flex-row items-start justify-start gap-[1.5rem] max-w-full'>
           <div className='flex flex-row items-center justify-center gap-[0.75rem]'>
             <img
               className='h-[2rem] w-[2rem] relative overflow-hidden shrink-0'
@@ -69,7 +69,7 @@ const Footer = () => {
           />
         </div>
       </div>
-      <div className='self-stretch flex flex-row items-start justify-between max-w-full gap-[1.25rem] mq1125:flex-wrap'>
+      <div className='self-stretch flex flex-row items-start justify-between max-w-full gap-[1.25rem] '>
         <div className='flex flex-row items-start justify-start py-[0rem] pr-[0.937rem] pl-[0rem] gap-[1.437rem]'>
           <a
             href=''
