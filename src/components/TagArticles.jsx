@@ -55,7 +55,7 @@ const TagArticles = ({ title, tags }) => {
               <img
                 className='self-stretch h-[14.25rem] max-w-full overflow-hidden shrink-0 object-cover'
                 loading='lazy'
-                alt=''
+                alt={post.title}
                 src={post.thumbnail}
               />
               <div className='self-stretch flex flex-col items-start justify-start mt-2'>
@@ -87,7 +87,7 @@ const TagArticles = ({ title, tags }) => {
               <img
                 className='self-stretch h-[14.25rem] max-w-full overflow-hidden shrink-0 object-cover'
                 loading='lazy'
-                alt=''
+                alt={post.title}
                 src={post.thumbnail}
               />
               <div className='self-stretch flex flex-col items-start justify-start mt-2'>

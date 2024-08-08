@@ -10,7 +10,7 @@ const Founders = () => {
         <img
           className='w-[35.625rem] relative rounded-xl max-h-full object-cover max-w-full mq1350:flex-1'
           loading='lazy'
-          alt=''
+          alt='Founder1'
           src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/team-founders/tj1w87bhm6iee3pafvgj'
         />
         <div className='flex-1 flex flex-col items-start justify-start min-w-[24.688rem] max-w-full gap-[1rem] mq800:min-w-full'>
@@ -32,7 +32,7 @@ const Founders = () => {
         <img
           className='w-[35.625rem] relative rounded-xl max-h-full object-cover max-w-full mq1125:flex-1'
           loading='lazy'
-          alt=''
+          alt='Founder2'
           src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/team-founders/jeagajwhx65ymyxkqn8o'
         />
       </div>

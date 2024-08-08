@@ -36,7 +36,7 @@ const ServiceCard = ({ title, image, description, features, index }) => {
           <img
             className='w-[40.5rem] relative rounded-11xl max-h-full overflow-hidden shrink-0 object-cover max-w-full mq1425:flex-1'
             loading='lazy'
-            alt=''
+            alt={title}
             src={image}
           />
         </>
@@ -45,7 +45,7 @@ const ServiceCard = ({ title, image, description, features, index }) => {
           <img
             className='w-[40.5rem] relative rounded-11xl max-h-full overflow-hidden shrink-0 object-cover max-w-full mq1425:flex-1'
             loading='lazy'
-            alt=''
+            alt={title}
             src={image}
           />
           <div className='w-[40.063rem] flex flex-col items-start justify-start py-[1.25rem] px-[0rem] box-border gap-[3rem] min-w-[40.063rem] max-w-full  mq825:min-w-full mq1425:flex-1'>

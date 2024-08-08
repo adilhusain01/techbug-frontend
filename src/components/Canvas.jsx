@@ -6,7 +6,7 @@ const Canvas = () => {
       <div className='w-[59.375rem] flex flex-col items-center justify-center  max-w-full '>
         <img
           src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/i5i7jzsvgjo8tv9fasb4'
-          alt=''
+          alt='canvas'
           className='rounded-[2rem]'
         />
         <div className='mt-[4rem] self-stretch flex flex-row items-start justify-start py-[0rem] px-[2.812rem] box-border max-w-full text-center text-[3rem] text-white lg:pl-[1.375rem] lg:pr-[1.375rem] lg:box-border'>

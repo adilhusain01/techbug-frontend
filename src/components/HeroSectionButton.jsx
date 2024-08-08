@@ -5,7 +5,7 @@ const HeroSectionButton = () => {
     >
       <img
         className='h-[3rem] w-[3rem] relative rounded-117xl overflow-hidden shrink-0'
-        alt=''
+        alt='arrow'
         src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ytryrgkpxv17uwjulsye'
       />
       <div className='flex flex-col items-start justify-start pt-[0.625rem] px-[0rem] pb-[0rem]'>

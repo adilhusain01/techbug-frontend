@@ -35,7 +35,7 @@ const Header = ({ menu, theme }) => {
           <img
             className='self-stretch flex-1 relative max-w-full overflow-hidden max-h-full object-cover'
             loading='lazy'
-            alt=''
+            alt='logo'
             src={currentTheme.logo}
           />
         </div>

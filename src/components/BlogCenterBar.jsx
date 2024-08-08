@@ -33,7 +33,7 @@ function BlogCenterBar({ post }) {
                 <img
                   key={index}
                   src={item.image_uri}
-                  alt={`Image ${index}`}
+                  alt={post.title}
                   className='self-stretch relative my-[2rem]'
                 />
               );

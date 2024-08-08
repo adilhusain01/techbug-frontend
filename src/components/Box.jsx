@@ -44,7 +44,7 @@ const Box = ({ title, icon, propOverflow }) => {
     >
       <img
         className='h-[6.25rem] w-[6.25rem] relative object-contain shrink-0'
-        alt=''
+        alt='icon'
         src={iconImage}
         style={iconsStyle}
         loading='lazy'

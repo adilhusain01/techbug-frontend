@@ -49,7 +49,7 @@ const Home = () => {
             <img
               className='h-[600px] w-[600px] rounded-[60px] object-cover'
               loading='lazy'
-              alt=''
+              alt='office'
               src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/wgdo3slwrcib7ltszr1x'
             />
           </div>

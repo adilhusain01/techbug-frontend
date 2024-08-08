@@ -148,7 +148,7 @@ function NewsLetter({ theme }) {
               <div className='flex flex-row items-start justify-start gap-[0.5rem]'>
                 <img
                   className='w-[2.5rem] relative h-[2.5rem] object-cover'
-                  alt=''
+                  alt={article.name}
                   src={article.imageUrl}
                 />
                 <span className='w-[14.625rem] flex flex-col items-start justify-start gap-[0.5rem]'>
@@ -162,7 +162,7 @@ function NewsLetter({ theme }) {
               </div>
               <img
                 className='w-[2.125rem] relative h-[2.125rem] object-cover'
-                alt='add'
+                alt='Add'
                 src={
                   selectedArticles[article.name]
                     ? checkMarkUrl

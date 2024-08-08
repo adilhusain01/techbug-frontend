@@ -6,7 +6,7 @@ const Footer = () => {
       <img
         className='w-[15rem] h-[3.063rem] relative overflow-hidden shrink-0'
         loading='lazy'
-        alt=''
+        alt='logo'
         src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/techbug_logo'
       />
       <div className='self-stretch flex flex-row items-end justify-between max-w-full gap-[1.25rem] mq800:flex-wrap'>
@@ -15,7 +15,7 @@ const Footer = () => {
             <img
               className='h-[2rem] w-[2rem] relative overflow-hidden shrink-0'
               loading='lazy'
-              alt=''
+              alt='Phone'
               src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/dx1ruiicql3ybkjepewn'
             />
             <div className='flex flex-col items-start justify-center gap-[0.25rem]'>
@@ -29,7 +29,7 @@ const Footer = () => {
             <img
               className='h-[2rem] w-[2rem] relative overflow-hidden shrink-0'
               loading='lazy'
-              alt=''
+              alt='Mail'
               src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/dfensk6qbd5yogbwoghg'
             />
             <div className='flex flex-col items-start justify-center gap-[0.25rem]'>
@@ -46,25 +46,25 @@ const Footer = () => {
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
-            alt=''
+            alt='Twitter'
             src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/ffhbq1vdrm87fd9xnkhr'
           />
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
-            alt=''
+            alt='Instagram'
             src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/xxtxxdtd5s24v9gdohaj'
           />
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
-            alt=''
+            alt='Youtube'
             src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/gz2akfvqeoinmxmxcxlm'
           />
           <img
             className='h-[1.5rem] w-[1.5rem] relative object-cover min-h-[1.5rem]'
             loading='lazy'
-            alt=''
+            alt='Linkedin'
             src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/socials/ejf1cub7byf8xl8bbakt'
           />
         </div>

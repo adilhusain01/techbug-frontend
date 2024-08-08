@@ -10,19 +10,19 @@ function Team() {
             <img
               className='self-stretch w-[25rem] relative max-h-full shrink-0 object-cover min-h-[25rem] max-w-full'
               loading='lazy'
-              alt=''
+              alt='member1'
               src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/team-founders/lxsknozh7b8zuvnxgyge'
             />
             <img
               className='self-stretch w-[25rem] relative max-h-full shrink-0 object-cover min-h-[25rem] max-w-full'
               loading='lazy'
-              alt=''
+              alt='member2'
               src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/team-founders/lzv0gp00mvjgubvmeabq'
             />
             <img
               className='self-stretch w-[25rem] relative max-h-full shrink-0 object-cover min-h-[25rem] max-w-full'
               loading='lazy'
-              alt=''
+              alt='member3'
               src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/team-founders/bpka6wcgbn9k6zfhcjmd'
             />
           </div>
