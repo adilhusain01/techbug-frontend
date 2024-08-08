@@ -28,6 +28,7 @@ const TextareaField = ({ theme, label, name, value, onChange }) => {
           value={value}
           onChange={onChange}
           style={{ color: theme.inputTextColor }}
+          autoComplete='off'
         />
       </div>
     </div>

@@ -1,36 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NewsSlider from './NewsSlider';
 import LatestArticlesGroup from './LatestArticlesGroup';
+import axios from '../api/axios';
 
 function BlogHead() {
+  const [tags, setTags] = useState([]);
+  const [selectedTag, setSelectedTag] = useState('All Posts');
+
+  const getTags = async () => {
+    try {
+      const response = await axios.get('/tags');
+      setTags(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    getTags();
+  }, []);
+
+  const handleTagClick = (tag) => {
+    setSelectedTag(tag);
+  };
+
   return (
     <section className='w-full'>
       <div className='mt-[8rem] flex flex-row items-start justify-start py-[0rem] px-[5rem] box-border max-w-full'>
         <div className='flex flex-col items-start justify-start gap-[0.5rem] max-w-full'>
-          <div className='text-white text-2xl flex flex-row items-start justify-start gap-[2rem] lg:flex-wrap'>
-            <div className='relative font-medium text-[#F9CA06] inline-block min-w-[5.063rem] z-[1] mq450:text-[1rem]'>
+          <div className='text-white text-2xl flex flex-row items-start justify-start gap-[1.5rem] lg:flex-wrap'>
+            <p
+              className={`m-0 pb-4 relative font-medium inline-block mq450:text-[1rem] ${
+                selectedTag === 'All Posts'
+                  ? 'text-[#F9CA06] border-[#F9CA06] border-b-[2px] border-solid '
+                  : ''
+              }`}
+              onClick={() => handleTagClick('All Posts')}
+            >
               All Posts
-            </div>
-            <div className='relative font-semibold inline-block min-w-[5.25rem] z-[1] mq450:text-[1rem]'>
-              WebDev
-            </div>
-            <a className='[text-decoration:none] relative font-semibold text-[inherit] inline-block min-w-[4.938rem] z-[1] mq450:text-[1rem]'>
-              AppDev
-            </a>
-            <div className='relative font-semibold z-[1] mq450:text-[1rem]'>
-              Digital Marketing
-            </div>
-            <div className='relative font-semibold z-[1] mq450:text-[1rem]'>
-              Smart Business Cards
-            </div>
-            <div className='relative font-semibold z-[1] mq450:text-[1rem]'>
-              Software Solutions
-            </div>
+            </p>
+            {tags.map((tag) => (
+              <p
+                key={tag._id}
+                className={`m-0 pb-4 relative font-semibold inline-block mq450:text-[1rem] ${
+                  selectedTag === tag.name
+                    ? 'text-[#F9CA06] border-[#F9CA06] border-b-[2px] border-solid '
+                    : ''
+                }`}
+                onClick={() => handleTagClick(tag.name)}
+              >
+                {tag.name}
+              </p>
+            ))}
           </div>
-          <div className='w-[5.438rem] h-[0.125rem] relative border-[#F9CA06] border-t-[2px] border-solid box-border z-[1]' />
         </div>
       </div>
-
       <NewsSlider />
 
       <LatestArticlesGroup />

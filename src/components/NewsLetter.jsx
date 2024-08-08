@@ -52,6 +52,13 @@ function NewsLetter({ theme }) {
   };
 
   const handleSubscribe = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setErrorMessage('Please enter a valid email address.');
+      setSuccessMessage('');
+      return;
+    }
+
     try {
       const response = await axios.post('/newsletters', {
         email: email,
@@ -181,6 +188,7 @@ function NewsLetter({ theme }) {
               placeholder='Enter your email id'
               value={email}
               onChange={handleEmailChange}
+              autoComplete='off'
             />
           </div>
           <button

@@ -17,14 +17,30 @@ const FormContact = ({ theme }) => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^\+?[1-9]\d{1,9}$/;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    let error = '';
+
+    // Validation
+    if (name === 'email' && !emailRegex.test(value)) {
+      error = 'Invalid email format';
+    } else if (name === 'phone' && !phoneRegex.test(value)) {
+      error = 'Invalid phone number format';
+    } else if (value.length > 100) {
+      error = 'Input exceeds maximum length of 100 characters';
+    }
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
+
+    setErrorMessage(error);
     setSuccessMessage('');
-    setErrorMessage('');
   };
 
   const handleSubmit = async (e) => {
