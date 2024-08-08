@@ -1,11 +1,11 @@
 import React, { lazy, Suspense } from 'react';
 
 const Header = lazy(() => import('../components/Header'));
-const FormContact = lazy(() => import('../components/FormContact'));
-const Footer = lazy(() => import('../components/Footer'));
-const BrandLogoGrid = lazy(() => import('../components/BrandLogoGrid'));
 const Canvas = lazy(() => import('../components/Canvas'));
 const ServiceSection = lazy(() => import('../components/ServiceSection'));
+const BrandLogoGrid = lazy(() => import('../components/BrandLogoGrid'));
+const FormContact = lazy(() => import('../components/FormContact'));
+const Footer = lazy(() => import('../components/Footer'));
 
 const Services = () => {
   return (

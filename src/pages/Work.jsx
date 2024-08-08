@@ -1,9 +1,9 @@
 import React, { lazy, Suspense } from 'react';
 
 const Header = lazy(() => import('../components/Header'));
+const WorkMenu = lazy(() => import('../components/WorkMenu'));
 const FormContact = lazy(() => import('../components/FormContact'));
 const Footer = lazy(() => import('../components/Footer'));
-const WorkMenu = lazy(() => import('../components/WorkMenu'));
 
 const Work = () => {
   return (

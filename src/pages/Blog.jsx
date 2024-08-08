@@ -1,11 +1,11 @@
 import React, { lazy, Suspense } from 'react';
 
 const Header = lazy(() => import('../components/Header'));
+const BlogHead = lazy(() => import('../components/BlogHead'));
 const TagArticles = lazy(() => import('../components/TagArticles'));
 const NewsLetter = lazy(() => import('../components/NewsLetter'));
 const FormContact = lazy(() => import('../components/FormContact'));
 const Footer = lazy(() => import('../components/Footer'));
-const BlogHead = lazy(() => import('../components/BlogHead'));
 
 const Blog = () => {
   return (

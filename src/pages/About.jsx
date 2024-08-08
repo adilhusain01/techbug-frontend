@@ -1,11 +1,11 @@
 import React, { lazy, Suspense } from 'react';
 
 const Header = lazy(() => import('../components/Header'));
+const Achievements = lazy(() => import('../components/Achievements'));
 const Founders = lazy(() => import('../components/Founders'));
+const Team = lazy(() => import('../components/Team'));
 const FormContact = lazy(() => import('../components/FormContact'));
 const Footer = lazy(() => import('../components/Footer'));
-const Achievements = lazy(() => import('../components/Achievements'));
-const Team = lazy(() => import('../components/Team'));
 
 const About = () => {
   return (
