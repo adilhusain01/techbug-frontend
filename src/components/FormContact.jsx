@@ -42,13 +42,11 @@ const FormContact = ({ theme }) => {
           message: '',
         });
       } else {
-        setErrorMessage('Unexpected response from the server.');
+        setErrorMessage(response.data.message || 'An error occurred');
         setSuccessMessage('');
       }
     } catch (error) {
-      setErrorMessage(
-        'There was an error sending your message. Please try again.'
-      );
+      setErrorMessage(error.response?.data?.message || 'An error occurred.');
       setSuccessMessage('');
     }
   };
