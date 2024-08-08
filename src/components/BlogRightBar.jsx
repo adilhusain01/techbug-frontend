@@ -1,18 +1,11 @@
-import { useCallback } from 'react';
-import about from '../assets/about.png';
-
 function BlogRightBar() {
-  const onLEARNMORETextClick = useCallback(() => {
-    // Please sync "About Us" to the project
-  }, []);
-
   return (
     <div className='col-span-3 gap-[1rem] text-[1rem] px-[8rem]'>
       <img
         className='self-stretch h-[14.25rem] relative max-w-full overflow-hidden shrink-0 object-cover'
         loading='lazy'
-        alt=''
-        src={about}
+        alt='about'
+        src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/rxttnatldfyhcvibtlkw'
       />
       <div className='self-stretch flex flex-col items-start justify-start gap-[3.125rem]'>
         <div className='self-stretch flex flex-col items-start justify-start gap-[1rem]'>
@@ -28,12 +21,9 @@ function BlogRightBar() {
               Website Layouts Best Practices for Web Page Layout Design
             </p>
           </div>
-          <div
-            className='relative text-[0.625rem] font-semibold text-yellow inline-block min-w-[4.063rem] whitespace-nowrap cursor-pointer text-[#F9CA06]'
-            onClick={onLEARNMORETextClick}
-          >
+          <h2 className='relative text-[0.625rem] font-semibold text-yellow inline-block min-w-[4.063rem] whitespace-nowrap cursor-pointer text-[#F9CA06]'>
             LEARN MORE
-          </div>
+          </h2>
         </div>
         <div className='self-stretch flex flex-row items-start justify-start py-[0rem] px-[1.937rem]'>
           <div className='flex-1 flex flex-col items-start justify-start gap-[0.562rem]'>
