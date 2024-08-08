@@ -1,11 +1,13 @@
-import Header from '../components/Header';
-import Founders from '../components/Founders';
-import FormContact from '../components/FormContact';
-import Footer from '../components/Footer';
-import Achievements from '../components/Achievements';
-import Team from '../components/Team';
+import React, { lazy, Suspense } from 'react';
 
-const Home = () => {
+const Header = lazy(() => import('../components/Header'));
+const Founders = lazy(() => import('../components/Founders'));
+const FormContact = lazy(() => import('../components/FormContact'));
+const Footer = lazy(() => import('../components/Footer'));
+const Achievements = lazy(() => import('../components/Achievements'));
+const Team = lazy(() => import('../components/Team'));
+
+const About = () => {
   return (
     <main
       className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal] mq1125:h-auto'
@@ -15,7 +17,9 @@ const Home = () => {
     >
       <section className='self-stretch flex flex-row items-start justify-start box-border max-w-full shrink-0 mq800:pb-[4.25rem] mq800:box-border mq1325:pb-[6.5rem] mq1325:box-border'>
         <div className="flex-1 flex flex-col items-start justify-start px-[3.75rem]  box-border gap-[14.531rem] bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq800:gap-[7.25rem] mq800:pt-[1.25rem] mq800:px-[1.875rem] mq800:pb-[8.875rem] mq800:box-border mq450:gap-[3.625rem] mq1125:pt-[1.938rem] mq1125:pb-[13.688rem] mq1125:box-border">
-          <Header menu={'About'} theme={'dark'} />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Header menu={'About'} theme={'dark'} />
+          </Suspense>
 
           <section className='self-stretch bg-gray flex flex-col items-start justify-start px-[3.75rem] box-border  max-w-full text-center text-[6.375rem] font-plus-jakarta-sans  mq800:pl-[1.875rem] mq800:pr-[1.875rem] mq800:box-border gap-[2.688rem]'>
             <div className='self-stretch flex flex-row items-start justify-center max-w-full'>
@@ -39,11 +43,15 @@ const Home = () => {
       </section>
 
       <section className='pl-10 pt-24 pb-8 self-stretch flex flex-col items-start justify-start box-border gap-[2rem] max-w-full text-left text-[9.375rem] text-black bg-white font-plus-jakarta-sans'>
-        <Achievements />
-        <Founders />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Achievements />
+          <Founders />
+        </Suspense>
       </section>
 
-      <Team />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Team />
+      </Suspense>
 
       <section className='w-full m-0 p-0'>
         <img
@@ -54,10 +62,12 @@ const Home = () => {
         />
       </section>
 
-      <FormContact theme={'white'} />
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <FormContact theme={'white'} />
+        <Footer />
+      </Suspense>
     </main>
   );
 };
 
-export default Home;
+export default About;

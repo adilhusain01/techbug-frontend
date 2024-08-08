@@ -1,12 +1,13 @@
-import Header from '../components/Header';
-import HeroContent from '../components/HeroContent';
-import Expertise from '../components/Expertise';
-import ProgressContent from '../components/ProgressContent';
+import React, { lazy, Suspense } from 'react';
 
-import Testimonials from '../components/Testimonials';
-import DesktopTablet from '../components/DesktopTablet';
-import FormContact from '../components/FormContact';
-import Footer from '../components/Footer';
+const Header = lazy(() => import('../components/Header'));
+const HeroContent = lazy(() => import('../components/HeroContent'));
+const Expertise = lazy(() => import('../components/Expertise'));
+const ProgressContent = lazy(() => import('../components/ProgressContent'));
+const Testimonials = lazy(() => import('../components/Testimonials'));
+const DesktopTablet = lazy(() => import('../components/DesktopTablet'));
+const FormContact = lazy(() => import('../components/FormContact'));
+const Footer = lazy(() => import('../components/Footer'));
 
 const Home = () => {
   return (
@@ -38,8 +39,10 @@ const Home = () => {
           }}
         />
         <div className="flex-1 flex flex-col items-start justify-start px-[3.75rem] pb-[21.093rem] box-border gap-[14.531rem] bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full mq800:gap-[7.25rem] mq800:pt-[1.25rem] mq800:px-[1.875rem] mq800:pb-[8.875rem] mq800:box-border mq450:gap-[3.625rem] mq1125:pt-[1.938rem] mq1125:pb-[13.688rem] mq1125:box-border">
-          <Header menu={'Home'} theme={'dark'} />
-          <HeroContent />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Header menu={'Home'} theme={'dark'} />
+            <HeroContent />
+          </Suspense>
         </div>
       </section>
 
@@ -63,22 +66,32 @@ const Home = () => {
         </div>
       </section>
 
-      <Expertise />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Expertise />
+      </Suspense>
 
       <section className='self-stretch flex flex-row items-start justify-start pt-[0rem] px-[3.75rem] pb-[11.5rem] box-border max-w-full shrink-0 mq800:pl-[1.875rem] mq800:pr-[1.875rem] mq800:pb-[4.875rem] mq800:box-border mq1325:pb-[7.5rem] mq1325:box-border'>
         <div className='flex-1 flex flex-col items-start justify-start gap-[1.5rem] max-w-full'>
-          <ProgressContent />
+          <Suspense fallback={<div>Loading...</div>}>
+            <ProgressContent />
+          </Suspense>
         </div>
       </section>
 
-      <Testimonials />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Testimonials />
+      </Suspense>
 
       <section className='overflow-hidden flex flex-row items-start justify-start pt-[2.75rem] pb-[3.25rem] pr-[0rem] pl-[1rem] box-border min-w-full shrink-0'>
-        <DesktopTablet />
+        <Suspense fallback={<div>Loading...</div>}>
+          <DesktopTablet />
+        </Suspense>
       </section>
 
-      <FormContact theme={'white'} />
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <FormContact theme={'white'} />
+        <Footer />
+      </Suspense>
     </main>
   );
 };
