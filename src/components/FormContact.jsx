@@ -73,7 +73,7 @@ const FormContact = ({ theme }) => {
       h1Color: '#1e1e1e',
       labelColor: '#1e1e1e',
       inputBg: '#313131',
-      inputTextColor: '#e8e8e8',
+      inputTextColor: '#696565',
       inputBorderColor: '#d9d9d9',
       buttonColor: '#1e1e1e',
     },

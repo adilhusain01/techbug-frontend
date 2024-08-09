@@ -29,7 +29,7 @@ const InputField = ({
       >
         <input
           id={name}
-          className='w-full [border:none] [outline:none] font-medium font-plus-jakarta-sans text-[0.8rem] md:text-[1.125rem] bg-[transparent] min-h-fit flex-1 relative leading-[100%] text-dimgray-300 text-left inline-block min-w-[15.625rem] max-w-full p-0'
+          className={`w-full [border:none] [outline:none] font-medium font-plus-jakarta-sans text-[0.8rem] md:text-[1.125rem] bg-[transparent] min-h-fit flex-1 relative leading-[100%] p-0`}
           placeholder={valuePlaceholder}
           type='text'
           name={name}

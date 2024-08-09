@@ -11,10 +11,10 @@ const ProgressCard = ({ title, image_uri, description }) => (
       />
     </div>
     <div className='self-stretch flex flex-col items-start justify-start gap-0 md:gap-[1.5rem]'>
-      <h2 className='m-0 self-stretch relative text-2xl md:text-11xl lg:text-19xl leading-[2.875rem] font-semibold font-inherit text-transparent !bg-clip-text [background:linear-gradient(90deg,_#f9ca06,_#ed763b),_#fff]'>
+      <h2 className='m-0 self-stretch relative text-2xl md:text-11xl lg:text-19xl leading-[2.875rem] font-semibold font-inherit text-transparent !bg-clip-text [background:linear-gradient(90deg,_#f9ca06,_#ed763b),_#fff] text-center lg:text-left'>
         {title}
       </h2>
-      <h3 className='m-0 text-center self-stretch relative text-base md:text-2xl lg:text-9xl leading-tight md:leading-[140%] tracking-tight md:tracking:normal font-normal font-inherit'>
+      <h3 className='m-0 text-center lg:text-left self-stretch relative text-base md:text-2xl lg:text-9xl leading-tight md:leading-[140%] tracking-tight md:tracking:normal font-normal font-inherit'>
         {description}
       </h3>
     </div>
