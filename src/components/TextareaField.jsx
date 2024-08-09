@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 const TextareaField = ({ theme, label, name, value, onChange }) => {
   return (
     <div
-      className={`w-[51.438rem] flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem] font-body-base`}
+      className={`w-full flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem] font-body-base`}
     >
       <label
         htmlFor={name}
-        className='self-stretch relative text-[1.25rem] leading-[140%] font-semibold font-plus-jakarta-sans '
+        className='self-stretch relative text-[1rem] md:text-[1.25rem] leading-[140%] font-semibold font-plus-jakarta-sans '
         style={{ color: theme.labelColor }}
       >
         {label}
@@ -22,7 +22,7 @@ const TextareaField = ({ theme, label, name, value, onChange }) => {
       >
         <textarea
           id={name}
-          className='w-[calc(100%_-_52.6px)] [border:none] [outline:none] font-medium font-plus-jakarta-sans text-[1.125rem] bg-[transparent] h-[1.125rem] flex-1 relative leading-[100%] text-left inline-block min-w-[15.625rem] max-w-full p-0'
+          className='min-h-fit [border:none] [outline:none] font-medium font-plus-jakarta-sans text-[1rem] md:text-[1.125rem] bg-[transparent] flex-1 relative leading-[100%] text-left inline-block min-w-[15.625rem] max-w-full p-0'
           placeholder='Tell us more about your projects, needs, and timeline.'
           name={name}
           value={value}

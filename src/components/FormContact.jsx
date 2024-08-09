@@ -99,7 +99,7 @@ const FormContact = ({ theme }) => {
     >
       <div className='w-[35rem] flex flex-row items-center justify-center'>
         <h1
-          className='m-0 relative text-inherit font-medium font-inherit text-[2.1rem] md:text-[2.5rem]'
+          className='m-0 relative font-medium font-inherit text-[1.5rem] md:text-[2.5rem]'
           style={{ color: currentTheme.h1Color }}
         >
           Let’s get in touch
@@ -115,7 +115,7 @@ const FormContact = ({ theme }) => {
         {errorMessage && (
           <div className='mt-4 text-red-500'>{errorMessage}</div>
         )}
-        <div className='w-[51.5rem] flex flex-row flex-wrap items-start justify-start gap-[0.65rem_1.5rem] min-h-[34rem] max-w-full z-[1]'>
+        <div className='w-[50rem] flex flex-row flex-wrap items-start justify-start gap-[0.65rem_1.5rem] max-w-full z-[1]'>
           <InputField
             label='Name '
             valuePlaceholder='Enter your first name'

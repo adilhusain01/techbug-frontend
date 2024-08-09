@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
 const Review = ({ name, designation, image_uri, review }) => (
-  <article className='w-[20rem] md:w-[35rem] lg:w-[43rem] rounded-xl bg-whitesmoke overflow-hidden shrink-0 flex flex-col items-start justify-start py-[1rem] md:py-[2rem] lg:py-[4rem] px-[0.5rem] md:px-[2rem] lg:px-[3rem] box-border'>
+  <article className='w-[20rem] md:w-[35rem] lg:w-[43rem] rounded-xl bg-whitesmoke overflow-hidden shrink-0 flex flex-col items-start justify-start py-[1.5rem] md:py-[2rem] lg:py-[4rem] px-[0.5rem] md:px-[2rem] lg:px-[3rem] box-border'>
     <div className='flex flex-row items-center justify-start gap-[0.5rem] md:gap-[2rem]'>
-      <div className='min-w-fit md:w-[10.25rem] flex flex-col items-center justify-start gap-[0.5rem] min-w-[8rem] md:min-w-[10.25rem]'>
+      <div className='min-w-fit md:w-[10.25rem] flex flex-col items-center justify-start gap-[0.5rem] md:min-w-[10.25rem]'>
         <img
           className='w-[4rem] md:w-[7.313rem] h-[4rem] md:h-[7.313rem] relative rounded-[50%] object-cover'
           loading='lazy'
