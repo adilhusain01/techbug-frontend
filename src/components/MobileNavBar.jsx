@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function MobileNavBar({ menu }) {
   return (
-    <div className='text-[1.5rem] md:text-[2rem] mt-20 md:mt-28 flex flex-col items-center justify-center gap-[1.5rem] md:gap-[2rem] p-[1rem]'>
+    <div className='text-[1.5rem] md:text-[1.8rem] lg:text-[2rem] mt-20 md:mt-28 flex flex-col items-center justify-center gap-[1.5rem] md:gap-[2rem] p-[1rem]'>
       <div className='flex flex-row items-center justify-center px-[1.5rem]'>
         <div className='flex-1 flex flex-col items-start justify-start gap-[1.5rem] md:gap-[2rem]'>
           <Link
@@ -59,7 +59,7 @@ function MobileNavBar({ menu }) {
         </div>
       </div>
       <p
-        className='m-0 flex flex-col items-center justify-center py-[1rem] px-[2rem]  rounded-[10rem]'
+        className='m-0 text-[1.3rem] md:text-[2rem] py-[0.8rem] px-[2rem] font-medium rounded-[10rem]'
         style={{
           backgroundColor: '#FFFFFF',
           color: '#000000',

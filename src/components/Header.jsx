@@ -72,7 +72,6 @@ const Header = ({ menu, theme }) => {
               alt='logo'
               src={currentTheme.logo}
             />
-            1
           </Link>
           <img
             className='m-0 p-0 h-[2rem] w-[2rem]'

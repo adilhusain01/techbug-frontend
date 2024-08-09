@@ -10,7 +10,7 @@ const InputField = ({
 }) => {
   return (
     <div
-      className={`w-[50rem] flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-[1rem] font-body-base`}
+      className={`w-[50rem] flex flex-col items-start justify-start gap-[0.5rem] max-w-full font-body-base`}
     >
       <label
         htmlFor={name}
@@ -21,7 +21,7 @@ const InputField = ({
       </label>
 
       <div
-        className='self-stretch rounded-xl  box-border overflow-hidden flex flex-row items-center justify-start py-[0.6rem] md:py-[0.8rem] lg:py-[1rem] px-[1.2rem] md:px-[1.5rem] min-w-[15rem] max-w-full border-[1px]'
+        className='self-stretch rounded-xl  box-border overflow-hidden flex flex-row items-center justify-start py-[0.6rem] md:py-[0.8rem] lg:py-[1rem] px-[1.2rem] md:px-[1.5rem] border-[1px]'
         style={{
           backgroundColor: theme.inputBg,
           borderColor: theme.inputBorderColor,
