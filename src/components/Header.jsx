@@ -72,6 +72,7 @@ const Header = ({ menu, theme }) => {
               alt='logo'
               src={currentTheme.logo}
             />
+            1
           </Link>
           <img
             className='m-0 p-0 h-[2rem] w-[2rem]'
@@ -86,10 +87,10 @@ const Header = ({ menu, theme }) => {
           }`}
         >
           <div className='mt-6 md:mt-16 px-8 md:px-16 flex flex-row content-center justify-between'>
-            <span />
+            <span className='w-[2rem] h-[2rem]' />
             <Link to={'/'}>
               <img
-                className='h-[2rem] w-[8rem] md:h-3/4 md:w-3/4 self-stretch relative overflow-hidden shrink-0'
+                className='h-[1.8rem] w-[9rem] object-cover md:h-3/4 md:w-3/4 self-stretch relative overflow-hidden shrink-0'
                 loading='lazy'
                 alt='logo'
                 src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ddhkrmchqvq2kbkzbkef'

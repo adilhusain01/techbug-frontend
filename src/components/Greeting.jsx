@@ -1,7 +1,7 @@
 const Greeting = () => {
   return (
     <div
-      className={`shrink-0 flex flex-row items-center justify-center pt-[0.25rem] pb-[0.2rem] pr-[3.2rem] pl-[0.6rem] box-border relative gap-[1rem] lg:gap-[2rem] w-full text-[6rem] text-white font-plus-jakarta-sans`}
+      className={`shrink-0 flex flex-row items-center justify-center box-border relative gap-[0.3rem] md:gap-[1rem] lg:gap-[2rem] w-full overflow-hidden text-[3rem] md:text-[4rem] lg:text-[6rem] text-white font-plus-jakarta-sans`}
       style={{ userSelect: 'none' }}
     >
       <h1 className='m-0 relative text-inherit font-semibold inline-block'>
