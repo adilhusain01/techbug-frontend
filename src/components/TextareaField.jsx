@@ -7,7 +7,7 @@ const TextareaField = ({ theme, label, name, value, onChange }) => {
     >
       <label
         htmlFor={name}
-        className='self-stretch relative text-[0.8rem] md:text-[1.25rem] leading-[140%] font-semibold font-plus-jakarta-sans '
+        className='self-stretch relative text-[0.8rem] md:text-[1.25rem] leading-[140%] font-semibold'
         style={{ color: theme.labelColor }}
       >
         {label}
@@ -22,7 +22,7 @@ const TextareaField = ({ theme, label, name, value, onChange }) => {
       >
         <textarea
           id={name}
-          className='min-h-fit [border:none] [outline:none] font-medium font-plus-jakarta-sans text-[0.8rem] md:text-[1.125rem] bg-[transparent] flex-1 relative leading-[100%] text-left inline-block min-w-[15.625rem] max-w-full p-0'
+          className='min-h-fit [border:none] [outline:none] font-medium text-[0.8rem] md:text-[1.125rem] bg-[transparent] flex-1 relative leading-[100%] text-left inline-block min-w-[15.625rem] max-w-full p-0'
           placeholder='Tell us more about your projects, needs, and timeline.'
           name={name}
           value={value}

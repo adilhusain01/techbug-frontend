@@ -9,7 +9,7 @@ const HeroSectionButton = () => {
         src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ytryrgkpxv17uwjulsye'
       />
       <div className='flex flex-col items-start justify-start pt-[0.625rem] px-[0rem] pb-[0rem]'>
-        <div className='relative text-[1.25rem] font-medium font-plus-jakarta-sans text-white text-left inline-block min-w-[7.25rem]'>
+        <div className='relative text-[1.25rem] font-medium text-white text-left inline-block min-w-[7.25rem]'>
           Get in touch
         </div>
       </div>

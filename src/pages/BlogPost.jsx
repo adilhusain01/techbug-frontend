@@ -56,7 +56,7 @@ const BlogPost = () => {
         </div>
       </section>
       <section className='mt-[8rem] pt-[6rem] w-full bg-white self-stretch flex flex-row items-center justify-center box-border-w-full text-left text-[1.031rem] text-black font-body-base'>
-        <div className='w-full flex flex-col items-end justify-start gap-[3.812rem] shrink-0 text-[1rem] text-black font-plus-jakarta-sans'>
+        <div className='w-full flex flex-col items-end justify-start gap-[3.812rem] shrink-0 text-[1rem] text-black'>
           <div className='self-stretch flex flex-col items-start justify-start gap-[0.293rem] max-w-full'>
             <div className='self-stretch flex flex-row items-start justify-start py-[0rem] pl-[0.062rem] pr-[0rem] box-border max-w-full'>
               <div className='grid grid-cols-12 gap-[2rem] w-full'>

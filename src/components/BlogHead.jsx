@@ -30,7 +30,7 @@ function BlogHead() {
         <div className='flex flex-col items-start justify-start gap-[0.5rem] max-w-full'>
           <div className='text-white text-2xl flex flex-row items-start justify-start gap-[1.5rem] lg:flex-wrap'>
             <p
-              className={`min-w-fit m-0 pb-4 relative font-medium inline-block ${
+              className={`min-w-fit m-0 pb-4 relative font-medium ${
                 selectedTag === 'All Posts'
                   ? 'text-[#F9CA06] border-[#F9CA06] border-b-[2px] border-solid '
                   : ''
@@ -42,7 +42,7 @@ function BlogHead() {
             {tags.map((tag) => (
               <p
                 key={tag._id}
-                className={`min-w-fit m-0 pb-4 relative font-semibold inline-block ${
+                className={`min-w-fit m-0 pb-4 relative font-semibold ${
                   selectedTag === tag.name
                     ? 'text-[#F9CA06] border-[#F9CA06] border-b-[2px] border-solid '
                     : ''

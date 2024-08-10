@@ -12,7 +12,7 @@ const Footer = lazy(() => import('../components/Footer'));
 const Home = () => {
   return (
     <main
-      className='w-full relative bg-gray overflow-hidden box-border'
+      className='w-full relative bg-gray overflow-hidden box-border font-plus-jakarta-sans'
       style={{
         userSelect: 'none',
       }}
@@ -58,7 +58,7 @@ const Home = () => {
           </div>
 
           <div className='py-[0.5rem] md:py-[2rem] px-[1rem] md:px-[2rem] lg:px-[8rem]'>
-            <h1 className='text-2xl md:text-13xl lg:text-37xl font-medium text-white tracking-tight md:tracking-normal lg:tracking-wider leading-tight md:leading-normal lg:leading-relaxed font-plus-jakarta-sans text-center'>
+            <h1 className='text-2xl md:text-13xl lg:text-37xl font-medium text-white tracking-tight md:tracking-normal lg:tracking-wider leading-tight md:leading-normal lg:leading-relaxed text-center'>
               Delivering pioneer digital solutions and top-notch design support
               to ambitious startups and leading corporations since 2018
             </h1>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const BlogPostHead = ({ post }) => {
   return (
     <div
-      className={`self-stretch flex flex-row items-start justify-start p-[5rem] box-border max-w-full text-left text-[3rem] text-[#FE8D4F] font-plus-jakarta-sans`}
+      className={`self-stretch flex flex-row items-start justify-start p-[5rem] box-border max-w-full text-left text-[3rem] text-[#FE8D4F]`}
     >
       <div className='flex-1 flex flex-col items-start justify-start max-w-full'>
         <div className='self-stretch flex flex-row items-start justify-start py-[0rem] box-border max-w-full'>

@@ -14,7 +14,7 @@ const SendButton = ({ color }) => {
 
       <div>
         <h2
-          className='text-[1rem] md:text-[1.25rem] font-medium font-plus-jakarta-sans'
+          className='text-[1rem] md:text-[1.25rem] font-medium'
           style={{ color: color }}
         >
           Send your enquiry

@@ -38,7 +38,7 @@ const Header = ({ menu, theme }) => {
   return (
     <>
       <header
-        className={`hidden lg:block mt-12 self-stretch flex flex-row items-start justify-start box-border top-[0] z-[99] sticky max-w-full text-[1.25rem] font-plus-jakarta-sans `}
+        className={`hidden lg:block mt-12 self-stretch flex flex-row items-start justify-start box-border top-[0] z-[99] sticky max-w-full text-[1.25rem]`}
       >
         <div className='flex-1 flex flex-row items-end justify-around max-w-full gap-[1.25rem]'>
           <div className='h-[3.25rem] w-[15rem] flex flex-col items-start justify-end pt-[0rem] px-[0rem] pb-[0.187rem] box-border'>
@@ -63,7 +63,7 @@ const Header = ({ menu, theme }) => {
           </p>
         </div>
       </header>
-      <header className='block lg:hidden mt-6 md:mt-12 w-full relative overflow-hidden flex flex-col items-start justify-start box-border gap-[4rem] text-center font-plus-jakarta-sans p-0'>
+      <header className='block lg:hidden mt-6 md:mt-12 w-full relative overflow-hidden flex flex-col items-start justify-start box-border gap-[4rem] text-center p-0'>
         <div className='m-0 p-0 self-stretch flex flex-row items-center justify-between md:justify-between'>
           <Link to={'/'}>
             <img
@@ -89,7 +89,7 @@ const Header = ({ menu, theme }) => {
             <span className='w-[2rem] h-[2rem]' />
             <Link to={'/'}>
               <img
-                className='h-[1.8rem] w-[9rem] object-cover md:h-3/4 md:w-3/4 self-stretch relative overflow-hidden shrink-0'
+                className='h-[1.8rem] w-[9rem] md:h-[2rem] md:w-[10rem] object-cover self-stretch relative overflow-hidden shrink-0'
                 loading='lazy'
                 alt='logo'
                 src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ddhkrmchqvq2kbkzbkef'

@@ -1,7 +1,7 @@
 const Canvas = () => {
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-center pt-[0rem] px-[1.25rem] pb-[4rem] box-border max-w-full text-left text-[0.75rem] text-gray-100 font-plus-jakarta-sans lg:pb-[2.625rem] lg:box-border`}
+      className={`self-stretch flex flex-row items-start justify-center pt-[0rem] px-[1.25rem] pb-[4rem] box-border max-w-full text-left text-[0.75rem] text-gray-100 lg:pb-[2.625rem] lg:box-border`}
     >
       <div className='w-[59.375rem] flex flex-col items-center justify-center  max-w-full '>
         <img

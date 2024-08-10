@@ -5,10 +5,10 @@ const PortfolioCard = ({ work, index }) => {
 
   const big = (
     <div
-      className={`w-[37.5rem] flex flex-col items-start justify-start max-w-full text-left text-[2rem] text-white font-plus-jakarta-sans`}
+      className={`w-[37.5rem] flex flex-col items-start justify-center gap-[1rem] text-[2rem] text-white`}
     >
       <div
-        className="self-stretch flex flex-col items-center justify-end pt-[44.75rem] px-[1.5rem] pb-[2rem] gap-[1rem] bg-[url('/public/web-dev2@3x.png')] bg-cover bg-no-repeat bg-[top] lg:pt-[4.25rem] lg:pb-[1.313rem] lg:box-border"
+        className='self-stretch flex flex-col items-center justify-end pt-[45rem] px-[1.5rem] pb-[2rem] gap-[1rem] bg-cover'
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(${work.image_uri})`,
         }}
@@ -25,10 +25,10 @@ const PortfolioCard = ({ work, index }) => {
 
   const small = (
     <div
-      className={`w-[37.5rem] flex flex-col items-start justify-center gap-[1rem] max-w-full text-left text-[2rem] text-white font-plus-jakarta-sans`}
+      className={`w-[37.5rem] flex flex-col items-start justify-center gap-[1rem] text-[2rem] text-white`}
     >
       <div
-        className="self-stretch flex flex-col items-center justify-end pt-[30.75rem] px-[1.5rem] pb-[2rem] gap-[1rem] bg-[url('/public/app-dev2@3x.png')] bg-cover bg-no-repeat bg-[top]"
+        className='self-stretch flex flex-col items-center justify-end pt-[30.75rem] px-[1.5rem] pb-[2rem] gap-[1rem] bg-cover'
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(${work.image_uri})`,
         }}

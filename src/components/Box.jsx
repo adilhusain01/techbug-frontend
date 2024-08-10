@@ -49,7 +49,7 @@ const Box = ({ title, icon, propOverflow }) => {
         style={iconsStyle}
         loading='lazy'
       />
-      <h1 className='text-[0.8rem] md:text-base lg:text-xl text-white font-plus-jakarta-sans'>
+      <h1 className='text-[0.8rem] md:text-base lg:text-xl text-white'>
         {title}
       </h1>
     </div>

@@ -3,7 +3,7 @@ const BrandLogoGrid = () => {
     <section
       className={`bg-white self-stretch flex flex-col items-center justify-center  box-border max-w-full`}
     >
-      <h1 className='mb-[4rem] text-[2.5rem] font-medium font-inhrit font-plus-jakarta-sans'>
+      <h1 className='mb-[4rem] text-[2.5rem] font-medium font-inhrit'>
         Proud to have worked with
       </h1>
       <div className='w-full flex flex-row items-center justify-center gap-[8rem] box-border relative  max-w-full z-[1]'>

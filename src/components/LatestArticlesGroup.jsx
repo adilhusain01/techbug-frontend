@@ -25,7 +25,7 @@ function LatestArticlesGroup() {
   return (
     <section className='mt-[5rem] px-[5rem]'>
       <div className='flex flex-row'>
-        <h1 className='min-w-[25rem] self-stretch  text-[3rem] font-semiboldtext-white'>
+        <h1 className='min-w-[25rem] self-stretch  text-[3rem] font-semibold text-white'>
           Latest Articles
         </h1>
         <div className='w-full border-white border-t-[2px] border-solid box-border' />

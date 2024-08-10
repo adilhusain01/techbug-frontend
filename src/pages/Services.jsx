@@ -10,7 +10,7 @@ const Footer = lazy(() => import('../components/Footer'));
 const Services = () => {
   return (
     <main
-      className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal]'
+      className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal] font-plus-jakarta-sans'
       style={{
         userSelect: 'none',
       }}

@@ -67,13 +67,13 @@ const NewsSlider = ({ tag }) => {
   return (
     <section className='self-stretch w-full'>
       <div
-        className={`self-stretch flex flex-row items-start justify-start py-[0rem] px-[5rem] box-border max-w-full text-left text-[3rem] text-[#FE8D4F] font-plus-jakarta-sans`}
+        className={`self-stretch flex flex-row items-start justify-start py-[0rem] px-[5rem] box-border max-w-full text-left text-[3rem] text-[#FE8D4F]`}
       >
         <h1 className='mt-[2rem] flex-1 relative text-inherit font-semibold font-[inherit] inline-block max-w-full z-[1]'>
           Explore News, Insightful Articles and Updates.
         </h1>
       </div>
-      <div className='self-stretch flex flex-row items-start justify-start pl-[5rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white font-plus-jakarta-sans'>
+      <div className='self-stretch flex flex-row items-start justify-start pl-[5rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white'>
         <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full'>
           <div
             className='overflow-x-auto flex flex-row items-center justify-start py-[0rem] px-[0rem] box-border gap-[1.25rem] max-w-full text-left text-[1.25rem] text-text-default-default'

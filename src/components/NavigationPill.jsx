@@ -19,7 +19,7 @@ const NavigationPill = ({
   return (
     <Link
       to={to}
-      className={`no-underline rounded-3xl flex flex-row items-start justify-start py-[0.75rem] px-[2.5rem] text-[1.25rem] text-text-default-default font-plus-jakarta-sans}`}
+      className='no-underline rounded-3xl flex flex-row items-start justify-start py-[0.75rem] px-[2.5rem] text-[1.25rem] text-text-default-default}'
       onClick={onNavigationPillContainerClick}
       style={navigationPillStyle}
     >

@@ -35,7 +35,7 @@ const LatestArticles = () => {
         </h1>
         <div className='w-full border-black border-t-[2px] border-solid box-border' />
       </div>
-      <div className='flex flex-col justify-center pb-[4rem] px-[8rem] box-border max-w-full text-left text-[1rem] text-black font-plus-jakarta-sans'>
+      <div className='flex flex-col justify-center pb-[4rem] px-[8rem] box-border max-w-full text-left text-[1rem] text-black'>
         <h1
           className='text-right text-[#F9CA06]'
           onClick={toggleShowAll}
@@ -47,7 +47,7 @@ const LatestArticles = () => {
           {firstThreePosts.map((post, index) => (
             <Link
               key={index}
-              className={`flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem] font-plus-jakarta-sans`}
+              className={`flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem]`}
               to={`/blog/${post.slug}`}
               style={{ cursor: 'pointer', textDecoration: 'none' }}
             >
@@ -79,7 +79,7 @@ const LatestArticles = () => {
           {remainingPosts.map((post, index) => (
             <Link
               key={index + 3}
-              className={`flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem] font-plus-jakarta-sans`}
+              className={`flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem]`}
               to={`/blog/${post.slug}`}
               style={{ cursor: 'pointer', textDecoration: 'none' }}
             >

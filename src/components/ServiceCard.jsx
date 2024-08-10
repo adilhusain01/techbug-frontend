@@ -5,7 +5,7 @@ const ServiceCard = ({ title, image, description, features, index }) => {
 
   return (
     <article
-      className={`self-stretch flex flex-row items-center justify-between max-w-full gap-[1.25rem] text-left text-[2.5rem]  font-plus-jakarta-sans`}
+      className={`self-stretch flex flex-row items-center justify-between max-w-full gap-[1.25rem] text-left text-[2.5rem]`}
     >
       {isEven ? (
         <>

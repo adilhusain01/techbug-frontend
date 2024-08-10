@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer
-      className={`w-full self-stretch bg-gray overflow-hidden flex flex-col md:flex-row items-center justify-between py-[4rem] md:py-[5.5rem] px-0 md:px-[3.75rem] box-border shrink-0 text-[1rem] text-darkgray font-plus-jakarta-sans`}
+      className={`w-full self-stretch bg-gray overflow-hidden flex flex-col md:flex-row items-center justify-between py-[4rem] md:py-[5.5rem] px-0 md:px-[3.75rem] box-border shrink-0 text-[1rem] text-darkgray`}
     >
       <div className='m-0 p-0 flex flex-col items-start justify-start gap-[0.5rem] lg:gap-[1.25rem]'>
         <img

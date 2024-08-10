@@ -22,7 +22,7 @@ const ServiceSection = () => {
 
   return (
     <div
-      className={`my-32 w-full px-[12rem] flex-1 flex flex-col items-center justify-center max-w-full text-left text-[2.5rem] text-white gap-[8rem] font-plus-jakarta-sans `}
+      className={`my-32 w-full px-[12rem] flex-1 flex flex-col items-center justify-center max-w-full text-left text-[2.5rem] text-white gap-[8rem]`}
     >
       {services.map((service, index) => (
         <ServiceCard
