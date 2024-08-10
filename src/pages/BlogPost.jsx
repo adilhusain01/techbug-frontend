@@ -47,8 +47,8 @@ const BlogPost = () => {
       <Helmet>
         <title>{blogpost.title}</title>
       </Helmet>
-      <section className='self-stretch flex flex-row items-start justify-start box-border max-w-full shrink-0'>
-        <div className="flex-1 flex flex-col items-start justify-start px-[3.75rem]  box-border bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full">
+      <section className='self-stretch flex flex-row items-start justify-start box-border w-full shrink-0'>
+        <div className='m-0 flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border'>
           <Suspense fallback={<div>Loading...</div>}>
             <Header menu={'Blog'} theme={'dark'} />
             <BlogPostHead post={blogpost} />

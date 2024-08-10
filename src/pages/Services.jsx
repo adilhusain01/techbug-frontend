@@ -16,7 +16,7 @@ const Services = () => {
       }}
     >
       <section className='self-stretch flex flex-row items-start justify-start box-border max-w-full shrink-0'>
-        <div className="flex-1 flex flex-col items-start justify-start px-[3.75rem]  box-border gap-[14.531rem] bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] max-w-full">
+        <div className='flex-1 flex flex-col items-start justify-start px-[3.75rem]  box-border gap-[14.5rem] w-full'>
           <Suspense fallback={<div>Loading...</div>}>
             <Header menu={'Services'} theme={'dark'} />
             <Canvas />
