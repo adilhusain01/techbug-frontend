@@ -1,12 +1,12 @@
 const BrandLogoGrid = () => {
   return (
     <section
-      className={`bg-white self-stretch flex flex-col items-center justify-center  box-border max-w-full`}
+      className={`py-[2rem] lg:py-[5rem] bg-white flex flex-col items-center justify-center box-border w-full`}
     >
-      <h1 className='mb-[4rem] text-[2.5rem] font-medium font-inhrit'>
+      <h1 className='text-[1.5rem] md:text-[2rem] lg:text-[3rem] font-medium font-inherit'>
         Proud to have worked with
       </h1>
-      <div className='w-full flex flex-row items-center justify-center gap-[8rem] box-border relative  max-w-full z-[1]'>
+      <div className='mt-[2rem] lg:mt-[4rem] w-full flex flex-row items-center justify-center gap-[0.5rem] md:gap-[2.5rem] lg:gap-[8rem] box-border relative  max-w-full z-[1]'>
         <img
           loading='lazy'
           alt='brand'

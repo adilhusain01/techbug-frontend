@@ -92,14 +92,14 @@ const FormContact = ({ theme }) => {
 
   return (
     <section
-      className={`my-[3rem] lg:mt-[6rem] py-[1.25rem] lg:py-[2.5rem] w-[90%] md:w-[80%] mx-auto lg:w-full overflow-hidden flex flex-col items-center justify-center box-border shrink-0 text-center`}
+      className={`px-[2rem] md:px-[7.5rem] lg:px-0 py-[3rem] md:py-[4.25rem] lg:py-[6.25rem] w-full overflow-hidden flex flex-col items-center justify-center box-border shrink-0 text-center mx-auto`}
       style={{
         backgroundColor: currentTheme.bg,
       }}
     >
-      <div className='w-[35rem] flex flex-row items-center justify-center'>
+      <div className='flex flex-row items-center justify-center'>
         <h1
-          className='m-0 relative font-medium font-inherit text-[1.5rem] md:text-[2.5rem]'
+          className='m-0 relative font-medium font-inherit text-[1.5rem] md:text-[2rem] lg:text-[3rem]'
           style={{ color: currentTheme.h1Color }}
         >
           Let’s get in touch

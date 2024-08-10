@@ -47,36 +47,50 @@ const BlogPost = () => {
       <Helmet>
         <title>{blogpost.title}</title>
       </Helmet>
-      <section className='self-stretch flex flex-row items-start justify-start box-border w-full shrink-0'>
-        <div className='m-0 flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border'>
+
+      <section className='w-full m-0 flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border'>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Header menu={'Blog'} theme={'dark'} />
+        </Suspense>
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <BlogPostHead post={blogpost} />
+        </Suspense>
+      </section>
+
+      <section className='pt-[6rem] mt-[8rem] w-full flex flex-col items-end justify-start gap-[3.8rem] shrink-0 text-[1rem] text-black bg-white box-border'>
+        <div className='grid grid-cols-12 gap-[2rem] w-full'>
           <Suspense fallback={<div>Loading...</div>}>
-            <Header menu={'Blog'} theme={'dark'} />
-            <BlogPostHead post={blogpost} />
+            <BlogLeftBar post={blogpost} />
+          </Suspense>
+
+          <Suspense fallback={<div>Loading...</div>}>
+            <BlogCenterBar post={blogpost} />
+          </Suspense>
+
+          <Suspense fallback={<div>Loading...</div>}>
+            <BlogRightBar post={blogpost} />
           </Suspense>
         </div>
-      </section>
-      <section className='mt-[8rem] pt-[6rem] w-full bg-white self-stretch flex flex-row items-center justify-center box-border-w-full text-left text-[1.031rem] text-black font-body-base'>
-        <div className='w-full flex flex-col items-end justify-start gap-[3.812rem] shrink-0 text-[1rem] text-black'>
-          <div className='self-stretch flex flex-col items-start justify-start gap-[0.293rem] max-w-full'>
-            <div className='self-stretch flex flex-row items-start justify-start py-[0rem] pl-[0.062rem] pr-[0rem] box-border max-w-full'>
-              <div className='grid grid-cols-12 gap-[2rem] w-full'>
-                <Suspense fallback={<div>Loading...</div>}>
-                  <BlogLeftBar post={blogpost} />
-                  <BlogCenterBar post={blogpost} />
-                  <BlogRightBar />
-                </Suspense>
-              </div>
-            </div>
-          </div>
+        <div className='m-0 w-full'>
           <Suspense fallback={<div>Loading...</div>}>
             <TagArticles title={'Related Articles'} tags={tags} />
+          </Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
             <LatestArticles />
           </Suspense>
         </div>
       </section>
+
       <Suspense fallback={<div>Loading...</div>}>
         <NewsLetter theme={'dark'} />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <FormContact theme={'white'} />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
     </main>

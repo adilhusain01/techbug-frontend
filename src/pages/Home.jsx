@@ -41,11 +41,13 @@ const Home = () => {
         <div className='w-full flex-1 flex flex-col items-start justify-start px-[3.75rem] pb-[21.093rem] box-border gap-[12rem] md:gap-[14.5rem]'>
           <Suspense fallback={<div>Loading...</div>}>
             <Header menu={'Home'} theme={'dark'} />
+          </Suspense>
+
+          <Suspense fallback={<div>Loading...</div>}>
             <HeroContent />
           </Suspense>
         </div>
       </section>
-
       <section className='px-[2rem] py-[2rem] lg:py-[8rem]'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-1'>
           <div className='flex flex-col items-center justify-center'>
@@ -90,6 +92,9 @@ const Home = () => {
 
       <Suspense fallback={<div>Loading...</div>}>
         <FormContact theme={'white'} />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
     </main>

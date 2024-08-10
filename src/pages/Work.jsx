@@ -13,12 +13,10 @@ const Work = () => {
         userSelect: 'none',
       }}
     >
-      <section className='self-stretch flex flex-row items-start justify-start box-border max-w-full shrink-0'>
-        <div className='flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border gap-[5rem] md:gap-[10rem] lg:gap-[14rem] w-full'>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Header menu={'Work'} theme={'light'} />
-          </Suspense>
-        </div>
+      <section className='flex flex-col items-start justify-start px-[3.75rem] box-border gap-[5rem] md:gap-[10rem] lg:gap-[14rem] w-full'>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Header menu={'Work'} theme={'light'} />
+        </Suspense>
       </section>
 
       <Suspense fallback={<div>Loading...</div>}>
@@ -27,6 +25,9 @@ const Work = () => {
 
       <Suspense fallback={<div>Loading...</div>}>
         <FormContact theme={'black'} />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
     </main>

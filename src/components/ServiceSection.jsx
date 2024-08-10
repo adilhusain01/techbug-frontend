@@ -21,8 +21,8 @@ const ServiceSection = () => {
   }, []);
 
   return (
-    <div
-      className={`my-32 w-full px-[12rem] flex-1 flex flex-col items-center justify-center max-w-full text-left text-[2.5rem] text-white gap-[8rem]`}
+    <section
+      className={`max-w-full flex flex-col items-center justify-center px-[1rem] md:px-[2rem] lg:px-[15rem] py-[5rem] lg:py-[8rem] text-[2.5rem] text-white gap-[4rem] md:gap-[5rem]`}
     >
       {services.map((service, index) => (
         <ServiceCard
@@ -34,7 +34,7 @@ const ServiceSection = () => {
           index={index}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

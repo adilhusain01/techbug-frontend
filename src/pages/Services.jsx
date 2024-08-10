@@ -10,32 +10,32 @@ const Footer = lazy(() => import('../components/Footer'));
 const Services = () => {
   return (
     <main
-      className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal] font-plus-jakarta-sans'
+      className='w-full relative bg-gray overflow-hidden box-border font-plus-jakarta-sans'
       style={{
         userSelect: 'none',
       }}
     >
-      <section className='self-stretch flex flex-row items-start justify-start box-border max-w-full shrink-0'>
-        <div className='flex-1 flex flex-col items-start justify-start px-[3.75rem]  box-border gap-[14.5rem] w-full'>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Header menu={'Services'} theme={'dark'} />
-            <Canvas />
-          </Suspense>
-        </div>
-      </section>
-
-      <section className='w-full self-stretch flex flex-row items-center justify-center  box-border max-w-full'>
+      <section className='px-[3.75rem] box-border lg:gap-[5rem] w-full'>
         <Suspense fallback={<div>Loading...</div>}>
-          <ServiceSection />
+          <Header menu={'Services'} theme={'dark'} />
         </Suspense>
       </section>
 
-      <section className='bg-[#ffffff] w-full py-[4rem]'>
-        <Suspense fallback={<div>Loading...</div>}>
-          <BrandLogoGrid />
-          <FormContact theme={'black'} />
-        </Suspense>
-      </section>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Canvas />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <ServiceSection />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <BrandLogoGrid />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <FormContact theme={'black'} />
+      </Suspense>
 
       <Suspense fallback={<div>Loading...</div>}>
         <Footer />

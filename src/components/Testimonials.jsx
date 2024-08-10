@@ -84,7 +84,7 @@ const Testimonials = () => {
       className={`self-stretch flex flex-row items-start justify-start pt-[0rem] pl-[1.5rem] md:pl-[3.75rem] pb-[2.5rem] box-border max-w-full shrink-0 text-center text-white`}
     >
       <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full'>
-        <h1 className='self-stretch flex flex-row items-start justify-center py-[0rem] m-0 relative text-7xl md:text-13xl lg:text-21xl font-medium'>
+        <h1 className='self-stretch flex flex-row items-start justify-center py-[0rem] m-0 relative text-7xl md:text-[2rem] lg:text-[3rem] font-medium'>
           Our Testimonials
         </h1>
 

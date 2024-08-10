@@ -10,18 +10,20 @@ const Footer = lazy(() => import('../components/Footer'));
 const Blog = () => {
   return (
     <main
-      className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal] font-plus-jakarta-sans'
+      className='min-w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] font-plus-jakarta-sans'
       style={{
         userSelect: 'none',
       }}
     >
-      <section className='flex-1 flex flex-col items-start justify-start px-[3.75rem] mb-[10rem]  box-border max-w-full'>
+      <section className='flex-1 flex flex-col items-start justify-start px-[3.75rem] mb-[10rem]  box-border w-full'>
         <Suspense fallback={<div>Loading...</div>}>
           <Header menu={'Blog'} theme={'dark'} />
+        </Suspense>
+
+        <Suspense fallback={<div>Loading...</div>}>
           <BlogHead />
         </Suspense>
       </section>
-
       <section className='mb-[-1rem] w-full bg-white'>
         <Suspense fallback={<div>Loading...</div>}>
           <TagArticles
@@ -46,7 +48,13 @@ const Blog = () => {
 
       <Suspense fallback={<div>Loading...</div>}>
         <NewsLetter theme={'light'} />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <FormContact theme={'white'} />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
     </main>

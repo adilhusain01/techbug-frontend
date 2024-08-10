@@ -1,21 +1,17 @@
 const Canvas = () => {
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-center pt-[0rem] px-[1.25rem] pb-[4rem] box-border max-w-full text-left text-[0.75rem] text-gray-100 lg:pb-[2.625rem] lg:box-border`}
+      className={`mx-[1rem] md:mx-[2.5rem] lg:mx-0 my-[7.5rem] lg:my-[5rem] max-w-full self-stretch flex flex-col items-center justify-center box-border gap-[2rem] lg:gap-[5rem]`}
     >
-      <div className='w-[59.375rem] flex flex-col items-center justify-center  max-w-full '>
-        <img
-          src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/i5i7jzsvgjo8tv9fasb4'
-          alt='canvas'
-          className='rounded-[2rem]'
-        />
-        <div className='mt-[4rem] self-stretch flex flex-row items-start justify-start py-[0rem] px-[2.812rem] box-border max-w-full text-center text-[3rem] text-white lg:pl-[1.375rem] lg:pr-[1.375rem] lg:box-border'>
-          <h3 className='m-0 flex-1 relative text-inherit leading-[3.75rem] font-semibold font-[inherit] inline-block max-w-full z-[1]'>
-            Our rich design and technology expertise delivers top brands and
-            digital experiences.
-          </h3>
-        </div>
-      </div>
+      <img
+        src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/i5i7jzsvgjo8tv9fasb4'
+        alt='canvas'
+        className='self-stretch lg:self-center lg:h-2/3 lg:w-3/3 rounded-[0.5rem] md:rounded-[1rem] lg:rounded-[2rem] object-cover'
+      />
+      <h3 className='w-[100%] md:w-[90%] lg:w-[75%] m-0 text-[1.25rem] md:text-[2rem] lg:text-[4rem] relative leading-[1.25rem] md:leading-[2rem] lg:leading-[4rem] text-white font-semibold text-center'>
+        Our rich design and technology expertise delivers top brands and digital
+        experiences.
+      </h3>
     </section>
   );
 };
