@@ -6,10 +6,12 @@ function WorkMenu() {
 
   return (
     <section className='w-full'>
-      <div className='self-stretch flex flex-row items-start justify-start box-border max-w-full text-left text-[6rem] text-black'>
-        <div className='py-[10rem] flex-1 flex flex-row items-start justify-between pl-[5.5rem] pr-[4.812rem] box-border max-w-full gap-[1.25rem]'>
-          <h1 className='p-2 m-0 w-[59.063rem] relative text-inherit leading-[6.563rem] font-semibold font-[inherit] text-transparent !bg-clip-text [background:linear-gradient(104.08deg,_#ff6e1f,_#fad3be)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] inline-block shrink-0 max-w-full'>{`Turning your visionary ideas into reality `}</h1>
-          <div className='flex flex-col items-start justify-center gap-[1rem] text-[1.25rem]'>
+      <div className='m-0 self-stretch flex flex-row items-start justify-start box-border w-full'>
+        <div className='py-[7rem] lg:py-[10rem] px-[1rem] md:px-[2rem] lg:px-0 flex-1 flex flex-col md:flex-row items-center justify-around box-border w-full'>
+          <h1 className='p-0 lg:p-2 m-0 relative leading-[2.5rem] md:leading-[5rem] lg:leading-[6.5rem] font-semibold !bg-clip-text [background:linear-gradient(104.08deg,_#ff6e1f,_#fad3be)] [-webkit-text-fill-color:transparent] inline-block shrink-0 w-full md:w-[70%] text-[2.5rem] md:text-[4rem] lg:text-[6rem] text-center md:text-left'>
+            Turning your visionary ideas into reality
+          </h1>
+          <div className='mt-[2rem] md:mt-0 flex flex-col items-center md:items-start justify-center gap-[0rem] md:gap-[0.75rem] lg:gap-[1rem]'>
             {[
               'All Works',
               'Website',
@@ -17,25 +19,25 @@ function WorkMenu() {
               'Digital Marketing',
               'Smart Business Cards',
             ].map((menu) => (
-              <div
+              <article
                 key={menu}
-                className={`flex flex-row items-center justify-center p-[0.5rem] ${
+                className={`${
                   selectedMenu === menu
-                    ? 'font-semibold border-black1 border-b-[2px] border-solid box-border'
-                    : 'font-medium'
+                    ? 'font-bold border-black1 border-b-[2px] border-solid box-border'
+                    : 'font-normal'
                 }`}
                 onClick={() => setSelectedMenu(menu)}
               >
-                <div className='relative inline-block min-w-[5.5rem]'>
+                <p className='m-0 p-[0.5rem] text-[1rem] md:text-[1.1rem] lg:text-[1.25rem] relative'>
                   {menu}
-                </div>
-              </div>
+                </p>
+              </article>
             ))}
           </div>
         </div>
       </div>
-      <div className='pt-[5rem] w-full self-stretch [background:linear-gradient(180deg,_#ffe9dd,_#fff)] overflow-hidden flex flex-col items-center justify-center box-border'>
-        <div className='m-0 py-[8rem] self-stretch grid grid-cols-2 justify-items-center px-[5.5rem] box-border gap-[8rem] lg:pt-[2.75rem] lg:pb-[2.75rem] lg:box-border'>
+      <div className='pt-0 md:pt-[5rem] w-full self-stretch [background:linear-gradient(180deg,_#ffe9dd,_#fff)] overflow-hidden box-border'>
+        <div className='py-[2rem] md:py-[8rem] self-stretch grid grid-cols-1 md:grid-cols-2 justify-items-center px-[2.5rem] lg:px-[5rem] box-border gap-[2rem] md:gap-[4rem] lg:gap-[8rem] lg:pt-[2.75rem] lg:pb-[2.75rem] lg:box-border'>
           <PortfolioContent selectedMenu={selectedMenu} />
         </div>
       </div>

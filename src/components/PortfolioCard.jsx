@@ -5,40 +5,40 @@ const PortfolioCard = ({ work, index }) => {
 
   const big = (
     <div
-      className={`w-[37.5rem] flex flex-col items-start justify-center gap-[1rem] text-[2rem] text-white`}
+      className={`w-[20rem] md:w-[22.5rem] lg:w-[37.5rem] flex flex-col items-start justify-center gap-[1rem] text-white`}
     >
       <div
-        className='self-stretch flex flex-col items-center justify-end pt-[45rem] px-[1.5rem] pb-[2rem] gap-[1rem] bg-cover'
+        className='self-stretch flex flex-col items-center justify-end pt-[12.5rem] md:pt-[30rem] lg:pt-[45rem] px-[1rem] md:px-[1.5rem] pb-[1.5rem] md:pb-[2rem] gap-[0.25rem] md:gap-[1rem] bg-cover'
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(${work.image_uri})`,
         }}
       >
-        <h2 className='m-0 self-stretch relative text-inherit font-bold font-[inherit]'>
+        <h2 className='m-0 self-stretch relative text-[1.2rem] md:text-[1.6rem] lg::text-[2rem] font-bold font-[inherit]'>
           {work.title}
         </h2>
-        <div className='self-stretch relative text-[1.5rem] font-medium'>
+        <p className='m-0 self-stretch relative text-[0.9rem] md:text-[1.2rem] lg:text-[1.5rem]'>
           {work.description}
-        </div>
+        </p>
       </div>
     </div>
   );
 
   const small = (
     <div
-      className={`w-[37.5rem] flex flex-col items-start justify-center gap-[1rem] text-[2rem] text-white`}
+      className={`w-[20rem] md:w-[22.5rem] lg:w-[37.5rem] flex flex-col items-start justify-center gap-[1rem] text-white`}
     >
       <div
-        className='self-stretch flex flex-col items-center justify-end pt-[30.75rem] px-[1.5rem] pb-[2rem] gap-[1rem] bg-cover'
+        className='self-stretch flex flex-col items-center justify-end pt-[12.5rem] md:pt-[20rem] lg:pt-[30rem] px-[1rem] md:px-[1.5rem] pb-[1.5rem] md:pb-[2rem] gap-[0.25rem] md:gap-[1rem] bg-cover'
         style={{
           backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(${work.image_uri})`,
         }}
       >
-        <h2 className='m-0 self-stretch relative text-inherit font-bold font-[inherit]'>
+        <h2 className='m-0 self-stretch relative text-[1.2rem] md:text-[1.6rem] lg:text-[2rem] font-bold font-[inherit]'>
           {work.title}
         </h2>
-        <div className='self-stretch relative text-[1.5rem] font-medium'>
+        <p className='m-0 self-stretch relative text-[0.9rem] md:text-[1.2rem] lg:text-[1.5rem]'>
           {work.description}
-        </div>
+        </p>
       </div>
     </div>
   );

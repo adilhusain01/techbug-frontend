@@ -19,7 +19,7 @@ function Achievements() {
         </h1>
 
         <h2 className='m-0 text-[1.5rem] md:text-[2.1rem] lg:text-[3rem] font-medium font-[inherit]'>
-          Team Members
+          Team
         </h2>
       </div>
 

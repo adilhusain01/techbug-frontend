@@ -92,7 +92,7 @@ const FormContact = ({ theme }) => {
 
   return (
     <section
-      className={`mt-[3rem] lg:mt-[6rem] mb-[-1rem] py-[1.25rem] lg:py-[2.5rem] w-[90%] md:w-[80%] mx-auto lg:w-full overflow-hidden flex flex-col items-center justify-center box-border shrink-0 text-center`}
+      className={`my-[3rem] lg:mt-[6rem] py-[1.25rem] lg:py-[2.5rem] w-[90%] md:w-[80%] mx-auto lg:w-full overflow-hidden flex flex-col items-center justify-center box-border shrink-0 text-center`}
       style={{
         backgroundColor: currentTheme.bg,
       }}
@@ -156,9 +156,8 @@ const FormContact = ({ theme }) => {
             theme={currentTheme}
           />
         </div>
-        <div className='w-[33.813rem] flex flex-row items-center justify-center max-w-full'>
-          <SendButton color={currentTheme.buttonColor} />
-        </div>
+
+        <SendButton color={currentTheme.buttonColor} />
       </form>
     </section>
   );

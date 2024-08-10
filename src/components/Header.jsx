@@ -16,6 +16,9 @@ const Header = ({ menu, theme }) => {
       callBg: '#171717',
       callTextColor: '#FFFFFF',
       logo: 'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ddhkrmchqvq2kbkzbkef',
+
+      breadcrumb:
+        'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/p97ifgieewh6ujdx3v5v',
     },
 
     dark: {
@@ -26,6 +29,8 @@ const Header = ({ menu, theme }) => {
       callBg: '#FFFFFF',
       callTextColor: '#000000',
       logo: 'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/techbug_logo',
+      breadcrumb:
+        'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ueadzzp4swfy8iso0snq',
     },
   };
 
@@ -64,20 +69,20 @@ const Header = ({ menu, theme }) => {
         </div>
       </header>
       <header className='block lg:hidden mt-6 md:mt-12 w-full relative overflow-hidden flex flex-col items-start justify-start box-border gap-[4rem] text-center p-0'>
-        <div className='m-0 p-0 self-stretch flex flex-row items-center justify-between md:justify-between'>
+        <div className='m-0 p-0 self-stretch flex flex-row items-center justify-between'>
           <Link to={'/'}>
             <img
-              className='m-0 p-0 h-[2rem] w-[8rem] md:h-1/2 md:w-3/4 self-stretch relative overflow-hidden shrink-0'
+              className='m-0 p-0 h-[1.85rem] w-[9rem] md:h-[2.05rem] md:w-[10rem] self-stretch relative overflow-hidden shrink-0 object-cover'
               loading='lazy'
               alt='logo'
               src={currentTheme.logo}
             />
           </Link>
           <img
-            className='m-0 p-0 h-[2rem] w-[2rem]'
+            className='m-0 p-0 h-[1rem] w-[1.2rem]'
             style={{ cursor: 'pointer' }}
             onClick={toggleMenu}
-            src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/rcnqy5chzco0mistbxuo'
+            src={currentTheme.breadcrumb}
           />
         </div>
         <div
@@ -89,7 +94,7 @@ const Header = ({ menu, theme }) => {
             <span className='w-[2rem] h-[2rem]' />
             <Link to={'/'}>
               <img
-                className='h-[1.8rem] w-[9rem] md:h-[2rem] md:w-[10rem] object-cover self-stretch relative overflow-hidden shrink-0'
+                className='pt-1 h-[1.85rem] w-[9rem] md:h-[2.05rem] md:w-[10rem] object-cover self-stretch relative overflow-hidden shrink-0'
                 loading='lazy'
                 alt='logo'
                 src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ddhkrmchqvq2kbkzbkef'
@@ -99,7 +104,7 @@ const Header = ({ menu, theme }) => {
               className='h-[2rem] w-[2rem]'
               style={{ cursor: 'pointer' }}
               onClick={toggleMenu}
-              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/wy6xvw9bayf83yzglnxa'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/boazg5wp1udtahz4ta8b'
             />
           </div>
 
