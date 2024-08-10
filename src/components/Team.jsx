@@ -5,7 +5,7 @@ function Team() {
         Our Team
       </h1>
       <div className='mt-8 flex-1 flex flex-col items-start justify-start shrink-0'>
-        <div className='flex-1 flex flex-row items-start justify-between gap-[0.5rem] md:gap-[1rem] lg:gap-[12rem] z-[2]'>
+        <div className='flex-1 flex flex-row items-start justify-between gap-[0.7rem] md:gap-[1rem] lg:gap-[12rem] z-[2]'>
           <img
             className='self-stretch h-[7rem] md:h-[15rem] lg:h-[25rem] w-[7rem] md:w-[15rem] lg:w-[25rem] relative shrink-0 object-cover'
             loading='lazy'
