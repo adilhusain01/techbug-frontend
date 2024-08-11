@@ -29,6 +29,10 @@ body {
   max-height: 1000px;
 }
 
+.hidden {
+  display: none;
+}
+
 /* News Card Hover Effect */
 
 .news-card {

@@ -12,7 +12,7 @@ const Footer = lazy(() => import('../components/Footer'));
 const Home = () => {
   return (
     <main
-      className='w-full relative bg-gray overflow-hidden box-border font-plus-jakarta-sans'
+      className='w-full relative flex flex-col bg-gray box-border font-plus-jakarta-sans overflow-hidden'
       style={{
         userSelect: 'none',
       }}
@@ -48,24 +48,18 @@ const Home = () => {
           </Suspense>
         </div>
       </section>
-      <section className='px-[2rem] py-[2rem] lg:py-[8rem]'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-1'>
-          <div className='flex flex-col items-center justify-center'>
-            <img
-              className='h-[300px] md:h-[400px] lg:h-[600px] w-[300px] md:w-[400px] lg:w-[600px] rounded-[20px] md:rounded-[60px] object-cover'
-              loading='lazy'
-              alt='office'
-              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/wgdo3slwrcib7ltszr1x'
-            />
-          </div>
+      <section className='px-[2rem] lg:px-[10rem] py-[5rem] lg:py-[8rem] grid grid-cols-1 md:grid-cols-2'>
+        <img
+          className='h-[300px] md:h-[400px] lg:h-[600px] w-[365px] md:w-[350px] lg:w-[600px] rounded-[20px] md:rounded-[60px] object-cover'
+          loading='lazy'
+          alt='office'
+          src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/wgdo3slwrcib7ltszr1x'
+        />
 
-          <div className='py-[0.5rem] md:py-[2rem] px-[1rem] md:px-[2rem] lg:px-[8rem]'>
-            <h1 className='text-2xl md:text-13xl lg:text-37xl font-medium text-white tracking-tight md:tracking-normal lg:tracking-wider leading-tight md:leading-normal lg:leading-relaxed text-center'>
-              Delivering pioneer digital solutions and top-notch design support
-              to ambitious startups and leading corporations since 2018
-            </h1>
-          </div>
-        </div>
+        <h1 className='text-2xl md:text-11xl lg:text-37xl font-medium text-white tracking-tight md:tracking-normal lg:tracking-wider leading-tighter md:leading-tight lg:leading-relaxed text-center md:text-right my-auto'>
+          Delivering pioneer digital solutions and top-notch design support to
+          ambitious startups and leading corporations since 2018
+        </h1>
       </section>
 
       <Suspense fallback={<div>Loading...</div>}>

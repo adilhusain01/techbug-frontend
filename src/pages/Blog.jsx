@@ -10,21 +10,22 @@ const Footer = lazy(() => import('../components/Footer'));
 const Blog = () => {
   return (
     <main
-      className='min-w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] font-plus-jakarta-sans'
+      className='max-w-full relative bg-gray flex flex-col items-start justify-start box-border font-plus-jakarta-sans z-0 overflow-hidden'
       style={{
         userSelect: 'none',
       }}
     >
-      <section className='flex-1 flex flex-col items-start justify-start px-[3.75rem] mb-[10rem]  box-border w-full'>
+      <section className='flex flex-col items-start justify-start box-border w-full px-[3.75rem]'>
         <Suspense fallback={<div>Loading...</div>}>
           <Header menu={'Blog'} theme={'dark'} />
         </Suspense>
-
-        <Suspense fallback={<div>Loading...</div>}>
-          <BlogHead />
-        </Suspense>
       </section>
-      <section className='mb-[-1rem] w-full bg-white'>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <BlogHead />
+      </Suspense>
+
+      <section className='w-full bg-white'>
         <Suspense fallback={<div>Loading...</div>}>
           <TagArticles
             title={'Customer Experience'}

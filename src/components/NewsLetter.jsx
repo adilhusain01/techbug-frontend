@@ -83,17 +83,17 @@ function NewsLetter({ theme }) {
 
   return (
     <section
-      className='w-full self-stretch overflow-hidden shrink-0 text-[2.5rem] py-[5rem]'
+      className='max-w-full self-stretch py-[2.5rem] lg:py-[5rem] md:px-0 lg:px-[10rem]'
       style={{ backgroundColor: currentTheme.bg }}
     >
-      <div className='flex flex-col items-center justify-start gap-[1rem]'>
+      <div className='flex flex-col items-center justify-center gap-[1rem]'>
         <h1
-          className='p-0 m-0 mx-auto self-stretch font-semibold text-[3rem]'
+          className='p-0 m-0 mx-auto self-stretch font-semibold text-[1.5rem] md:text-[2rem] lg:text-[3rem] text-center'
           style={{ color: currentTheme.titleColor }}
         >
           Subscribe to Techbug's Newsletters
         </h1>
-        <h2 className='p-0 m-0 mx-auto self-stretch text-[1.25rem] font-semibold text-[#ACACAC] text-center flex items-center justify-center shrink-0 tracking-wide'>
+        <h2 className='p-0 m-0 mx-auto self-stretch text-[1rem] md:text-[1.25rem] font-semibold text-[#ACACAC] text-center flex items-center justify-center shrink-0 tracking-wide'>
           Get the best in industry news, delivered to your inbox.
         </h2>
         {successMessage && (
@@ -107,8 +107,8 @@ function NewsLetter({ theme }) {
           </p>
         )}
       </div>
-      <div className='mt-[4rem] flex flex-row items-start justify-center px-[5rem] gap-[4rem] text-[1rem]'>
-        <div className='grid grid-cols-2 gap-[2rem]'>
+      <div className='mt-[2.5rem] lg:mt-[4rem] grid grid-cols-1 md:grid-cols-12 px-[2.5rem] lg:px-[5rem] gap-[1rem] lg:gap-[4rem] text-[1rem]'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-[1rem] lg:gap-[2rem] md:col-span-8'>
           {[
             {
               name: 'DEF',
@@ -143,25 +143,23 @@ function NewsLetter({ theme }) {
           ].map((article) => (
             <article
               key={article.name}
-              className='self-stretch rounded-2xl bg-[#FFFFFF] border-[#DBE4EC] border-[1px] border-solid flex flex-row items-start justify-start p-[1.5rem] gap-[1rem]'
+              className='self-stretch rounded-2xl bg-[#FFFFFF] border-[#DBE4EC] border-[1px] border-solid px-[0.5rem] lg:px-[1.25rem] py-[0.5rem] md:py-[0rem] lg:py-[1.25rem] grid grid-cols-12'
             >
-              <div className='flex flex-row items-start justify-start gap-[0.5rem]'>
-                <img
-                  className='w-[2.5rem] relative h-[2.5rem] object-cover'
-                  alt={article.name}
-                  src={article.imageUrl}
-                />
-                <span className='w-[14.625rem] flex flex-col items-start justify-start gap-[0.5rem]'>
-                  <h2 className='m-0 self-stretch relative font-semibold flex items-center h-[1.313rem] shrink-0'>
-                    {article.name}
-                  </h2>
-                  <h3 className='m-0 self-stretch relative text-[0.938rem] font-semibold text-[#6D6E72]'>
-                    {article.description}
-                  </h3>
-                </span>
+              <img
+                className='m-0 p-0 h-[2rem] lg:h-[2.5rem] w-[2rem] lg:w-[2.5rem] relative object-cover col-span-2 my-auto'
+                alt={article.name}
+                src={article.imageUrl}
+              />
+              <div className='m-0 p-0 flex flex-col items-start justify-start gap-[0.25rem] lg:gap-[0.5rem] col-span-8 my-auto'>
+                <h2 className='m-0 p-0 text-[1.15rem] lg:text-[1.5rem] self-stretch relative font-semibold flex items-center shrink-0'>
+                  {article.name}
+                </h2>
+                <h3 className='m-0 p-0 text-[0.8rem] lg:text-[1rem] self-stretch relative font-normal text-[#6D6E72 overflow-hidden'>
+                  {article.description}
+                </h3>
               </div>
               <img
-                className='w-[2.125rem] relative h-[2.125rem] object-cover'
+                className='m-0 p-0 h-[1.75rem] lg:h-[2.125rem] w-[1.75rem] lg:w-[2.125rem] object-cover col-span-2 my-auto'
                 alt='Add'
                 src={
                   selectedArticles[article.name]
@@ -174,30 +172,29 @@ function NewsLetter({ theme }) {
           ))}
         </div>
 
-        <div className='w-[23.5rem] flex flex-col items-start justify-start gap-[1rem] text-[1rem] text-text-brand-on-brand-secondary'>
-          <div className='self-stretch h-[6rem] flex flex-col items-start justify-start gap-space-200'>
-            <div
-              className='self-stretch relative text-[1.25rem] leading-[140%] font-semibold'
-              style={{ color: currentTheme.emailColor }}
-            >
-              Email
-            </div>
+        <div className='flex flex-col items-start justify-start gap-[0.75rem] lg:gap-[1rem] md:col-span-4'>
+          <h3
+            className='m-0 relative text-[1rem] md:text-[1.15rem] lg:text-[1.25rem] font-semibold'
+            style={{ color: currentTheme.emailColor }}
+          >
+            Email
+          </h3>
 
-            <input
-              className='self-stretch flex-1 rounded-xl bg-whitesmoke [border:none] [outline:none] overflow-hidden flex flex-row items-center justify-start px-[1.5rem] min-w-[15rem] text-[1.125rem] text-lightslategray-900'
-              placeholder='Enter your email id'
-              value={email}
-              onChange={handleEmailChange}
-              autoComplete='off'
-            />
-          </div>
+          <input
+            className='self-stretch rounded-xl bg-whitesmoke [border:none] [outline:none] px-[1rem] lg:px-[1.5rem] py-[0.75rem] lg:py-[1.25rem] text-[1rem] md:text-[1.125rem]'
+            placeholder='Enter your email id'
+            value={email}
+            onChange={handleEmailChange}
+            autoComplete='off'
+          />
+
           <button
-            className='self-stretch rounded-3xl bg-[#F9CA06] flex flex-row items-center justify-center py-[1rem] px-[1rem] box-border text-[1.25rem] text-black tracking-wider'
+            className='self-stretch rounded-3xl bg-[#F9CA06] flex flex-row items-center justify-center px-[1rem] py-[0.5rem] lg:py-[1rem] box-border text-[1.15rem] lg:text-[1.25rem] text-black tracking-wider'
             onClick={handleSubscribe}
           >
             Subscribe
           </button>
-          <div className='self-stretch relative text-[0.875rem] font-semibold text-[#ACACAC] flex items-center h-[7.5rem] shrink-0'>
+          <div className='self-stretch relative text-[0.75rem] md:text-[0.875rem] font-semibold text-[#ACACAC] flex items-center shrink-0'>
             <p className='m-0'>
               We're committed to your privacy. Techbug uses the information you
               provide to us to contact you about our relevant content, products,
@@ -205,9 +202,9 @@ function NewsLetter({ theme }) {
               time. For more information, check out our
             </p>
           </div>
-          <div className='relative leading-[1.5rem] text-[#838383]'>
+          <p className='m-0 relative leading-[1.5rem] text-[0.75rem] lg:text-[1rem] text-[#838383]'>
             Privacy policy
-          </div>
+          </p>
         </div>
       </div>
     </section>

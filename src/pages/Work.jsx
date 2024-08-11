@@ -8,7 +8,7 @@ const Footer = lazy(() => import('../components/Footer'));
 const Work = () => {
   return (
     <main
-      className='w-full relative bg-white overflow-hidden flex flex-col items-start justify-start box-border font-plus-jakarta-sans'
+      className='w-full relative bg-white flex flex-col items-start justify-start box-border font-plus-jakarta-sans overflow-hidden'
       style={{
         userSelect: 'none',
       }}

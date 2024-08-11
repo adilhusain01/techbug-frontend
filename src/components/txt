@@ -1,0 +1,119 @@
+// import PropTypes from 'prop-types';
+// import { useState, useEffect } from 'react';
+// import axios from '../api/axios';
+// import { Link } from 'react-router-dom';
+
+// const TagArticles = ({ title, tags }) => {
+//   const [posts, setPosts] = useState([]);
+//   const [showAll, setShowAll] = useState(false);
+
+//   const getBlogPost = async () => {
+//     try {
+//       const response = await axios.get(`/blogposts/meta/${tags}`);
+//       const data = response.data;
+//       setPosts(data);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+
+//   useEffect(() => {
+//     getBlogPost();
+//   }, [tags]);
+
+//   const toggleShowAll = () => {
+//     setShowAll(!showAll);
+//   };
+
+//   const firstThreePosts = posts.slice(0, 3);
+//   const remainingPosts = posts.slice(3);
+
+//   return (
+//     <section className='p-0 max-w-full px-[8rem]'>
+//       <div className='flex flex-row'>
+//         <h2 className='p-0 min-w-fit self-stretch text-[3rem] font-semibold'>
+//           {title}
+//         </h2>
+//         <div className='p-0 w-full border-black border-t-[2px] border-solid box-border' />
+//       </div>
+//       <div className='p-0 flex flex-col justify-center pb-[4rem] box-border text-[1rem] text-black'>
+//         <h1
+//           className='text-right text-[#F9CA06] p-0'
+//           onClick={toggleShowAll}
+//           style={{ cursor: 'pointer' }}
+//         >
+//           {showAll ? 'Collapse' : 'View All'}
+//         </h1>
+//         <div className='grid grid-cols-2 lg:grid-cols-3 justify-items-center gap-[1rem]'>
+//           {firstThreePosts.map((post, index) => (
+//             <Link
+//               key={index}
+//               className={`flex flex-col items-start justify-start gap-[0.5rem] text-[1rem] w-[33.5rem]`}
+//               to={`/blog/${post.slug}`}
+//               style={{ cursor: 'pointer', textDecoration: 'none' }}
+//             >
+//               <img
+//                 className='self-stretch h-[16.5rem] w-[33.5rem] overflow-hidden shrink-0 object-cover'
+//                 loading='lazy'
+//                 alt={post.title}
+//                 src={post.thumbnail}
+//               />
+//               <div className='flex flex-col items-start justify-start mt-2'>
+//                 <h1 className='p-0 m-0 font-semibold flex items-center shrink-0 text-gray'>
+//                   {post.title}
+//                 </h1>
+//                 <h2 className='p-0 m-0 mt-4 text-[1rem] font-semibold text-dimgray-100'>
+//                   {post.author}
+//                 </h2>
+//                 <h3 className='p-0 m-0 mt-1 [text-decoration:none]  text-[1rem] font-semibold text-dimgray-100'>
+//                   {post.updatedAt}
+//                 </h3>
+//               </div>
+//             </Link>
+//           ))}
+//         </div>
+
+//         {/* transition-container */}
+//         <div
+//           className={`mt-8 grid grid-cols-3 justify-items-center gap-[1rem] transition-container ${
+//             showAll ? 'expanded' : 'collapsed'
+//           }`}
+//         >
+//           {remainingPosts.map((post, index) => (
+//             <Link
+//               key={index}
+//               className={`flex flex-col items-start justify-start gap-[0.5rem] text-[1rem] w-[33.5rem]`}
+//               to={`/blog/${post.slug}`}
+//               style={{ cursor: 'pointer', textDecoration: 'none' }}
+//             >
+//               <img
+//                 className='self-stretch h-[16.5rem] w-[33.5rem] overflow-hidden shrink-0 object-cover'
+//                 loading='lazy'
+//                 alt={post.title}
+//                 src={post.thumbnail}
+//               />
+//               <div className='flex flex-col items-start justify-start mt-2'>
+//                 <h1 className='p-0 m-0 font-semibold flex items-center shrink-0 text-gray'>
+//                   {post.title}
+//                 </h1>
+//                 <h2 className='p-0 m-0 mt-4 text-[1rem] font-semibold text-dimgray-100'>
+//                   {post.author}
+//                 </h2>
+//                 <h3 className='p-0 m-0 mt-1 [text-decoration:none]  text-[1rem] font-semibold text-dimgray-100'>
+//                   {post.updatedAt}
+//                 </h3>
+//               </div>
+//             </Link>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// TagArticles.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   tags: PropTypes.string.isRequired,
+// };
+
+// export default TagArticles;

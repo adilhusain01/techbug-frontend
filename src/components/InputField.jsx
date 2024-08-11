@@ -21,7 +21,7 @@ const InputField = ({
       </label>
 
       <div
-        className='self-stretch rounded-xl  box-border overflow-hidden flex flex-row items-center justify-start py-[0.6rem] md:py-[0.8rem] lg:py-[1rem] px-[1.2rem] md:px-[1.5rem] border-[1px]'
+        className='self-stretch rounded-xl box-border overflow-hidden flex flex-row items-center justify-start py-[0.6rem] md:py-[0.8rem] lg:py-[1rem] px-[1.2rem] md:px-[1.5rem] border-[1px] border-solid'
         style={{
           backgroundColor: theme.inputBg,
           borderColor: theme.inputBorderColor,

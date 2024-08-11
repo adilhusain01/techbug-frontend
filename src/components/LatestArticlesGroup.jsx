@@ -23,75 +23,74 @@ function LatestArticlesGroup() {
   const remainingPosts = blogPostsMeta.slice(2, 5);
 
   return (
-    <section className='mt-[5rem] px-[5rem]'>
-      <div className='flex flex-row'>
-        <h1 className='min-w-[25rem] self-stretch  text-[3rem] font-semibold text-white'>
+    <section className='max-w-full my-[2.5rem] lg:my-[5rem] px-[2rem] lg:px-[8rem]'>
+      <div className='flex flex-row gap-[1.25rem] lg:gap-[2rem]'>
+        <h1 className='p-0 min-w-fit self-stretch text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] font-semibold m-0 text-white'>
           Latest Articles
         </h1>
-        <div className='w-full border-white border-t-[2px] border-solid box-border' />
+        <div className='w-full border-white border-b-[2px] border-solid box-border' />
       </div>
-      <div className='w-full self-stretch'>
-        <div className='grid grid-cols-2 gap-[2rem]'>
-          {firstTwoPosts.map((post) => (
+
+      <div className='mt-[4rem] p-0 w-full self-stretch gap-[1.5rem]'>
+        <div
+          className={`grid justify-items-center grid-cols-1 md:grid-cols-2 gap-[1.5rem]`}
+        >
+          {firstTwoPosts.map((post, index) => (
             <Link
-              className='flex-1 flex flex-col items-end justify-start min-w-[24.875rem] max-w-full'
+              className='bg-[#FEF4EA] flex flex-col items-start justify-start w-[20rem] md:w-[22rem] lg:w-[51rem]'
               key={post._id}
               to={`/blog/${post.slug}`}
               style={{ cursor: 'pointer', textDecoration: 'none' }}
             >
               <img
-                className='h-[20rem] self-stretch box-border'
-                loading='lazy'
+                className='m-0 h-[10rem] md:h-[11rem] lg:h-[25rem] w-[20rem] md:w-[22rem] lg:w-[51rem] self-stretch box-border'
                 alt={post.title}
                 src={post.thumbnail}
               />
-              <div className='self-stretch bg-linen flex flex-col items-start justify-start py-[2rem] px-[1rem] gap-[1rem] z-[2] bg-[#fef4ea]'>
-                <h2 className='text-[#344252] m-0 self-stretch relative font-semibold font-[inherit] '>
+              <div className='m-0 px-[1rem] py-[0.5rem] flex flex-col items-start justify-start mt-2 self-stretch'>
+                <h1 className='m-0 font-semibold flex text-[1rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
                   {post.title}
-                </h2>
-                <p className='m-0 self-stretch relative text-[1rem] font-semibold text-[#65666D]'>
-                  {post.description}
-                </p>
-                <div className='flex flex-row items-end justify-start gap-[0.5rem] text-[0.969rem] text-[#8186A2]'>
-                  <p className='m-0 relative leading-[1rem] font-semibold inline-block min-w-[4.288rem] shrink-0'>
+                </h1>
+                <span className='mt-1 flex flex-row gap-[0.5rem]'>
+                  <h2 className='m-0 p-0 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
                     {post.author}
-                  </p>
-                  <p className='m-0 relative text-[0.906rem] leading-[0.956rem] font-semibold text-lightslategray-500 inline-block min-w-[3.319rem] shrink-0'>
+                  </h2>
+                  <h3 className='m-0 p-0 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
                     {post.updatedAt}
-                  </p>
-                </div>
+                  </h3>
+                </span>
               </div>
             </Link>
           ))}
         </div>
-        <div className='grid grid-cols-3 gap-[2rem] mt-[2rem]'>
+
+        <div
+          className={`mt-[2rem] grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem]`}
+        >
           {remainingPosts.map((post, index) => (
             <Link
-              className='flex-1 flex flex-col items-end justify-start min-w-[24.875rem] max-w-full '
+              className='bg-[#FEF4EA]  flex flex-col items-start justify-start gap-0 w-[20rem] md:w-[22rem] lg:w-[33.5rem]'
               key={post._id}
               to={`/blog/${post.slug}`}
               style={{ cursor: 'pointer', textDecoration: 'none' }}
             >
               <img
-                className='h-[13rem] self-stretch box-border'
+                className='m-0 h-[10rem] md:h-[11rem] lg:h-[16.5rem] w-[20rem] md:w-[22rem] lg:w-[33.5rem] self-stretch box-border'
                 alt={post.title}
                 src={post.thumbnail}
               />
-              <div className='self-stretch bg-linen flex flex-col items-start justify-start py-[1rem] px-[1rem] gap-[1rem] z-[2] bg-[#fef4ea]'>
-                <h2 className='text-[#344252] m-0 self-stretch relative font-semibold font-[inherit] '>
+              <div className='m-0 px-[1rem] py-[0.5rem] flex flex-col items-start justify-start mt-2'>
+                <h1 className='m-0 font-semibold flex text-[1rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
                   {post.title}
-                </h2>
-                <p className='m-0 self-stretch relative text-[1rem] font-semibold text-[#65666D]'>
-                  {post.description}
-                </p>
-                <div className='flex flex-row items-end justify-start gap-[0.5rem] text-[0.969rem] text-[#8186A2]'>
-                  <p className='m-0 relative leading-[1rem] font-semibold inline-block min-w-[4.288rem] shrink-0'>
+                </h1>
+                <span className='mt-1 flex flex-row gap-[0.5rem]'>
+                  <h2 className='m-0 p-0 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
                     {post.author}
-                  </p>
-                  <p className='m-0 relative text-[0.906rem] leading-[0.956rem] font-semibold text-lightslategray-500 inline-block min-w-[3.319rem] shrink-0'>
+                  </h2>
+                  <h3 className='m-0 p-0 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
                     {post.updatedAt}
-                  </p>
-                </div>
+                  </h3>
+                </span>
               </div>
             </Link>
           ))}

@@ -39,7 +39,7 @@ const BlogPost = () => {
 
   return (
     <main
-      className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] leading-[normal] tracking-[normal] font-plus-jakarta-sans'
+      className='w-full relative bg-gray flex flex-col items-start justify-start box-border font-plus-jakarta-sans overflow-hidden'
       style={{
         userSelect: 'none',
       }}

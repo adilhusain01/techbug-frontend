@@ -1,107 +1,80 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import axios from '../api/axios';
 import { Link } from 'react-router-dom';
 
 const LatestArticles = () => {
-  const [blogPostsMeta, setBlogPostsMeta] = useState([]);
-  const [showAll, setShowAll] = useState(false);
+  const [posts, setPosts] = useState([]);
+  // const [showAll, setShowAll] = useState(false);
 
-  const getBlogPostsMeta = async () => {
+  const getBlogPost = async () => {
     try {
-      const response = await axios.get('/blogposts/meta');
+      const response = await axios.get(`/blogposts/meta`);
       const data = response.data;
-      setBlogPostsMeta(data);
+      setPosts(data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getBlogPostsMeta();
+    getBlogPost();
   }, []);
 
-  const toggleShowAll = () => {
-    setShowAll(!showAll);
-  };
-
-  const firstThreePosts = blogPostsMeta.slice(0, 3);
-  const remainingPosts = blogPostsMeta.slice(3);
+  // const toggleShowAll = () => {
+  //   setShowAll(!showAll);
+  // };
 
   return (
-    <section className='w-full'>
-      <div className='flex flex-row px-[8rem] py-0'>
-        <h1 className='min-w-[25rem] self-stretch  text-[3rem] font-semibold'>
+    <section className='max-w-full px-[1.5rem] md:px-[4rem] lg:px-[8rem] my-[1.5rem] md:my-[2.5rem] lg:my-[4rem]'>
+      <div className='flex flex-row gap-[1.25rem] lg:gap-[2rem]'>
+        <h2 className='p-0 min-w-fit self-stretch text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] font-semibold m-0'>
           Latest Articles
-        </h1>
-        <div className='w-full border-black border-t-[2px] border-solid box-border' />
+        </h2>
+        <div className='p-0 w-full border-black border-t-[2px] border-solid box-border' />
       </div>
-      <div className='flex flex-col justify-center pb-[4rem] px-[8rem] box-border max-w-full text-left text-[1rem] text-black'>
-        <h1
-          className='text-right text-[#F9CA06]'
+      <div className='mt-[2rem] p-0 flex flex-col justify-center box-border text-[1rem] text-black'>
+        {/* <h1
+          className='text-right text-[#F9CA06] p-0'
           onClick={toggleShowAll}
           style={{ cursor: 'pointer' }}
         >
           {showAll ? 'Collapse' : 'View All'}
-        </h1>
-        <div className={`grid grid-cols-3 gap-[2rem] lg:grid-cols-2`}>
-          {firstThreePosts.map((post, index) => (
-            <Link
-              key={index}
-              className={`flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem]`}
-              to={`/blog/${post.slug}`}
-              style={{ cursor: 'pointer', textDecoration: 'none' }}
-            >
-              <img
-                className='self-stretch h-[14.25rem] max-w-full overflow-hidden shrink-0 object-cover'
-                loading='lazy'
-                alt={post.title}
-                src={post.thumbnail}
-              />
-              <div className='self-stretch flex flex-col items-start justify-start mt-2'>
-                <h1 className='p-0 m-0 self-stretch font-semibold flex items-center shrink-0 text-gray'>
-                  {post.title}
-                </h1>
-                <h2 className='p-0 m-0 mt-4 self-stretch text-[1rem] font-semibold text-dimgray-100'>
-                  {post.author}
-                </h2>
-                <h3 className='p-0 m-0 mt-1 [text-decoration:none] self-stretch text-[1rem] font-semibold text-dimgray-100'>
-                  {post.updatedAt}
-                </h3>
-              </div>
-            </Link>
-          ))}
-        </div>
-        <div
-          className={`mt-8 grid grid-cols-3 gap-[2rem] lg:grid-cols-2 transition-container ${
-            showAll ? 'expanded' : 'collapsed'
-          }`}
-        >
-          {remainingPosts.map((post, index) => (
-            <Link
-              key={index + 3}
-              className={`flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-left text-[1rem]`}
-              to={`/blog/${post.slug}`}
-              style={{ cursor: 'pointer', textDecoration: 'none' }}
-            >
-              <img
-                className='self-stretch h-[14.25rem] max-w-full overflow-hidden shrink-0 object-cover'
-                loading='lazy'
-                alt={post.title}
-                src={post.thumbnail}
-              />
-              <div className='self-stretch flex flex-col items-start justify-start mt-2'>
-                <h1 className='p-0 m-0 self-stretch font-semibold flex items-center shrink-0 text-gray'>
-                  {post.title}
-                </h1>
-                <h2 className='p-0 m-0 mt-4 self-stretch text-[1rem] font-semibold text-dimgray-100'>
-                  {post.author}
-                </h2>
-                <h3 className='p-0 m-0 mt-1 [text-decoration:none] self-stretch text-[1rem] font-semibold text-dimgray-100'>
-                  {post.updatedAt}
-                </h3>
-              </div>
-            </Link>
-          ))}
+        </h1> */}
+
+        <div className='overflow-x-auto flex flex-row gap-[1rem] pb-[1.5rem]'>
+          <div className={`flex flex-row gap-[1.5rem]`}>
+            {/*  ${!showAll ? 'w-max' : ''} */}
+            {posts.map((post, index) => (
+              <Link
+                key={index}
+                className={`flex flex-col items-start justify-start gap-[0.5rem] w-[20rem] md:w-[25rem] lg:w-[33.5rem]`}
+                to={`/blog/${post.slug}`}
+                style={{ cursor: 'pointer', textDecoration: 'none' }}
+              >
+                {/*  ${
+                  !showAll && index >= 3 ? 'hidden' : ''
+                } */}
+                <img
+                  className='self-stretch h-[11rem] md:h-[13rem] lg:h-[16.5rem] w-[20rem] md:w-[25rem] lg:w-[33.5rem] overflow-hidden shrink-0 object-cover'
+                  loading='lazy'
+                  alt={post.title}
+                  src={post.thumbnail}
+                />
+                <div className='flex flex-col items-start justify-start mt-2'>
+                  <h1 className='m-0 font-semibold flex text-[1rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
+                    {post.title}
+                  </h1>
+                  <h2 className='m-0 mt-2 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+                    {post.author}
+                  </h2>
+                  <h3 className='m-0 mt-1 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+                    {post.updatedAt}
+                  </h3>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

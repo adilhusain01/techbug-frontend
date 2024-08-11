@@ -10,7 +10,7 @@ const Footer = lazy(() => import('../components/Footer'));
 const About = () => {
   return (
     <main
-      className='w-full relative bg-gray overflow-hidden flex flex-col items-start justify-start box-border gap-[0.187rem] font-plus-jakarta-sans'
+      className='w-full relative bg-gray flex flex-col items-start justify-start box-border font-plus-jakarta-sans overflow-hidden'
       style={{
         userSelect: 'none',
       }}

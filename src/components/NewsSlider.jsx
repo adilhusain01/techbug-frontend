@@ -67,13 +67,13 @@ const NewsSlider = ({ tag }) => {
   return (
     <section className='self-stretch w-full'>
       <div
-        className={`self-stretch flex flex-row items-start justify-start py-[0rem] px-[5rem] box-border max-w-full text-left text-[3rem] text-[#FE8D4F]`}
+        className={`self-stretch flex flex-row items-start justify-start py-[0rem] px-[2rem] lg:px-[8rem] box-border max-w-full text-left text-[#FE8D4F]`}
       >
-        <h1 className='mt-[2rem] flex-1 relative text-inherit font-semibold font-[inherit] inline-block max-w-full z-[1]'>
+        <h1 className='mt-[2rem] flex-1 relative text-[2.5rem] md:text-[3rem] font-semibold font-[inherit] inline-block max-w-full z-[1] text-center md:text-left leading-tighter md:leading-normal'>
           Explore News, Insightful Articles and Updates.
         </h1>
       </div>
-      <div className='self-stretch flex flex-row items-start justify-start pl-[5rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white'>
+      <div className='self-stretch flex flex-row items-start justify-start pl-[2rem] lg:pl-[8rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white'>
         <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full'>
           <div
             className='overflow-x-auto flex flex-row items-center justify-start py-[0rem] px-[0rem] box-border gap-[1.25rem] max-w-full text-left text-[1.25rem] text-text-default-default'
@@ -94,13 +94,13 @@ const NewsSlider = ({ tag }) => {
           >
             {posts.map((post) => (
               <Link
-                className='w-[32.25rem] flex flex-col items-start justify-end box-border max-w-full shrink-0'
+                className='w-[20rem] md:w-[25rem] lg:w-[33.5rem] flex flex-col items-start justify-end box-border max-w-full shrink-0'
                 key={post._id}
                 to={`/blog/${post.slug}`}
                 style={{ cursor: 'pointer', textDecoration: 'none' }}
               >
                 <img
-                  className='w-full h-[13rem] relative object-cover z-[1]'
+                  className='h-[9rem] md:h-[11rem] lg:h-[15rem] w-[20rem] md:w-[25rem] lg:w-[33.5rem] relative object-cover z-[1]'
                   alt='News'
                   src={post.thumbnail}
                 />

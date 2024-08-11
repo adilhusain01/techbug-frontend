@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const TextareaField = ({ theme, label, name, value, onChange }) => {
   return (
     <div
-      className={`w-full flex flex-col items-start justify-start gap-[0.5rem] max-w-full text-[1rem] font-body-base`}
+      className={`w-full flex flex-col items-start justify-start gap-[0.5rem] max-w-full font-plus-jakarta-sans`}
     >
       <label
         htmlFor={name}
@@ -14,7 +14,7 @@ const TextareaField = ({ theme, label, name, value, onChange }) => {
       </label>
 
       <div
-        className='self-stretch h-[8rem] rounded-xl  box-border overflow-hidden shrink-0 flex flex-row items-start justify-start py-[0.6rem] md:py-[0.8rem] lg:py-[1rem] px-[1.2rem] md:px-[1.5rem] border-[1px] border-solid'
+        className='self-stretch h-[8rem] rounded-xl box-border overflow-hidden shrink-0 flex flex-row items-start justify-start py-[0.6rem] md:py-[0.8rem] lg:py-[1rem] px-[1.2rem] md:px-[1.5rem] border-[1px] border-solid'
         style={{
           backgroundColor: theme.inputBg,
           borderColor: theme.inputBorderColor,
@@ -22,7 +22,7 @@ const TextareaField = ({ theme, label, name, value, onChange }) => {
       >
         <textarea
           id={name}
-          className='min-h-fit [border:none] [outline:none] font-medium text-[0.8rem] md:text-[1.125rem] bg-[transparent] flex-1 relative leading-[100%] text-left inline-block min-w-[15.625rem] max-w-full p-0'
+          className='w-full [border:none] [outline:none] text-[0.8rem] md:text-[0.95rem] bg-[transparent] min-h-fit flex-1 relative leading-[100%] p-0'
           placeholder='Tell us more about your projects, needs, and timeline.'
           name={name}
           value={value}
