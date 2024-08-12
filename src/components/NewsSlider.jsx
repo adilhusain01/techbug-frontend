@@ -29,6 +29,23 @@ const NewsSlider = ({ tag }) => {
     setIsDragging(false);
   };
 
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 1.2; // scroll-fast
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   const handleWheel = (e) => {
     if (e.deltaY !== 0) {
       scrollRef.current.scrollLeft += e.deltaY;
@@ -67,7 +84,7 @@ const NewsSlider = ({ tag }) => {
   return (
     <section className='self-stretch w-full'>
       <div
-        className={`self-stretch flex flex-row items-start justify-start py-[0rem] px-[2rem] lg:px-[8rem] box-border max-w-full text-left text-[#FE8D4F]`}
+        className={`self-stretch flex flex-row items-start justify-start py-[0rem] px-[2rem] lg:px-[8rem] box-border max-w-full text-[#FE8D4F]`}
       >
         <h1 className='mt-[2rem] flex-1 relative text-[2.5rem] md:text-[3rem] font-semibold font-[inherit] inline-block max-w-full z-[1] text-center md:text-left leading-tighter md:leading-normal'>
           Explore News, Insightful Articles and Updates.
@@ -90,6 +107,9 @@ const NewsSlider = ({ tag }) => {
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
             onWheel={handleWheel}
           >
             {posts.map((post) => (
