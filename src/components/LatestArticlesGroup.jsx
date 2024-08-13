@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from '../api/axios';
 
+import AnimatedSection from './AnimatedSection';
+
 function LatestArticlesGroup() {
   const [blogPostsMeta, setBlogPostsMeta] = useState([]);
 
@@ -32,69 +34,72 @@ function LatestArticlesGroup() {
       </div>
 
       <div className='mt-[4rem] p-0 w-full self-stretch gap-[1.5rem]'>
-        <div
-          className={`grid justify-items-center grid-cols-1 md:grid-cols-2 gap-[1.5rem]`}
-        >
-          {firstTwoPosts.map((post, index) => (
-            <Link
-              className='bg-[#FEF4EA] flex flex-col items-start justify-start w-[20rem] md:w-[22rem] lg:w-[51rem]'
-              key={post._id}
-              to={`/blog/${post.slug}`}
-              style={{ cursor: 'pointer', textDecoration: 'none' }}
-            >
-              <img
-                className='m-0 h-[10rem] md:h-[11rem] lg:h-[25rem] w-[20rem] md:w-[22rem] lg:w-[51rem] self-stretch box-border'
-                alt={post.title}
-                src={post.thumbnail}
-              />
-              <div className='m-0 px-[1rem] py-[0.5rem] flex flex-col items-start justify-start mt-2 self-stretch'>
-                <h1 className='m-0 font-semibold flex text-[1rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
-                  {post.title}
-                </h1>
-                <span className='mt-1 flex flex-row gap-[0.5rem]'>
-                  <h2 className='m-0 p-0 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
-                    {post.author}
-                  </h2>
-                  <h3 className='m-0 p-0 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
-                    {post.updatedAt}
-                  </h3>
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        <div
-          className={`mt-[2rem] grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem]`}
-        >
-          {remainingPosts.map((post, index) => (
-            <Link
-              className='bg-[#FEF4EA]  flex flex-col items-start justify-start gap-0 w-[20rem] md:w-[22rem] lg:w-[33.5rem]'
-              key={post._id}
-              to={`/blog/${post.slug}`}
-              style={{ cursor: 'pointer', textDecoration: 'none' }}
-            >
-              <img
-                className='m-0 h-[10rem] md:h-[11rem] lg:h-[16.5rem] w-[20rem] md:w-[22rem] lg:w-[33.5rem] self-stretch box-border'
-                alt={post.title}
-                src={post.thumbnail}
-              />
-              <div className='m-0 px-[1rem] py-[0.5rem] flex flex-col items-start justify-start mt-2'>
-                <h1 className='m-0 font-semibold flex text-[1rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
-                  {post.title}
-                </h1>
-                <span className='mt-1 flex flex-row gap-[0.5rem]'>
-                  <h2 className='m-0 p-0 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
-                    {post.author}
-                  </h2>
-                  <h3 className='m-0 p-0 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
-                    {post.updatedAt}
-                  </h3>
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <AnimatedSection>
+          <div
+            className={`grid justify-items-center grid-cols-1 md:grid-cols-2 gap-[1.5rem]`}
+          >
+            {firstTwoPosts.map((post, index) => (
+              <Link
+                className='bg-[#FEF4EA] flex flex-col items-start justify-start w-[20rem] md:w-[22rem] lg:w-[51rem]'
+                key={post._id}
+                to={`/blog/${post.slug}`}
+                style={{ cursor: 'pointer', textDecoration: 'none' }}
+              >
+                <img
+                  className='m-0 h-[10rem] md:h-[11rem] lg:h-[25rem] w-[20rem] md:w-[22rem] lg:w-[51rem] self-stretch box-border'
+                  alt={post.title}
+                  src={post.thumbnail}
+                />
+                <div className='m-0 px-[1rem] py-[0.5rem] flex flex-col items-start justify-start mt-2 self-stretch'>
+                  <h1 className='m-0 font-semibold flex text-[1rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
+                    {post.title}
+                  </h1>
+                  <span className='mt-1 flex flex-row gap-[0.5rem]'>
+                    <h2 className='m-0 p-0 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+                      {post.author}
+                    </h2>
+                    <h3 className='m-0 p-0 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+                      {post.updatedAt}
+                    </h3>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </AnimatedSection>
+        <AnimatedSection>
+          <div
+            className={`mt-[2rem] grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem]`}
+          >
+            {remainingPosts.map((post, index) => (
+              <Link
+                className='bg-[#FEF4EA]  flex flex-col items-start justify-start gap-0 w-[20rem] md:w-[22rem] lg:w-[33.5rem]'
+                key={post._id}
+                to={`/blog/${post.slug}`}
+                style={{ cursor: 'pointer', textDecoration: 'none' }}
+              >
+                <img
+                  className='m-0 h-[10rem] md:h-[11rem] lg:h-[16.5rem] w-[20rem] md:w-[22rem] lg:w-[33.5rem] self-stretch box-border'
+                  alt={post.title}
+                  src={post.thumbnail}
+                />
+                <div className='m-0 px-[1rem] py-[0.5rem] flex flex-col items-start justify-start mt-2'>
+                  <h1 className='m-0 font-semibold flex text-[1rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
+                    {post.title}
+                  </h1>
+                  <span className='mt-1 flex flex-row gap-[0.5rem]'>
+                    <h2 className='m-0 p-0 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+                      {post.author}
+                    </h2>
+                    <h3 className='m-0 p-0 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+                      {post.updatedAt}
+                    </h3>
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

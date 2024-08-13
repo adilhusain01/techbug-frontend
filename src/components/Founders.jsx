@@ -21,7 +21,7 @@ const Founders = () => {
         </h2>
       </div>
       <div className='self-stretch flex flex-row items-start justify-center box-border gap-[2rem] lg:gap-[4rem]'>
-        <h2 className='m-0 self-stretch relative text-[0.9rem] md:text-[1.5rem] lg:text-[2.25rem]leading:tighter md:leading-normal lg:leading-wider font-normal font-[inherit] text-right'>
+        <h2 className='m-0 self-stretch relative text-[0.9rem] md:text-[1.5rem] lg:text-[2.25rem] leading-tighter md:leading-normal lg:leading-wider font-normal font-[inherit] text-right'>
           Lorem ipsum dolor sit amet consectetur. Consectetur suspendisse cursus
           eu sodales. Nisl non egestas vitae nisl in. Leo fringilla eu
           pellentesque enim suspendisse.

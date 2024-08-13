@@ -1,6 +1,7 @@
 import axios from '../api/axios';
 import { useEffect, useState } from 'react';
 import ProgressCard from './ProgressCard';
+import AnimatedSection from './AnimatedSection';
 
 const ProgressContent = () => {
   const [cards, setCards] = useState([]);
@@ -26,12 +27,14 @@ const ProgressContent = () => {
         className={`self-stretch grid grid-cols-1 lg:grid-cols-2 flex-wrap items-start justify-start gap-[1rem] md:gap-[1.5rem] w-full text-white`}
       >
         {cards.slice(0, 4).map((card) => (
-          <ProgressCard
-            key={card._id}
-            title={card.title}
-            image_uri={card.image_uri}
-            description={card.description}
-          />
+          <AnimatedSection>
+            <ProgressCard
+              key={card._id}
+              title={card.title}
+              image_uri={card.image_uri}
+              description={card.description}
+            />
+          </AnimatedSection>
         ))}
       </div>
     </div>

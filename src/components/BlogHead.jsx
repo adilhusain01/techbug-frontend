@@ -86,7 +86,7 @@ function BlogHead() {
   return (
     <section className='max-w-full z-1'>
       <div
-        className='mt-[2.5rem] md:mt-[5rem] lg:mt-[8rem] px-[2rem] lg:px-[8rem] box-border text-white flex flex-row items-start justify-start gap-[0.5rem] md:gap-[1rem] overflow-x-auto flex-auto md:flex-wrap'
+        className='mt-[2.5rem] md:mt-[5rem] lg:mt-[8rem] mx-[2rem] lg:mx-[8rem] box-border text-white flex flex-row items-start justify-start gap-[0.5rem] md:gap-[1rem] overflow-x-auto flex-auto md:flex-wrap'
         style={{
           overflowX: 'hidden',
           overflowY: 'auto',
