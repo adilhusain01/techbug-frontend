@@ -5,10 +5,13 @@ function BlogLeftBar({ post }) {
     : [];
 
   return (
-    <div className='col-span-3 box-border px-[8rem]'>
-      <div className='self-stretch flex flex-col items-start justify-start gap-[0.1rem]'>
+    <div className='m-0 hidden md:block md:col-span-3 box-border px-[2rem] lg:px-[8rem]'>
+      <div className='m-0 p-0 self-stretch flex flex-col items-start justify-center gap-[0.75rem] lg:gap-[1rem]'>
         {subheadings.map((subheading) => (
-          <p key={subheading._id} className='self-stretch relative font-medium'>
+          <p
+            key={subheading._id}
+            className='text-[0.8rem] lg:text-[1rem] m-0 p-0 self-stretch relative font-medium'
+          >
             {subheading.subheading}
           </p>
         ))}

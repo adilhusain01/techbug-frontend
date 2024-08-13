@@ -82,7 +82,7 @@ const TagArticles = ({ title, tags }) => {
   return (
     <section className='max-w-full px-[1.5rem] md:px-[4rem] lg:px-[8rem] my-[2.5rem] lg:my-[4rem]'>
       <div className='flex flex-row gap-[1.25rem] lg:gap-[2rem]'>
-        <h2 className='p-0 min-w-fit self-stretch text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] font-semibold m-0'>
+        <h2 className='p-0 min-w-fit self-stretch text-[1.25rem] md:text-[1.5rem] lg:text-[2.5rem] font-semibold m-0'>
           {title}
         </h2>
         <div className='p-0 w-full border-black border-t-[2px] border-solid box-border' />
@@ -120,13 +120,13 @@ const TagArticles = ({ title, tags }) => {
               src={post.thumbnail}
             />
             <div className='flex flex-col items-start justify-start mt-2'>
-              <h1 className='m-0 font-semibold flex text-[1rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
+              <h1 className='m-0 font-semibold flex text-[0.9rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
                 {post.title}
               </h1>
               <h2 className='m-0 mt-2 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
                 {post.author}
               </h2>
-              <h3 className='m-0 mt-1 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+              <h3 className='m-0 mt-1  text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
                 {post.updatedAt}
               </h3>
             </div>

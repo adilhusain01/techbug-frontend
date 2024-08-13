@@ -17,6 +17,17 @@ const Home = () => {
         userSelect: 'none',
       }}
     >
+      <Helmet>
+        <title>Techbug</title>
+        <meta
+          name='description'
+          content='At Techbug we provide Development, Marketing and Custom Services and Solutions'
+        />
+        <meta
+          name='keywords'
+          content='App Development, Web Development, Marketing, Digital Solutions, Web Development and Design, App Development and Design, Digital Marketing, Smart Business Card, Business Automation, Custom Service, Techbug'
+        />
+      </Helmet>
       <section
         className='self-stretch flex flex-row items-start justify-start pb-[10rem] box-border max-w-full shrink-0'
         style={{

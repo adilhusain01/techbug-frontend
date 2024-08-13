@@ -15,6 +15,14 @@ const Services = () => {
         userSelect: 'none',
       }}
     >
+      <Helmet>
+        <title>Services</title>
+        <meta name='description' content='Techbug Services' />
+        <meta
+          name='keywords'
+          content='App Development, Web Development, Marketing, Digital Solutions, Web Development and Design, App Development and Design, Digital Marketing, Smart Business Card, Business Automation, Custom Service, Techbug'
+        />
+      </Helmet>
       <section className='px-[3.75rem] box-border lg:gap-[5rem] w-full'>
         <Suspense fallback={<div>Loading...</div>}>
           <Header menu={'Services'} theme={'dark'} />

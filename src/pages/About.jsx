@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import { Helmet } from 'react-helmet';
 
 const Header = lazy(() => import('../components/Header'));
 const Achievements = lazy(() => import('../components/Achievements'));
@@ -15,6 +16,14 @@ const About = () => {
         userSelect: 'none',
       }}
     >
+      <Helmet>
+        <title>About Us</title>
+        <meta name='description' content='About TechBug' />
+        <meta
+          name='keywords'
+          content='App Development, Marketing, Digital Solution, Web development and design, App Development and Design, Digital Marketing, Smart Business Card, Business Automation, Custom Services, Team, Project, Founder, Brand, Collaboration'
+        />
+      </Helmet>
       <section className='self-stretch flex flex-row items-start justify-start box-border max-w-full shrink-0'>
         <div className='flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border gap-[5rem] md:gap-[10rem] lg:gap-[14rem] w-full'>
           <Suspense fallback={<div>Loading...</div>}>

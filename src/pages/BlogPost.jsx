@@ -46,20 +46,22 @@ const BlogPost = () => {
     >
       <Helmet>
         <title>{blogpost.title}</title>
+        <meta name='description' content={blogpost.title} />
+        <meta name='keywords' content='Article, Post, Latest Post, Techbug' />
       </Helmet>
 
       <section className='w-full m-0 flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border'>
         <Suspense fallback={<div>Loading...</div>}>
           <Header menu={'Blog'} theme={'dark'} />
         </Suspense>
-
-        <Suspense fallback={<div>Loading...</div>}>
-          <BlogPostHead post={blogpost} />
-        </Suspense>
       </section>
 
-      <section className='pt-[6rem] mt-[8rem] w-full flex flex-col items-end justify-start gap-[3.8rem] shrink-0 text-[1rem] text-black bg-white box-border'>
-        <div className='grid grid-cols-12 gap-[2rem] w-full'>
+      <Suspense fallback={<div>Loading...</div>}>
+        <BlogPostHead post={blogpost} />
+      </Suspense>
+
+      <section className='pt-[2rem] md:pt-[3rem] lg:pt-[6rem] mt-[0.5rem] md:mt-[4rem] lg:mt-[8rem] w-full flex flex-col items-center justify-center text-black bg-white box-border'>
+        <div className='grid grid-cols-1 md:grid-cols-12 gap-[2rem] w-full'>
           <Suspense fallback={<div>Loading...</div>}>
             <BlogLeftBar post={blogpost} />
           </Suspense>

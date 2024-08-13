@@ -5,6 +5,7 @@ import {
   useNavigationType,
   useLocation,
 } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import LoadingSpinner from '../src/components/LoadingSpinner';
 import BlogPost from './pages/BlogPost';
 
@@ -25,62 +26,30 @@ function App() {
     }
   }, [action, pathname]);
 
-  useEffect(() => {
-    let title = '';
-    let metaDescription = '';
-
-    switch (pathname) {
-      case '/':
-        title = 'Home';
-        metaDescription = 'Welcome to the Home page';
-        break;
-      case '/work':
-        title = 'Work';
-        metaDescription = 'Our Work';
-        break;
-      case '/services':
-        title = 'Services';
-        metaDescription = 'Our Services';
-        break;
-      case '/blog':
-        title = 'Blog';
-        metaDescription = 'Our Blog';
-        break;
-      case '/about':
-        title = 'About';
-        metaDescription = 'About Us';
-        break;
-      default:
-        title = 'Website';
-        metaDescription = 'Website Description';
-        break;
-    }
-
-    if (title) {
-      document.title = title;
-    }
-
-    if (metaDescription) {
-      const metaDescriptionTag = document.querySelector(
-        'head > meta[name="description"]'
-      );
-      if (metaDescriptionTag) {
-        metaDescriptionTag.content = metaDescription;
-      }
-    }
-  }, [pathname]);
-
   return (
-    <Suspense fallback={<LoadingSpinner />}>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/work' element={<Work />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/blog' element={<Blog />} />
-        <Route path='/blog/:slug' element={<BlogPost />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
-    </Suspense>
+    <main className='w-full'>
+      <Helmet>
+        <title>Techbug</title>
+        <meta
+          name='description'
+          content='At Techbug we provide Development, Marketing and Custom Services and Solutions'
+        />
+        <meta
+          name='keywords'
+          content='App Development, Web Development, Marketing, Digital Solutions, Web Development and Design, App Development and Design, Digital Marketing, Smart Business Card, Business Automation, Custom Service, Techbug'
+        />
+      </Helmet>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/work' element={<Work />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/blog/:slug' element={<BlogPost />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </Suspense>
+    </main>
   );
 }
 

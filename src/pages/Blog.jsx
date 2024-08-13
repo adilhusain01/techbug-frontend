@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import { Helmet } from 'react-helmet';
 
 const Header = lazy(() => import('../components/Header'));
 const BlogHead = lazy(() => import('../components/BlogHead'));
@@ -15,6 +16,14 @@ const Blog = () => {
         userSelect: 'none',
       }}
     >
+      <Helmet>
+        <title>Blog</title>
+        <meta name='description' content='TechBug Blogs and Articles' />
+        <meta
+          name='keywords'
+          content='Blog, Latest Post, Post, Category, Article, App Development, Marketing, Digital Solution, Web development and design, App Development and Design, Digital Marketing, Smart Business Card, Business Automation, Custom Service, Techbug'
+        />
+      </Helmet>
       <section className='flex flex-col items-start justify-start box-border w-full px-[3.75rem]'>
         <Suspense fallback={<div>Loading...</div>}>
           <Header menu={'Blog'} theme={'dark'} />
