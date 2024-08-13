@@ -80,7 +80,7 @@ const TagArticles = ({ title, tags }) => {
   }, []);
 
   return (
-    <section className='max-w-full px-[1.5rem] md:px-[4rem] lg:px-[8rem] my-[1.5rem] md:my-[2.5rem] lg:my-[4rem]'>
+    <section className='max-w-full px-[1.5rem] md:px-[4rem] lg:px-[8rem] my-[2.5rem] lg:my-[4rem]'>
       <div className='flex flex-row gap-[1.25rem] lg:gap-[2rem]'>
         <h2 className='p-0 min-w-fit self-stretch text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] font-semibold m-0'>
           {title}
@@ -95,7 +95,6 @@ const TagArticles = ({ title, tags }) => {
           msOverflowStyle: 'none',
           scrollbarWidth: 'none',
           cursor: isDragging ? 'grabbing' : 'grab',
-          userSelect: 'none',
         }}
         ref={scrollRef}
         onMouseDown={handleMouseDown}

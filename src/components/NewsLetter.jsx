@@ -86,14 +86,14 @@ function NewsLetter({ theme }) {
       className='max-w-full self-stretch py-[2.5rem] lg:py-[5rem] md:px-0 lg:px-[10rem]'
       style={{ backgroundColor: currentTheme.bg }}
     >
-      <div className='flex flex-col items-center justify-center gap-[1rem]'>
+      <div className='flex flex-col items-center justify-center gap-[0.5rem] md:gap-[1rem]'>
         <h1
           className='p-0 m-0 mx-auto self-stretch font-semibold text-[1.5rem] md:text-[2rem] lg:text-[3rem] text-center'
           style={{ color: currentTheme.titleColor }}
         >
           Subscribe to Techbug's Newsletters
         </h1>
-        <h2 className='p-0 m-0 mx-auto self-stretch text-[1rem] md:text-[1.25rem] font-semibold text-[#ACACAC] text-center flex items-center justify-center shrink-0 tracking-wide'>
+        <h2 className='p-0 mx-[1rem] md:m-0 self-stretch text-[1rem] md:text-[1.25rem] font-semibold text-[#ACACAC] text-center flex items-center justify-center shrink-0 tracking-wide'>
           Get the best in industry news, delivered to your inbox.
         </h2>
         {successMessage && (
@@ -107,7 +107,7 @@ function NewsLetter({ theme }) {
           </p>
         )}
       </div>
-      <div className='mt-[2.5rem] lg:mt-[4rem] grid grid-cols-1 md:grid-cols-12 px-[2.5rem] lg:px-[5rem] gap-[1rem] lg:gap-[4rem] text-[1rem]'>
+      <div className='mt-[2.5rem] lg:mt-[4rem] grid grid-cols-1 md:grid-cols-12 px-[2.5rem] lg:px-[5rem] gap-[1rem] lg:gap-[4rem]'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-[1rem] lg:gap-[2rem] md:col-span-8'>
           {[
             {
@@ -151,7 +151,7 @@ function NewsLetter({ theme }) {
                 src={article.imageUrl}
               />
               <div className='m-0 p-0 flex flex-col items-start justify-start gap-[0.25rem] lg:gap-[0.5rem] col-span-8 my-auto'>
-                <h2 className='m-0 p-0 text-[1.15rem] lg:text-[1.5rem] self-stretch relative font-semibold flex items-center shrink-0'>
+                <h2 className='m-0 p-0 text-[0.9rem] md:text-[1.15rem lg:text-[1.5rem] self-stretch relative font-semibold flex items-center shrink-0'>
                   {article.name}
                 </h2>
                 <h3 className='m-0 p-0 text-[0.8rem] lg:text-[1rem] self-stretch relative font-normal text-[#6D6E72 overflow-hidden'>
