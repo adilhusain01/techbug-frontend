@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import { Helmet } from 'react-helmet';
 
 const Header = lazy(() => import('../components/Header'));
 const Canvas = lazy(() => import('../components/Canvas'));
