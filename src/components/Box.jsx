@@ -39,11 +39,9 @@ const Box = ({ title, icon, propOverflow }) => {
   }, [propOverflow]);
 
   return (
-    <div
-      className={`rounded-2xl md:rounded-11xl [background:linear-gradient(233deg,_#1e1e1e_33.1%,_#5f5f5f_90%)] flex flex-col items-center justify-center p-[0.5rem] box-border w-[7rem] md:w-[11rem] lg:w-[13rem] h-[7rem] md:h-[11rem] lg:h-[13rem] text-center`}
-    >
+    <div className='rounded-2xl md:rounded-11xl [background:linear-gradient(233deg,_#1e1e1e_33.1%,_#5f5f5f_90%)] flex flex-col items-center justify-center p-[0.5rem] box-border w-[7rem] h-[7rem] md:h-[10rem] md:w-[10rem] lg:h-[12rem] lg:w-[12rem] text-center'>
       <img
-        className='h-[2rem] md:h-[4rem] lg:h-[6.25rem] w-[2rem] md:w-[4rem] lg:w-[6.25rem] relative object-contain shrink-0'
+        className='h-[2rem] md:h-[4rem] lg:h-[5rem] w-[2rem] md:w-[4rem] lg:w-[5rem] relative object-contain shrink-0'
         alt='icon'
         src={iconImage}
         style={iconsStyle}

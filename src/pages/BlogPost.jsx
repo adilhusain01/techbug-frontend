@@ -1,7 +1,7 @@
+import { Helmet } from 'react-helmet';
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from '../api/axios';
-import { Helmet } from 'react-helmet';
 
 const Header = lazy(() => import('../components/Header'));
 const BlogPostHead = lazy(() => import('../components/BlogPostHead'));

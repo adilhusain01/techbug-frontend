@@ -1,7 +1,7 @@
 const Canvas = () => {
   return (
     <section
-      className={`mx-[1rem] md:mx-[2.5rem] lg:mx-0 my-[7.5rem] lg:my-[5rem] max-w-full self-stretch flex flex-col items-center justify-center box-border gap-[2rem] lg:gap-[5rem]`}
+      className={`mx-[1rem] md:mx-[2.5rem] lg:mx-0 my-[5rem] md:my-[7.5rem] lg:my-[5rem] max-w-full self-stretch flex flex-col items-center justify-center box-border gap-[2rem] lg:gap-[5rem]`}
     >
       <img
         src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/i5i7jzsvgjo8tv9fasb4'

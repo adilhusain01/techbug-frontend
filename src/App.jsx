@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import React, { useEffect, lazy, Suspense } from 'react';
 import {
   Routes,
@@ -5,7 +6,6 @@ import {
   useNavigationType,
   useLocation,
 } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import LoadingSpinner from '../src/components/LoadingSpinner';
 import BlogPost from './pages/BlogPost';
 

@@ -1,5 +1,5 @@
-import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
+import React, { lazy, Suspense } from 'react';
 
 const Header = lazy(() => import('../components/Header'));
 const HeroContent = lazy(() => import('../components/HeroContent'));
@@ -60,7 +60,7 @@ const Home = () => {
           </Suspense>
         </div>
       </section>
-      <section className='px-[2rem] lg:px-[10rem] py-[5rem] lg:py-[8rem] grid grid-cols-1 md:grid-cols-2'>
+      <section className='px-[2rem] lg:px-[3.5rem] py-[5rem] lg:py-[8rem] grid grid-cols-1 md:grid-cols-2 gap-[1rem] md:gap-[2.5rem] lg:gap-[5rem]'>
         <img
           className='h-[300px] md:h-[400px] lg:h-[600px] w-[365px] md:w-[350px] lg:w-[600px] rounded-[20px] md:rounded-[60px] object-cover'
           loading='lazy'
@@ -68,7 +68,7 @@ const Home = () => {
           src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/wgdo3slwrcib7ltszr1x'
         />
 
-        <h1 className='text-2xl md:text-11xl lg:text-37xl font-medium text-white tracking-tight md:tracking-normal lg:tracking-wider leading-tighter md:leading-tight lg:leading-relaxed text-center md:text-right my-auto'>
+        <h1 className='text-2xl md:text-11xl lg:text-29xl font-medium text-white tracking-tight md:tracking-normal lg:tracking-wider leading-tighter md:leading-tight lg:leading-relaxed text-center md:text-right my-auto'>
           Delivering pioneer digital solutions and top-notch design support to
           ambitious startups and leading corporations since 2018
         </h1>

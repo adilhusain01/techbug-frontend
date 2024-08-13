@@ -4,7 +4,7 @@ const ServiceCard = ({ title, image, description, features, index }) => {
   const isEven = index % 2 === 0;
 
   return isEven ? (
-    <article className='m-0 grid grid-cols-1 md:grid-cols-2 justify-items-end w-[90%] lg:w-[75%] gap-[1rem]'>
+    <article className='m-0 flex flex-col-reverse md:grid md:grid-cols-2 md:justify-items-end w-[90%] lg:w-[85%] gap-[1rem] md:gap-[5rem] lg:gap-[1rem]'>
       <div className='self-stretch flex flex-col items-start justify-center gap-[0.5rem] md:gap-[1rem] lg:gap-[1.75rem] px-[1.15rem] md:px-0'>
         <h1 className='m-0 text-[1.5rem] md:text-[2.5rem] lg:text-[4rem] font-semibold text-transparent !bg-clip-text [background:linear-gradient(90deg,_#fff,_#9a8cfe)]'>
           {title}
@@ -26,17 +26,17 @@ const ServiceCard = ({ title, image, description, features, index }) => {
         </div>
       </div>
       <img
-        className='h-[20rem] w-[21.5rem] md:h-[30rem] md:w-[22rem] lg:h-[43.5rem] lg:w-[37.5rem] rounded-11xl object-cover mx-auto md:mx-0'
+        className='h-[20rem] w-[21.5rem] md:h-[30rem] md:w-[18rem] lg:h-[43.5rem] lg:w-[35rem] rounded-11xl object-cover mx-auto md:mx-0'
         loading='lazy'
         alt={title}
         src={image}
       />
     </article>
   ) : (
-    <article className='m-0 grid grid-cols-1 md:grid-cols-2 justify-items-end w-[90%] lg:w-[75%] gap-[1rem]'>
+    <article className='m-0 grid grid-cols-1 md:grid-cols-2 justify-items-end w-[90%] lg:w-[85%] gap-[1rem] md:gap-[5rem] lg:gap-[1rem]'>
       <div className='w-full flex flex-col items-center justify-center md:items-start md:justify-start'>
         <img
-          className='h-[20rem] w-[21.5rem] md:h-[30rem] md:w-[22rem] lg:h-[43.5rem] lg:w-[37.5rem] rounded-11xl object-cover mx-auto md:mx-0'
+          className='h-[20rem] w-[21.5rem] md:h-[30rem] md:w-[18rem] lg:h-[43.5rem] lg:w-[35rem] rounded-11xl object-cover mx-auto md:mx-0'
           loading='lazy'
           alt={title}
           src={image}

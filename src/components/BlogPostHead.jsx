@@ -22,8 +22,9 @@ const BlogPostHead = ({ post }) => {
           </h3>
         </div>
 
+        {/* example */}
         <img
-          className='h-[12.5rem] w-[20.5rem] md:h-[25rem] md:w-[46rem] lg:h-[50rem] lg:w-[102.5rem] mt-[2rem] self-stretch relative overflow-hidden object-cover mx-auto'
+          className='self-stretch h-auto w-full max-w-[20.5rem] md:max-w-[46rem] lg:max-w-[102.5rem] mt-[2rem] relative overflow-hidden object-cover mx-auto'
           loading='lazy'
           alt={post.title}
           src={post.thumbnail}

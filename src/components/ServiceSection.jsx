@@ -22,7 +22,7 @@ const ServiceSection = () => {
 
   return (
     <section
-      className={`max-w-full flex flex-col items-center justify-center py-[5rem] lg:py-[8rem] text-white gap-[4rem] md:gap-[5rem]`}
+      className={`max-w-full flex flex-col items-center justify-center py-[2.5rem] md:py-[5rem] lg:py-[8rem] text-white gap-[4rem] md:gap-[5rem]`}
     >
       {services.map((service, index) => (
         <ServiceCard
