@@ -26,15 +26,29 @@ const Services = () => {
         />
       </Helmet>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <section className='px-[3.75rem] box-border lg:gap-[5rem] w-full'>
+      <section className='px-[3.75rem] box-border lg:gap-[5rem] w-full'>
+        <Suspense fallback={<div>Loading...</div>}>
           <Header menu={'Services'} theme={'dark'} />
-        </section>
+        </Suspense>
+      </section>
 
+      <Suspense fallback={<div>Loading...</div>}>
         <Canvas />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <ServiceSection />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <BrandLogoGrid />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <FormContact theme={'black'} />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
     </main>

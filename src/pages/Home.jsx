@@ -32,52 +32,69 @@ const Home = () => {
         />
       </Helmet>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <section
-          className='self-stretch flex flex-row items-start justify-start pb-[10rem] box-border max-w-full shrink-0'
+      <section
+        className='self-stretch flex flex-row items-start justify-start pb-[10rem] box-border max-w-full shrink-0'
+        style={{
+          backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/zedaquuziqtgm1iporvx)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'relative',
+          height: '1080px',
+          width: '1920px',
+        }}
+      >
+        <div
           style={{
-            backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/zedaquuziqtgm1iporvx)`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            position: 'relative',
-            height: '1080px',
-            width: '1920px',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
           }}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0, 0, 0, 0.6)',
-            }}
-          />
-          <div className='w-full flex-1 flex flex-col items-start justify-start px-[3.75rem] pb-[21.093rem] box-border gap-[12rem] md:gap-[14.5rem]'>
+        />
+        <div className='w-full flex-1 flex flex-col items-start justify-start px-[3.75rem] pb-[21.093rem] box-border gap-[12rem] md:gap-[14.5rem]'>
+          <Suspense fallback={<div>Loading...</div>}>
             <Header menu={'Home'} theme={'dark'} />
+          </Suspense>
+
+          <Suspense fallback={<div>Loading...</div>}>
             <HeroContent />
-          </div>
-        </section>
+          </Suspense>
+        </div>
+      </section>
 
+      <Suspense fallback={<div>Loading...</div>}>
         <Job />
+      </Suspense>
 
-        <AnimatedSection>
+      <AnimatedSection>
+        <Suspense fallback={<div>Loading...</div>}>
           <Expertise />
-        </AnimatedSection>
+        </Suspense>
+      </AnimatedSection>
 
+      <Suspense fallback={<div>Loading...</div>}>
         <ProgressContent />
+      </Suspense>
 
-        <AnimatedSection>
+      <AnimatedSection>
+        <Suspense fallback={<div>Loading...</div>}>
           <Testimonials />
-        </AnimatedSection>
+        </Suspense>
+      </AnimatedSection>
 
-        <AnimatedSection>
+      <AnimatedSection>
+        <Suspense fallback={<div>Loading...</div>}>
           <Greeting />
-        </AnimatedSection>
+        </Suspense>
+      </AnimatedSection>
 
+      <Suspense fallback={<div>Loading...</div>}>
         <FormContact theme={'white'} />
+      </Suspense>
 
+      <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
     </main>
