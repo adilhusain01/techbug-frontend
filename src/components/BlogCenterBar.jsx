@@ -39,7 +39,7 @@ function BlogCenterBar({ post }) {
                   key={index}
                   src={item.image_uri}
                   alt={post.title}
-                  className='self-stretch relative'
+                  className='h-auto w-full max-w-[24rem] md:max-w-[23rem] lg:max-w-[51rem] self-stretch relative'
                 />
               </AnimatedSection>
             );
