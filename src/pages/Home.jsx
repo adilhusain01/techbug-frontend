@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 import React, { lazy, Suspense } from 'react';
+import LoadingSpinner from '../components/LoadingSpinner';
 import AnimatedSection from '../components/AnimatedSection';
 
 const Header = lazy(() => import('../components/Header'));
@@ -32,70 +33,64 @@ const Home = () => {
         />
       </Helmet>
 
-      <section
-        className='self-stretch flex flex-row items-start justify-start pb-[10rem] box-border max-w-full shrink-0'
-        style={{
-          backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/zedaquuziqtgm1iporvx)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          position: 'relative',
-          height: '1080px',
-          width: '1920px',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(0, 0, 0, 0.6)',
-          }}
-        />
-        <div className='w-full flex-1 flex flex-col items-start justify-start px-[3.75rem] pb-[21.093rem] box-border gap-[12rem] md:gap-[14.5rem]'>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Header menu={'Home'} theme={'dark'} />
-          </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <AnimatedSection>
+          <section
+            className='self-stretch flex flex-row items-start justify-start pb-[10rem] box-border max-w-full shrink-0'
+            style={{
+              backgroundImage: `url(https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/zedaquuziqtgm1iporvx)`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              position: 'relative',
+              height: '1080px',
+              width: '1920px',
+            }}
+          >
+            <div
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'rgba(0, 0, 0, 0.6)',
+              }}
+            />
+            <div className='w-full flex-1 flex flex-col items-start justify-start px-[3.75rem] pb-[21.093rem] box-border gap-[12rem] md:gap-[14.5rem]'>
+              <Header menu={'Home'} theme={'dark'} />
 
-          <Suspense fallback={<div>Loading...</div>}>
-            <HeroContent />
-          </Suspense>
-        </div>
-      </section>
+              <HeroContent />
+            </div>
+          </section>
+        </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <Job />
-      </Suspense>
+        <AnimatedSection>
+          <Job />
+        </AnimatedSection>
 
-      <AnimatedSection>
-        <Suspense fallback={<div>Loading...</div>}>
+        <AnimatedSection>
           <Expertise />
-        </Suspense>
-      </AnimatedSection>
+        </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <ProgressContent />
-      </Suspense>
+        <AnimatedSection>
+          <ProgressContent />
+        </AnimatedSection>
 
-      <AnimatedSection>
-        <Suspense fallback={<div>Loading...</div>}>
+        <AnimatedSection>
           <Testimonials />
-        </Suspense>
-      </AnimatedSection>
+        </AnimatedSection>
 
-      <AnimatedSection>
-        <Suspense fallback={<div>Loading...</div>}>
+        <AnimatedSection>
           <Greeting />
-        </Suspense>
-      </AnimatedSection>
+        </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <FormContact theme={'white'} />
-      </Suspense>
+        <AnimatedSection>
+          <FormContact theme={'white'} />
+        </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <Footer />
+        <AnimatedSection>
+          <Footer />
+        </AnimatedSection>
       </Suspense>
     </main>
   );

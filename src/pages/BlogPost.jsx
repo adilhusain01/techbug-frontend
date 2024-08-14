@@ -2,6 +2,8 @@ import { Helmet } from 'react-helmet';
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from '../api/axios';
+import LoadingSpinner from '../components/LoadingSpinner';
+import AnimatedSection from '../components/AnimatedSection';
 
 const Header = lazy(() => import('../components/Header'));
 const BlogPostHead = lazy(() => import('../components/BlogPostHead'));
@@ -50,50 +52,48 @@ const BlogPost = () => {
         <meta name='keywords' content='Article, Post, Latest Post, Techbug' />
       </Helmet>
 
-      <section className='w-full m-0 flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border'>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Header menu={'Blog'} theme={'dark'} />
-        </Suspense>
-      </section>
+      <Suspense fallback={<LoadingSpinner />}>
+        <AnimatedSection>
+          <section className='w-full m-0 flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border'>
+            <Header menu={'Blog'} theme={'dark'} />
+          </section>
+        </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <BlogPostHead post={blogpost} />
-      </Suspense>
+        <AnimatedSection>
+          <BlogPostHead post={blogpost} />
+        </AnimatedSection>
 
-      <section className='pt-[2rem] md:pt-[3rem] lg:pt-[6rem] mt-[0.5rem] md:mt-[4rem] lg:mt-[8rem] w-full flex flex-col items-center justify-center text-black bg-white box-border'>
-        <div className='grid grid-cols-1 md:grid-cols-12 gap-[2rem] w-full'>
-          <Suspense fallback={<div>Loading...</div>}>
-            <BlogLeftBar post={blogpost} />
-          </Suspense>
+        <section className='pt-[2rem] md:pt-[3rem] lg:pt-[6rem] mt-[0.5rem] md:mt-[4rem] lg:mt-[8rem] w-full flex flex-col items-center justify-center text-black bg-white box-border'>
+          <AnimatedSection>
+            <div className='grid grid-cols-1 md:grid-cols-12 gap-[2rem] w-full'>
+              <BlogLeftBar post={blogpost} />
 
-          <Suspense fallback={<div>Loading...</div>}>
-            <BlogCenterBar post={blogpost} />
-          </Suspense>
+              <BlogCenterBar post={blogpost} />
 
-          <Suspense fallback={<div>Loading...</div>}>
-            <BlogRightBar post={blogpost} />
-          </Suspense>
-        </div>
-        <div className='m-0 w-full'>
-          <Suspense fallback={<div>Loading...</div>}>
-            <TagArticles title={'Related Articles'} tags={tags} />
-          </Suspense>
-          <Suspense fallback={<div>Loading...</div>}>
-            <LatestArticles />
-          </Suspense>
-        </div>
-      </section>
+              <BlogRightBar post={blogpost} />
+            </div>
+          </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <NewsLetter theme={'dark'} />
-      </Suspense>
+          <AnimatedSection>
+            <div className='m-0 w-full'>
+              <TagArticles title={'Related Articles'} tags={tags} />
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <FormContact theme={'white'} />
-      </Suspense>
+              <LatestArticles />
+            </div>
+          </AnimatedSection>
+        </section>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <Footer />
+        <AnimatedSection>
+          <NewsLetter theme={'dark'} />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <FormContact theme={'white'} />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <Footer />
+        </AnimatedSection>
       </Suspense>
     </main>
   );

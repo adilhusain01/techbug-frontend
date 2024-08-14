@@ -15,7 +15,7 @@ const AnimatedSection = ({ children }) => {
 
   return (
     <motion.span
-      className='w-full flex'
+      className='m-0 p-0 w-full max-w-full flex'
       ref={ref}
       initial='hidden'
       animate={controls}

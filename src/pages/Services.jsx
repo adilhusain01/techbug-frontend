@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 import React, { lazy, Suspense } from 'react';
+import LoadingSpinner from '../components/LoadingSpinner';
 import AnimatedSection from '../components/AnimatedSection';
 
 const Header = lazy(() => import('../components/Header'));
@@ -25,31 +26,32 @@ const Services = () => {
           content='App Development, Web Development, Marketing, Digital Solutions, Web Development and Design, App Development and Design, Digital Marketing, Smart Business Card, Business Automation, Custom Service, Techbug'
         />
       </Helmet>
+      <Suspense fallback={<LoadingSpinner />}>
+        <AnimatedSection>
+          <section className='px-[3.75rem] box-border lg:gap-[5rem] w-full'>
+            <Header menu={'Services'} theme={'dark'} />
+          </section>
+        </AnimatedSection>
 
-      <section className='px-[3.75rem] box-border lg:gap-[5rem] w-full'>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Header menu={'Services'} theme={'dark'} />
-        </Suspense>
-      </section>
+        <AnimatedSection>
+          <Canvas />
+        </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <Canvas />
-      </Suspense>
+        <AnimatedSection>
+          <ServiceSection />
+        </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <ServiceSection />
-      </Suspense>
+        <AnimatedSection>
+          <BrandLogoGrid />
+        </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <BrandLogoGrid />
-      </Suspense>
+        <AnimatedSection>
+          <FormContact theme={'black'} />
+        </AnimatedSection>
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <FormContact theme={'black'} />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading...</div>}>
-        <Footer />
+        <AnimatedSection>
+          <Footer />
+        </AnimatedSection>
       </Suspense>
     </main>
   );
