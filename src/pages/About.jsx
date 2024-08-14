@@ -27,51 +27,34 @@ const About = () => {
         />
       </Helmet>
 
-      <section className='self-stretch flex flex-row items-start justify-start box-border max-w-full shrink-0'>
-        <div className='flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border gap-[5rem] md:gap-[10rem] lg:gap-[14rem] w-full'>
-          <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <section className='self-stretch flex flex-row items-start justify-start box-border max-w-full shrink-0'>
+          <div className='flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border gap-[5rem] md:gap-[10rem] lg:gap-[14rem] w-full'>
             <Header menu={'About'} theme={'dark'} />
-          </Suspense>
 
-          <section className='self-stretch bg-gray flex flex-col items-center justify-center px-0 lg:px-[3.75rem] pb-[5rem] lg:pb-[10rem] box-border w-full gap-[2rem] md:gap-[7.5rem] lg:gap-[15rem]'>
-            <AnimatedSection>
-              <h1 className='m-0 relative leading-tight md:leading-[4.5rem] lg:leading-[6.5rem] font-semibold text-transparent !bg-clip-text [background:linear-gradient(104.08deg,_#ff6e1f,_#fad3be)] text-center shrink-0 w-full text-[2rem] md:text-[4.5rem] lg:text-[6.375rem]'>
-                Turning your visionary ideas into reality
-              </h1>
-            </AnimatedSection>
-            <AnimatedSection>
-              <h1 className='px-[1rem] md:px-[6rem] lg:px-[8rem] mt-2 lg:mt-4 text-[1rem] md:text-[1.8rem] lg:text-[2.5rem] leading-[140%] text-center font-normal text-[#FFFFFF]'>
-                Our mission is simple–to increase the chance of success of your
-                digital product. With a future-proof design, clean code and
-                well-thought-out strategies, we turn ideas into products people
-                love to use.
-              </h1>
-            </AnimatedSection>
-          </section>
-        </div>
-      </section>
+            <section className='self-stretch bg-gray flex flex-col items-center justify-center px-0 lg:px-[3.75rem] pb-[5rem] lg:pb-[10rem] box-border w-full gap-[2rem] md:gap-[7.5rem] lg:gap-[15rem]'>
+              <AnimatedSection>
+                <h1 className='m-0 relative leading-tight md:leading-[4.5rem] lg:leading-[6.5rem] font-semibold text-transparent !bg-clip-text [background:linear-gradient(104.08deg,_#ff6e1f,_#fad3be)] text-center shrink-0 w-full text-[2rem] md:text-[4.5rem] lg:text-[6.375rem]'>
+                  Turning your visionary ideas into reality
+                </h1>
+              </AnimatedSection>
+              <AnimatedSection>
+                <h1 className='px-[1rem] md:px-[6rem] lg:px-[8rem] mt-2 lg:mt-4 text-[1rem] md:text-[1.8rem] lg:text-[2.5rem] leading-[140%] text-center font-normal text-[#FFFFFF]'>
+                  Our mission is simple–to increase the chance of success of
+                  your digital product. With a future-proof design, clean code
+                  and well-thought-out strategies, we turn ideas into products
+                  people love to use.
+                </h1>
+              </AnimatedSection>
+            </section>
+          </div>
+        </section>
 
-      <Suspense fallback={<div>Loading...</div>}>
         <Achievements />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading...</div>}>
         <Founders />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading...</div>}>
         <Team />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading...</div>}>
         <Brands />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading...</div>}>
         <FormContact theme={'white'} />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
     </main>

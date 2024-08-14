@@ -24,23 +24,13 @@ const Work = () => {
         />
       </Helmet>
 
-      <section className='flex flex-col items-start justify-start px-[3.75rem] box-border gap-[5rem] md:gap-[10rem] lg:gap-[14rem] w-full'>
-        <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <section className='flex flex-col items-start justify-start px-[3.75rem] box-border gap-[5rem] md:gap-[10rem] lg:gap-[14rem] w-full'>
           <Header menu={'Work'} theme={'light'} />
-        </Suspense>
-      </section>
+        </section>
 
-      <Suspense fallback={<div>Loading...</div>}>
         <WorkMenu />
-      </Suspense>
-
-      <AnimatedSection>
-        <Suspense fallback={<div>Loading...</div>}>
-          <FormContact theme={'black'} />
-        </Suspense>
-      </AnimatedSection>
-
-      <Suspense fallback={<div>Loading...</div>}>
+        <FormContact theme={'black'} />
         <Footer />
       </Suspense>
     </main>

@@ -26,18 +26,14 @@ const Blog = () => {
         />
       </Helmet>
 
-      <section className='flex flex-col items-start justify-start box-border w-full px-[3.75rem]'>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Header menu={'Blog'} theme={'dark'} />
-        </Suspense>
-      </section>
-
       <Suspense fallback={<div>Loading...</div>}>
-        <BlogHead />
-      </Suspense>
+        <section className='flex flex-col items-start justify-start box-border w-full px-[3.75rem]'>
+          <Header menu={'Blog'} theme={'dark'} />
+        </section>
 
-      <section className='w-full bg-white'>
-        <Suspense fallback={<div>Loading...</div>}>
+        <BlogHead />
+
+        <section className='w-full bg-white'>
           <TagArticles
             title={'Customer Experience'}
             tags={'Customer Experience'}
@@ -59,18 +55,10 @@ const Blog = () => {
           />
 
           <TagArticles title={'Custom Solutions'} tags={'Custom Solutions'} />
-        </Suspense>
-      </section>
+        </section>
 
-      <Suspense fallback={<div>Loading...</div>}>
         <NewsLetter theme={'light'} />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading...</div>}>
         <FormContact theme={'white'} />
-      </Suspense>
-
-      <Suspense fallback={<div>Loading...</div>}>
         <Footer />
       </Suspense>
     </main>
