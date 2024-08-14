@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import AnimatedSection from './AnimatedSection';
 
 function BlogCenterBar({ post }) {
   if (!post.body) {
@@ -11,30 +12,36 @@ function BlogCenterBar({ post }) {
         switch (item.type) {
           case 'paragraph':
             return (
-              <p
-                key={index}
-                className='text-[0.9rem] md:text-[1.1rem] lg:text-[1.25rem] leading-relaxed m-0 p-0 self-stretch relative'
-              >
-                {`${item.content}`}
-              </p>
+              <AnimatedSection>
+                <p
+                  key={index}
+                  className='text-[0.9rem] md:text-[1.1rem] lg:text-[1.25rem] leading-relaxed m-0 p-0 self-stretch relative'
+                >
+                  {`${item.content}`}
+                </p>
+              </AnimatedSection>
             );
           case 'subheading':
             return (
-              <h2
-                key={index}
-                className='text-[1.25rem] md:text-[1.5rem] lg:text-[2rem] self-stretch relative font-semibold m-0 p-0'
-              >
-                {item.subheading}
-              </h2>
+              <AnimatedSection>
+                <h2
+                  key={index}
+                  className='text-[1.25rem] md:text-[1.5rem] lg:text-[2rem] self-stretch relative font-semibold m-0 p-0'
+                >
+                  {item.subheading}
+                </h2>
+              </AnimatedSection>
             );
           case 'image':
             return (
-              <img
-                key={index}
-                src={item.image_uri}
-                alt={post.title}
-                className='self-stretch relative'
-              />
+              <AnimatedSection>
+                <img
+                  key={index}
+                  src={item.image_uri}
+                  alt={post.title}
+                  className='self-stretch relative'
+                />
+              </AnimatedSection>
             );
           default:
             return null;

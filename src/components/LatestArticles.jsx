@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from '../api/axios';
 import { Link } from 'react-router-dom';
+import AnimatedSection from './AnimatedSection';
 
 const LatestArticles = () => {
   const [posts, setPosts] = useState([]);
@@ -81,11 +82,16 @@ const LatestArticles = () => {
   return (
     <section className='max-w-full px-[1.5rem] md:px-[4rem] lg:px-[8rem] my-[1.5rem] md:my-[2.5rem] lg:my-[4rem]'>
       <div className='flex flex-row gap-[1.25rem] lg:gap-[2rem]'>
-        <h2 className='p-0 min-w-fit self-stretch text-[1.25rem] md:text-[1.5rem] lg:text-[2.5rem] font-semibold m-0'>
-          Latest Articles
-        </h2>
-        <div className='p-0 w-full border-black border-t-[2px] border-solid box-border' />
+        <AnimatedSection>
+          <h2 className='p-0 min-w-fit self-stretch text-[1.25rem] md:text-[1.5rem] lg:text-[2.5rem] font-semibold m-0'>
+            Latest Articles
+          </h2>
+        </AnimatedSection>
+        <AnimatedSection>
+          <div className='w-full border-black border-t-[2px] border-solid box-border' />
+        </AnimatedSection>
       </div>
+
       <div
         className={`mt-[2rem] p-0 overflow-x-auto flex flex-row gap-[1rem] text-black text-[1rem] box-border`}
         style={{
@@ -107,30 +113,32 @@ const LatestArticles = () => {
         onWheel={handleWheel}
       >
         {posts.map((post, index) => (
-          <Link
-            key={index}
-            className={`flex flex-col items-start justify-start gap-[0.5rem] w-[20rem] md:w-[25rem] lg:w-[33.5rem]`}
-            to={`/blog/${post.slug}`}
-            style={{ cursor: 'pointer', textDecoration: 'none' }}
-          >
-            <img
-              className='self-stretch h-[11rem] md:h-[13rem] lg:h-[16.5rem] w-[20rem] md:w-[25rem] lg:w-[33.5rem] overflow-hidden shrink-0 object-cover'
-              loading='lazy'
-              alt={post.title}
-              src={post.thumbnail}
-            />
-            <div className='flex flex-col items-start justify-start mt-2'>
-              <h1 className='m-0 font-semibold flex text-[0.9rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
-                {post.title}
-              </h1>
-              <h2 className='m-0 mt-2 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
-                {post.author}
-              </h2>
-              <h3 className='m-0 mt-1 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
-                {post.updatedAt}
-              </h3>
-            </div>
-          </Link>
+          <AnimatedSection>
+            <Link
+              key={index}
+              className={`flex flex-col items-start justify-start gap-[0.5rem] w-[20rem] md:w-[25rem] lg:w-[33.5rem]`}
+              to={`/blog/${post.slug}`}
+              style={{ cursor: 'pointer', textDecoration: 'none' }}
+            >
+              <img
+                className='self-stretch h-[11rem] md:h-[13rem] lg:h-[16.5rem] w-[20rem] md:w-[25rem] lg:w-[33.5rem] overflow-hidden shrink-0 object-cover'
+                loading='lazy'
+                alt={post.title}
+                src={post.thumbnail}
+              />
+              <div className='flex flex-col items-start justify-start mt-2'>
+                <h1 className='m-0 font-semibold flex text-[0.9rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
+                  {post.title}
+                </h1>
+                <h2 className='m-0 mt-2 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+                  {post.author}
+                </h2>
+                <h3 className='m-0 mt-1 [text-decoration:none] text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+                  {post.updatedAt}
+                </h3>
+              </div>
+            </Link>
+          </AnimatedSection>
         ))}
       </div>
     </section>

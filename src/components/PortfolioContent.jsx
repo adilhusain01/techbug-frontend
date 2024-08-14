@@ -2,6 +2,7 @@ import axios from '../api/axios';
 import { useEffect, useState } from 'react';
 import PortfolioCard from './PortfolioCard';
 import PropTypes from 'prop-types';
+import AnimatedSection from './AnimatedSection';
 
 function PortfolioContent({ selectedMenu }) {
   const [works, setWorks] = useState([]);

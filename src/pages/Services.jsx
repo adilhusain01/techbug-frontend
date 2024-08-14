@@ -25,41 +25,32 @@ const Services = () => {
           content='App Development, Web Development, Marketing, Digital Solutions, Web Development and Design, App Development and Design, Digital Marketing, Smart Business Card, Business Automation, Custom Service, Techbug'
         />
       </Helmet>
-      <AnimatedSection>
-        <section className='px-[3.75rem] box-border lg:gap-[5rem] w-full'>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Header menu={'Services'} theme={'dark'} />
-          </Suspense>
-        </section>
-      </AnimatedSection>
 
-      <AnimatedSection>
+      <section className='px-[3.75rem] box-border lg:gap-[5rem] w-full'>
         <Suspense fallback={<div>Loading...</div>}>
-          <Canvas />
+          <Header menu={'Services'} theme={'dark'} />
         </Suspense>
-      </AnimatedSection>
+      </section>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <Canvas />
+      </Suspense>
 
       <Suspense fallback={<div>Loading...</div>}>
         <ServiceSection />
       </Suspense>
 
-      <AnimatedSection>
-        <Suspense fallback={<div>Loading...</div>}>
-          <BrandLogoGrid />
-        </Suspense>
-      </AnimatedSection>
+      <Suspense fallback={<div>Loading...</div>}>
+        <BrandLogoGrid />
+      </Suspense>
 
-      <AnimatedSection>
-        <Suspense fallback={<div>Loading...</div>}>
-          <FormContact theme={'black'} />
-        </Suspense>
-      </AnimatedSection>
+      <Suspense fallback={<div>Loading...</div>}>
+        <FormContact theme={'black'} />
+      </Suspense>
 
-      <AnimatedSection>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Footer />
-        </Suspense>
-      </AnimatedSection>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Footer />
+      </Suspense>
     </main>
   );
 };

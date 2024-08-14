@@ -3,7 +3,7 @@ import Box from './Box';
 const Expertise = () => {
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start px-[0.5rem] pb-[4rem] lg:pb-[9rem] box-border shrink-0 text-center text-gray`}
+      className={`self-stretch flex flex-row items-start justify-start px-[0.5rem] pb-[4rem] lg:pb-[9rem] box-border shrink-0 text-center text-gray w-full max-w-full`}
     >
       <div className='flex-1 flex flex-col items-center justify-start w-full'>
         <div

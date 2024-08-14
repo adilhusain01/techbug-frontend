@@ -21,7 +21,7 @@ const AnimatedSection = ({ children }) => {
       animate={controls}
       variants={{
         hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { duration: 1.5 } },
+        visible: { opacity: 1, transition: { duration: 1.25 } },
       }}
     >
       {children}

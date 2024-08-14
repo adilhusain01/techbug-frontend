@@ -4,6 +4,7 @@ import TextareaField from './TextareaField';
 import SendButton from './SendButton';
 import axios from '../api/axios';
 import PropTypes from 'prop-types';
+import AnimatedSection from './AnimatedSection';
 
 const FormContact = ({ theme }) => {
   const [formData, setFormData] = useState({
@@ -97,14 +98,16 @@ const FormContact = ({ theme }) => {
         backgroundColor: currentTheme.bg,
       }}
     >
-      <div className='flex flex-row items-center justify-center'>
-        <h1
-          className='m-0 relative font-medium font-inherit text-[1.5rem] md:text-[2rem] lg:text-[3rem]'
-          style={{ color: currentTheme.h1Color }}
-        >
-          Let’s get in touch
-        </h1>
-      </div>
+      <AnimatedSection>
+        <div className='flex flex-row items-center justify-center mx-auto'>
+          <h1
+            className='m-0 relative font-medium font-inherit text-[1.5rem] md:text-[2rem] lg:text-[3rem]'
+            style={{ color: currentTheme.h1Color }}
+          >
+            Let’s get in touch
+          </h1>
+        </div>
+      </AnimatedSection>
       <form
         className='mt-[2rem] flex flex-col items-center justify-center relative max-w-full text-left text-[1rem] font-body-base'
         onSubmit={handleSubmit}
