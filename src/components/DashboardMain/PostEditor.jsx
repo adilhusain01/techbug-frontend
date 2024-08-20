@@ -143,18 +143,21 @@ function PostEditor() {
             required
             id='outlined-required-title'
             label='Title'
+            autoComplete='off'
             onChange={(e) => setTitle(e.target.value)}
           />
           <TextField
             required
             id='outlined-required-description'
             label='Description'
+            autoComplete='off'
             onChange={(e) => setDescription(e.target.value)}
           />
           <TextField
             required
             id='outlined-required-author'
             label='Author'
+            autoComplete='off'
             onChange={(e) => setAuthor(e.target.value)}
           />
           <input
