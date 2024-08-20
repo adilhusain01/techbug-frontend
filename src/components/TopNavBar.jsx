@@ -9,7 +9,7 @@ const TopNavBar = ({ menu, theme }) => {
 
   return (
     <div
-      className={`rounded-11xl flex flex-row items-start justify-start p-[0.375rem] gap-[0.25rem] text-left text-[1.25rem]`}
+      className={`rounded-11xl flex flex-row items-start justify-start p-[0.375rem] gap-[0.25rem] text-[1.25rem]`}
       style={{
         backgroundColor: theme.menuBg,
       }}

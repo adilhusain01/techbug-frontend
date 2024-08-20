@@ -1,20 +1,44 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
-import "./global.css";
+import { BrowserRouter } from 'react-router-dom';
+import TagManager from 'react-gtm-module';
+import ReactGA from 'react-ga4';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import './global.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-const container = document.getElementById("root");
-const root = createRoot(container);
+//global
 
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+import { global } from 'global';
+window.global = global;
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactGA.initialize('G-T0XMKBP3BZ');
+const container = document.getElementById('root');
+
+if (container) {
+  const root = createRoot(container);
+
+  const env = process.env.NODE_ENV;
+
+  const tagManagerArgs = {
+    gtmId: 'GTM-MKVT5BDK',
+    auth:
+      env === 'development'
+        ? 'GdVg_dzv1iFjX1bNjelpIg'
+        : 'CA37gzaOktKFjo0A7APAkQ',
+    preview: env === 'development' ? 'env-6' : 'env-1',
+  };
+
+  try {
+    TagManager.initialize(tagManagerArgs);
+  } catch (error) {
+    console.error('Failed to initialize Tag Manager:', error);
+  }
+
+  root.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+} else {
+  console.error('Failed to find the root element');
+}

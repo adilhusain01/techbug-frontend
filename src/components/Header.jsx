@@ -13,9 +13,9 @@ const Header = ({ menu, theme }) => {
       activeTextColor: '#FFFFFF',
       menuBg: '#F9CA06',
       activeMenuBg: '#171717',
-      callBg: '#171717',
-      callTextColor: '#FFFFFF',
-      logo: 'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ddhkrmchqvq2kbkzbkef',
+      callBg: 'bg-[#171717]',
+      callTextColor: 'text-[#FFFFFF]',
+      logo: 'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/zuqbajuyhavubnv8l7le',
 
       breadcrumb:
         'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/p97ifgieewh6ujdx3v5v',
@@ -26,9 +26,9 @@ const Header = ({ menu, theme }) => {
       activeTextColor: '#1E1E1E',
       menuBg: '#FFFFFF',
       activeMenuBg: '#F9CA06',
-      callBg: '#FFFFFF',
-      callTextColor: '#000000',
-      logo: 'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/techbug_logo',
+      callBg: 'bg-[#FFFFFF]',
+      callTextColor: 'text-[#000000]',
+      logo: 'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/b9loymbrksijbqi80ypt',
       breadcrumb:
         'https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ueadzzp4swfy8iso0snq',
     },
@@ -38,6 +38,13 @@ const Header = ({ menu, theme }) => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    document.querySelector('#contact-form').scrollIntoView({
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -57,15 +64,16 @@ const Header = ({ menu, theme }) => {
           <div className='flex flex-col items-start justify-start py-[0rem] pr-[2.5rem] pl-[0rem] box-border max-w-full'>
             <TopNavBar menu={menu} theme={currentTheme} />
           </div>
-          <p
-            className='m-0 flex flex-col items-center justify-center py-[1rem] px-[2rem]  rounded-[10rem]'
+          <a
+            href='#contact-form'
+            onClick={handleClick}
+            className={`m-0 flex flex-col items-center justify-center py-[0.85rem] px-[2rem] text-[1.25rem] rounded-[10rem] hover:bg-[#F1CB47] ${currentTheme.callBg} ${currentTheme.callTextColor} duration-300 ease-in-out`}
             style={{
-              backgroundColor: currentTheme.callBg,
-              color: currentTheme.callTextColor,
+              textDecoration: 'none',
             }}
           >
             Book Call
-          </p>
+          </a>
         </div>
       </header>
       <header className='block lg:hidden mt-6 md:mt-12 w-full relative overflow-hidden flex flex-col items-start justify-start box-border gap-[4rem] text-center p-0'>

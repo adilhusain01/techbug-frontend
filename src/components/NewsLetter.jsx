@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import ReactGA from 'react-ga4';
 import { useState } from 'react';
 import axios from '../api/axios';
 // const AnimatedSection = lazy(() => import('./AnimatedSection'));
@@ -61,6 +62,10 @@ function NewsLetter({ theme }) {
     }
 
     try {
+      ReactGA.event({
+        category: 'Form',
+        action: 'Subscribed newsletter',
+      });
       const response = await axios.post('/newsletters', {
         email: email,
         topics: topics,
@@ -159,12 +164,12 @@ function NewsLetter({ theme }) {
               {/* </AnimatedSection> */}
               <div className='p-0 flex flex-col items-start justify-start gap-[0.25rem] lg:gap-[0.5rem] col-span-10 md:col-span-8 lg:col-span-10 my-auto pl-[1rem]'>
                 {/* <AnimatedSection> */}
-                <h2 className='m-0 p-0 text-[0.9rem] md:text-[1.15rem lg:text-[1.5rem] self-stretch relative font-semibold flex items-center shrink-0'>
+                <h2 className='m-0 px-[0.5rem] md:px-[0.25rem] lg:px-[0.5rem] text-[0.9rem] md:text-[1.15rem lg:text-[1.5rem] self-stretch relative font-semibold flex items-center shrink-0'>
                   {article.name}
                 </h2>
                 {/* </AnimatedSection> */}
                 {/* <AnimatedSection> */}
-                <h3 className='m-0 p-0 text-[0.8rem] lg:text-[1rem] self-stretch relative font-normal text-[#6D6E72 overflow-hidden'>
+                <h3 className='m-0 px-[0.5rem] md:px-[0.25rem] lg:px-[0.5rem] text-[0.8rem] lg:text-[1rem] self-stretch relative font-normal text-[#6D6E72 overflow-hidden'>
                   {article.description}
                 </h3>
                 {/* </AnimatedSection> */}

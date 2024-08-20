@@ -14,51 +14,91 @@ body {
   border-width: 0;
 }
 
-/*  View All animation for article list expand and collapse  */
+/* Greeting scroll */
 
-.transition-container {
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-
-.transition-container.collapsed {
-  max-height: 0;
-}
-
-.transition-container.expanded {
-  max-height: 1000px;
-}
-
-.hidden {
-  display: none;
-}
-
-/* News Card Hover Effect */
-
-.news-card {
-  width: 43.063rem;
-  background-color: whitesmoke;
-  overflow: hidden;
-  flex-shrink: 0;
+.greetings-container {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  padding: 3rem;
-  box-sizing: border-box;
-  max-width: 100%;
-  transition: transform 0.3s ease-in-out;
+  animation: scroll 20s linear infinite;
 }
 
-.news-card:hover {
-  transform: scale(1.05);
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-@media (max-width: 800px) {
-  .news-card {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    box-sizing: border-box;
+/* Text Length exceeding */
+
+.text-overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Blog Post Inner Sizes */
+
+.blog-content img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+}
+
+.blog-content p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.blog-content h2,
+h2 span {
+  font-size: 1.25rem !important;
+}
+
+.blog-content p,
+p span,
+p a,
+li,
+li span {
+  font-size: 0.9rem !important;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .blog-content h2,
+  h2 span {
+    font-size: 1.5rem !important;
+  }
+
+  .blog-content p,
+  p span,
+  p a,
+  li,
+  li span {
+    font-size: 1.1rem !important;
+    line-height: 1.65rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-content h2,
+  h2 span {
+    font-size: 2rem !important;
+  }
+
+  .blog-content p,
+  p span,
+  p a,
+  li,
+  li span {
+    font-size: 1.35rem !important;
+    line-height: 2rem;
   }
 }
 

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ReactGA from 'react-ga4';
 import InputField from './InputField';
 import TextareaField from './TextareaField';
 import SendButton from './SendButton';
@@ -46,6 +47,11 @@ const FormContact = ({ theme }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    ReactGA.event({
+      category: 'Form',
+      action: 'Submitted Contact Form',
+    });
+
     try {
       const response = await axios.post('/contact', formData);
       if (response.status === 201) {
@@ -93,6 +99,7 @@ const FormContact = ({ theme }) => {
 
   return (
     <section
+      id='contact-form'
       className={`px-[2rem] md:px-[7.5rem] lg:px-0 py-[3rem] md:py-[4.25rem] lg:py-[6.25rem] w-full overflow-hidden flex flex-col items-center justify-center box-border shrink-0 text-center mx-auto`}
       style={{
         backgroundColor: currentTheme.bg,

@@ -26,7 +26,11 @@ const BlogPostHead = ({ post }) => {
           {/* </AnimatedSection> */}
           {/* <AnimatedSection> */}
           <h3 className='text-[0.65rem] md:text-[0.85rem] lg:text-[1rem] m-0 font-semibold text-[#838DAA]'>
-            {post.createdAt}
+            {new Date(post.updatedAt).toLocaleString('en-UK', {
+              year: 'numeric',
+              month: 'numeric',
+              day: 'numeric',
+            })}
           </h3>
           {/* </AnimatedSection> */}
         </div>

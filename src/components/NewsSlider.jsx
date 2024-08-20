@@ -93,51 +93,49 @@ const NewsSlider = ({ tag }) => {
         </h1>
         {/* </AnimatedSection> */}
       </div>
-      <div className='self-stretch flex flex-row items-start justify-start pl-[2rem] lg:pl-[8rem] box-border max-w-full shrink-0 text-center text-[2.5rem] text-white'>
-        <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full'>
-          <div
-            className='overflow-x-auto flex flex-row items-center justify-start py-[0rem] px-[0rem] box-border gap-[1.25rem] max-w-full text-left text-[1.25rem] text-text-default-default'
-            style={{
-              overflowX: 'hidden',
-              overflowY: 'auto',
-              msOverflowStyle: 'none',
-              scrollbarWidth: 'none',
-              cursor: isDragging ? 'grabbing' : 'grab',
-              userSelect: 'none',
-            }}
-            ref={scrollRef}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseUp}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-            onWheel={handleWheel}
-          >
-            {posts.map((post) => (
-              // <AnimatedSection>
+      <div className='pl-[2rem] lg:pl-[8rem] py-[1rem] w-full'>
+        <div
+          className='overflow-x-auto flex flex-row items-center justify-start py-[0rem] px-[0rem] box-border gap-[1.25rem] max-w-full text-[1.25rem] w-full text-white'
+          style={{
+            overflowX: 'hidden',
+            overflowY: 'auto',
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'none',
+            cursor: isDragging ? 'grabbing' : 'grab',
+            userSelect: 'none',
+          }}
+          ref={scrollRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          onWheel={handleWheel}
+        >
+          {posts.map((post) => (
+            // <AnimatedSection>
 
-              <Link
-                className='w-[20rem] md:w-[25rem] lg:w-[33.5rem] flex flex-col items-start justify-end box-border max-w-full shrink-0'
-                key={post._id}
-                to={`/blog/${post.slug}`}
-                style={{ cursor: 'pointer', textDecoration: 'none' }}
-              >
-                <img
-                  className='h-[9rem] md:h-[11rem] lg:h-[15rem] w-[20rem] md:w-[25rem] lg:w-[33.5rem] relative object-cover z-[1]'
-                  alt='News'
-                  src={post.thumbnail}
-                />
-                <div className='min-h-[3.5rem] lg:min-h-[4rem] p-[0.5rem] box-border w-full bg-[#FBEBD9] overflow-hidden leading-tight lg:leading-normal'>
-                  <h2 className='text-black m-0 text-[0.85rem] lg:text-[1rem] overflow-hidden'>
-                    {post.title}
-                  </h2>
-                </div>
-              </Link>
-              // </AnimatedSection>
-            ))}
-          </div>
+            <Link
+              className='w-full max-w-[20rem] md:max-w-[25rem] lg:max-w-[33.5rem] flex flex-col items-start justify-end box-border shrink-0'
+              key={post._id}
+              to={`/blog/${post.slug}`}
+              style={{ cursor: 'pointer', textDecoration: 'none' }}
+            >
+              <img
+                className='h-[9rem] md:h-[11rem] lg:h-[15rem] w-full max-w-[20rem] md:max-w-[25rem] lg:max-w-[33.5rem] relative object-cover z-[1]'
+                alt='News'
+                src={post.thumbnail}
+              />
+              <div className='min-h-[3.5rem] lg:min-h-[4rem] p-[0.5rem] box-border w-full bg-[#FBEBD9] overflow-hidden leading-tight lg:leading-normal'>
+                <h2 className='text-black m-0 text-[0.85rem] lg:text-[1rem] overflow-hidden'>
+                  {post.title}
+                </h2>
+              </div>
+            </Link>
+            // </AnimatedSection>
+          ))}
         </div>
       </div>
     </section>

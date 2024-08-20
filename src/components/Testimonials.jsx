@@ -4,11 +4,11 @@ import Review from './Review';
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
-
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const scrollRef = useRef(null);
+  const [progressBarWidth, setProgressBarWidth] = useState(0);
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -63,6 +63,29 @@ const Testimonials = () => {
   };
 
   useEffect(() => {
+    const updateProgressBar = () => {
+      if (scrollRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        const scrollPercentage =
+          (scrollLeft / (scrollWidth - clientWidth)) * 100;
+        setProgressBarWidth(scrollPercentage);
+      }
+    };
+
+    const handleScroll = () => {
+      updateProgressBar();
+    };
+
+    scrollRef.current.addEventListener('scroll', handleScroll);
+
+    return () => {
+      if (scrollRef.current) {
+        scrollRef.current.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [reviews]);
+
+  useEffect(() => {
     getReviews();
   }, []);
 
@@ -80,9 +103,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section
-      className={`self-stretch flex flex-row items-start justify-start pt-[0rem] pl-[1.5rem] md:pl-[3.75rem] pb-[2.5rem] box-border max-w-full shrink-0 text-center text-white`}
-    >
+    <section className='self-stretch flex flex-row items-start justify-start pt-[0rem] pl-[1.5rem] md:pl-[3.75rem] pb-[2.5rem] box-border max-w-full shrink-0 text-center text-white'>
       <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full'>
         <h1 className='self-stretch flex flex-row items-start justify-center py-[0rem] m-0 relative text-7xl md:text-[2rem] lg:text-[3rem] font-medium'>
           Our Testimonials
@@ -96,7 +117,6 @@ const Testimonials = () => {
             msOverflowStyle: 'none',
             scrollbarWidth: 'none',
             cursor: isDragging ? 'grabbing' : 'grab',
-            userSelect: 'none',
           }}
           ref={scrollRef}
           onMouseDown={handleMouseDown}
@@ -118,8 +138,11 @@ const Testimonials = () => {
             />
           ))}
         </div>
-        <div className='mx-auto h-[0.5rem] w-[20rem] md:w-[38rem] bg-whitesmoke overflow-hidden shrink-0 flex flex-row items-start justify-start max-w-full'>
-          <div className='h-[0.5rem] w-[10rem] md:w-[19rem] relative bg-gold' />
+        <div className='mx-auto h-[0.25rem] md-[0.375rem] lg:h-[0.5rem] w-[20rem] md:w-[38rem] bg-whitesmoke overflow-hidden shrink-0 flex flex-row items-start justify-start max-w-full'>
+          <div
+            className='h-[0.25rem] md:h-[0.375rem] lg:h-[0.5rem] bg-gold'
+            style={{ width: `${progressBarWidth}%` }}
+          />
         </div>
       </div>
     </section>

@@ -44,13 +44,13 @@ function LatestArticlesGroup() {
           {firstTwoPosts.map((post, index) => (
             // <AnimatedSection>
             <Link
-              className='bg-[#FEF4EA] flex flex-col items-start justify-start w-[20rem] md:w-[22rem] lg:w-[51rem] mx-auto'
+              className='bg-[#FEF4EA] flex flex-col items-start justify-start w-full max-w-[20rem] md:max-w-[22rem] lg:max-w-[51rem] mx-auto'
               key={post._id}
               to={`/blog/${post.slug}`}
               style={{ cursor: 'pointer', textDecoration: 'none' }}
             >
               <img
-                className='m-0 h-[10rem] md:h-[11rem] lg:h-[25rem] w-[20rem] md:w-[22rem] lg:w-[51rem] self-stretch box-border'
+                className='m-0 w-full h-auto max-w-[20rem] md:max-w-[22rem] lg:max-w-[51rem] self-stretch box-border object-cover'
                 alt={post.title}
                 src={post.thumbnail}
               />
@@ -82,13 +82,13 @@ function LatestArticlesGroup() {
           {remainingPosts.map((post, index) => (
             // <AnimatedSection>
             <Link
-              className='bg-[#FEF4EA]  flex flex-col items-start justify-start gap-0 w-[20rem] md:w-[22rem] lg:w-[33.5rem] mx-auto'
+              className='bg-[#FEF4EA]  flex flex-col items-start justify-start gap-0 w-full max-w-[20rem] md:max-w-[22rem] lg:max-w-[33.5rem] mx-auto'
               key={post._id}
               to={`/blog/${post.slug}`}
               style={{ cursor: 'pointer', textDecoration: 'none' }}
             >
               <img
-                className='m-0 h-[10rem] md:h-[11rem] lg:h-[16.5rem] w-[20rem] md:w-[22rem] lg:w-[33.5rem] self-stretch box-border'
+                className='m-0 w-full h-auto max-w-[20rem] md:max-w-[22rem] lg:max-w-[33.5rem] self-stretch box-border object-cover'
                 alt={post.title}
                 src={post.thumbnail}
               />

@@ -90,7 +90,7 @@ const TagArticles = ({ title, tags }) => {
         {/* </AnimatedSection> */}
 
         {/* <AnimatedSection> */}
-        <div className='p-0 w-full border-black border-t-[2px] border-solid box-border' />
+        <div className='p-0 m-0 w-full border-black border-t-[2px] border-solid box-border' />
         {/* </AnimatedSection> */}
       </div>
 
