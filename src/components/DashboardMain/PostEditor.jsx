@@ -222,7 +222,8 @@ function PostEditor() {
             Case
           </h4>
           <h4 className='m-0 p-0 font-normal text-center'>
-            For&nbsp;<span className='text-red-500'>&nbsp;Plain text</span>
+            For&nbsp;
+            <span className='text-red-500'>&nbsp;Plain text & Links</span>
             <span className='text-green-500'>&nbsp;'Normal'</span>&nbsp;with
             Size
             <span className='text-green-500'>&nbsp;24</span>&nbsp;is Optimal

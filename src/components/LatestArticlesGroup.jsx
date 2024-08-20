@@ -55,7 +55,7 @@ function LatestArticlesGroup() {
                 src={post.thumbnail}
               />
               <div className='m-0 px-[1rem] py-[0.5rem] flex flex-col items-start justify-start mt-2 self-stretch'>
-                <h1 className='m-0 font-semibold flex text-[0.75rem] md:text-[0.85rem] lg:text-[1.35rem] shrink-0 text-gray'>
+                <h1 className='m-0 font-semibold flex text-[0.75rem] md:text-[0.85rem] lg:text-[1.35rem] shrink-0 text-gray text-overflow-ellipsis'>
                   {post.title}
                 </h1>
                 <span className='mt-1 flex flex-row gap-[1rem]'>
@@ -93,7 +93,7 @@ function LatestArticlesGroup() {
                 src={post.thumbnail}
               />
               <div className='m-0 px-[1rem] py-[0.5rem] flex flex-col items-start justify-start mt-2'>
-                <h1 className='m-0 font-semibold flex text-[0.75rem] md:text-[0.85rem] lg:text-[1.35rem] shrink-0 text-gray'>
+                <h1 className='m-0 font-semibold flex text-[0.75rem] md:text-[0.85rem] lg:text-[1.35rem] shrink-0 text-gray text-overflow-ellipsis'>
                   {post.title}
                 </h1>
                 <span className='mt-1 flex flex-row gap-[1rem]'>

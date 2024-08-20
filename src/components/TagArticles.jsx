@@ -128,13 +128,13 @@ const TagArticles = ({ title, tags }) => {
               src={post.thumbnail}
             />
             <div className='flex flex-col items-start justify-start mt-2'>
-              <h1 className='m-0 font-semibold flex text-[0.9rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
+              <h1 className='m-0 font-semibold text-[0.9rem] md:text-[1.15rem] lg:text-[1.35rem] shrink-0 text-gray'>
                 {post.title}
               </h1>
               <h2 className='m-0 mt-2 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
                 {post.author}
               </h2>
-              <h3 className='m-0 mt-1  text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
+              <h3 className='m-0 mt-1 text-[0.75rem] md:text-[0.9rem] lg:text-[1rem] font-semibold text-dimgray-100'>
                 {new Date(post.updatedAt).toLocaleString('en-UK', {
                   year: 'numeric',
                   month: 'numeric',

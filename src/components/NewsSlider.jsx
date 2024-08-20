@@ -128,8 +128,8 @@ const NewsSlider = ({ tag }) => {
                 alt='News'
                 src={post.thumbnail}
               />
-              <div className='min-h-[3.5rem] lg:min-h-[4rem] p-[0.5rem] box-border w-full bg-[#FBEBD9] overflow-hidden leading-tight lg:leading-normal'>
-                <h2 className='text-black m-0 text-[0.85rem] lg:text-[1rem] overflow-hidden'>
+              <div className='p-[0.5rem] box-border w-full bg-[#FBEBD9] overflow-hidden leading-tight lg:leading-normal'>
+                <h2 className='text-black m-0 text-[0.85rem] lg:text-[1rem] text-overflow-ellipsis'>
                   {post.title}
                 </h2>
               </div>
