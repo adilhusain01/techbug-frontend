@@ -4,7 +4,15 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-function ConfirmationModal({ open, handleClose, handleDelete, postTitle }) {
+function ConfirmationModal({
+  open,
+  handleClose,
+  handleDelete,
+  handleDiscard,
+  handleSaveDraft,
+  postTitle,
+  mode,
+}) {
   return (
     <Modal
       open={open}
@@ -24,16 +32,43 @@ function ConfirmationModal({ open, handleClose, handleDelete, postTitle }) {
           p: 4,
         }}
       >
-        <Typography id='modal-title' variant='h6' component='h2'>
-          Are you sure you want to delete "{postTitle}"?
+        <Typography
+          id='modal-title'
+          variant='h6'
+          component='h2'
+          className='text-overflow-ellipsis'
+        >
+          {mode === 'delete'
+            ? `Sure to delete ? "${postTitle}"`
+            : 'Are you sure ?'}
         </Typography>
         <Box mt={2} display='flex' justifyContent='flex-end' gap={2}>
-          <Button variant='contained' color='error' onClick={handleDelete}>
-            Yes
-          </Button>
-          <Button variant='outlined' onClick={handleClose}>
-            Cancel
-          </Button>
+          {mode === 'delete' ? (
+            <>
+              <Button variant='contained' color='error' onClick={handleDelete}>
+                Yes
+              </Button>
+              <Button variant='outlined' onClick={handleClose}>
+                Cancel
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button variant='contained' color='error' onClick={handleDiscard}>
+                Discard Changes
+              </Button>
+              <Button variant='outlined' onClick={handleClose}>
+                Cancel
+              </Button>
+              <Button
+                variant='contained'
+                color='primary'
+                onClick={handleSaveDraft}
+              >
+                Save Draft
+              </Button>
+            </>
+          )}
         </Box>
       </Box>
     </Modal>
