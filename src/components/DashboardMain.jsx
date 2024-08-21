@@ -1,4 +1,3 @@
-//views
 import { lazy } from 'react';
 
 const DashboardView = lazy(() =>
