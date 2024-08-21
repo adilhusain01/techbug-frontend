@@ -1,19 +1,21 @@
 import { useEffect, useState, lazy } from 'react';
 const Blog = lazy(() => import('./Blog'));
 import { TextField } from '@mui/material';
-import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ImageIcon from '@mui/icons-material/Image';
 import draftToHtml from 'draftjs-to-html';
 import Select from 'react-select';
-
 import { Editor } from 'react-draft-wysiwyg';
-import { EditorState, convertToRaw } from 'draft-js';
+import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import axios from '../../api/axios';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
+const ConfirmationModal = lazy(() => import('./ConfirmationModal'));
+import htmlToDraft from 'html-to-draftjs';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
-function PostEditor() {
+function PostEditor({ post }) {
   const [isCancelled, setIsCancelled] = useState(false);
+  const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedTags, setSelectedTags] = useState([]);
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
@@ -21,6 +23,26 @@ function PostEditor() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [author, setAuthor] = useState('');
+
+  useEffect(() => {
+    if (post) {
+      setTitle(post.title);
+      setDescription(post.description || '');
+      setAuthor(post.author || '');
+      setSelectedTags(
+        post.tags.map((tag) => ({ label: tag, value: tag })) || []
+      );
+      setSelectedImage(post.thumbnail);
+
+      const contentBlock = htmlToDraft(post.body);
+      if (contentBlock) {
+        const contentState = ContentState.createFromBlockArray(
+          contentBlock.contentBlocks
+        );
+        setEditorState(EditorState.createWithContent(contentState));
+      }
+    }
+  }, [post]);
 
   const getTags = async () => {
     try {
@@ -89,25 +111,95 @@ function PostEditor() {
     }
 
     try {
-      const thumbnailUrl = await uploadImageToCloudinary(selectedImage);
+      let thumbnailUrl = selectedImage;
+      if (selectedImage instanceof File) {
+        thumbnailUrl = await uploadImageToCloudinary(selectedImage);
+      }
 
-      const response = await axios.post('/blogposts/posts', {
-        title,
-        description,
-        author,
-        thumbnail: thumbnailUrl,
-        tags,
-        body,
-      });
+      const response = post
+        ? await axios.put(`/blogposts/posts/${post._id}`, {
+            title,
+            description,
+            author,
+            thumbnail: thumbnailUrl,
+            tags,
+            body,
+            published: true,
+          })
+        : await axios.post('/blogposts/posts', {
+            title,
+            description,
+            author,
+            thumbnail: thumbnailUrl,
+            tags,
+            body,
+            published: true,
+          });
 
-      if (response.status === 201) {
-        toast.success('Blog post created successfully');
+      if (response.status === 201 || 200) {
         setIsCancelled(true);
       }
     } catch (error) {
       console.error(error);
       toast.error(error.response.data.message);
     }
+  };
+
+  const discard = async () => {
+    setIsCancelled(true);
+  };
+
+  const saveDraft = async () => {
+    const tags = selectedTags.map((tag) => tag.label) || [];
+    const body =
+      draftToHtml(convertToRaw(editorState.getCurrentContent())) || '';
+
+    if (!title || !selectedImage) {
+      toast.error('Title & Thumbnail are required');
+      return;
+    }
+
+    try {
+      let thumbnailUrl = selectedImage;
+      if (selectedImage instanceof File) {
+        thumbnailUrl = await uploadImageToCloudinary(selectedImage);
+      }
+
+      const response = post
+        ? await axios.put(`/blogposts/posts/${post._id}`, {
+            title,
+            description,
+            author,
+            thumbnail: thumbnailUrl,
+            tags,
+            body,
+            published: false,
+          })
+        : await axios.post('/blogposts/posts', {
+            title,
+            description,
+            author,
+            thumbnail: thumbnailUrl,
+            tags,
+            body,
+            published: false,
+          });
+
+      if (response.status === 201 || 200) {
+        setIsCancelled(true);
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error(error.response.data.message);
+    }
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return isCancelled ? (
@@ -129,7 +221,7 @@ function PostEditor() {
           </button>
           <button
             className='text-white bg-[#575757] hover:bg-[#272727] transition-all duration-300 text-[1rem] p-[0.75rem] rounded-sm'
-            onClick={() => setIsCancelled(true)}
+            onClick={() => handleOpen()}
           >
             Cancel
           </button>
@@ -144,6 +236,7 @@ function PostEditor() {
             id='outlined-required-title'
             label='Title'
             autoComplete='off'
+            value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
           <TextField
@@ -151,6 +244,7 @@ function PostEditor() {
             id='outlined-required-description'
             label='Description'
             autoComplete='off'
+            value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
           <TextField
@@ -158,6 +252,7 @@ function PostEditor() {
             id='outlined-required-author'
             label='Author'
             autoComplete='off'
+            value={author}
             onChange={(e) => setAuthor(e.target.value)}
           />
           <input
@@ -183,7 +278,11 @@ function PostEditor() {
           {selectedImage ? (
             <div className='p-[2rem] border border-solid border-slate-300 rounded-sm flex items-center justify-center'>
               <img
-                src={URL.createObjectURL(selectedImage)}
+                src={
+                  selectedImage instanceof File
+                    ? URL.createObjectURL(selectedImage)
+                    : selectedImage
+                }
                 alt='Selected'
                 className='max-w-full h-auto'
               />
@@ -246,6 +345,13 @@ function PostEditor() {
           value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
         /> */}
       </section>
+
+      <ConfirmationModal
+        open={open}
+        handleClose={handleClose}
+        handleDiscard={discard}
+        handleSaveDraft={saveDraft}
+      />
 
       <ToastContainer
         position='bottom-right'
