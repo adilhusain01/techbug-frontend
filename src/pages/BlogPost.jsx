@@ -19,6 +19,7 @@ const Footer = lazy(() => import('../components/Footer'));
 const BlogPost = () => {
   const { slug } = useParams();
   const [blogpost, setBlogpost] = useState({});
+  const [foundBlogPost, setFoundBlogPost] = useState(false);
   const [relatedPostsMeta, setRelatedPostsMeta] = useState([]);
   const [tags, setTags] = useState('');
 
@@ -30,6 +31,7 @@ const BlogPost = () => {
       const tagsString = tagsArray.join('-');
       setTags(tagsString);
       setBlogpost(data);
+      setFoundBlogPost(true);
     } catch (error) {
       console.log(error);
     }
@@ -39,7 +41,7 @@ const BlogPost = () => {
     getBlogPost();
   }, [slug]);
 
-  return (
+  return foundBlogPost ? (
     <main
       className='w-full relative bg-gray flex flex-col items-start justify-start box-border font-plus-jakarta-sans overflow-hidden'
       style={{
@@ -96,6 +98,8 @@ const BlogPost = () => {
         </AnimatedSection>
       </Suspense>
     </main>
+  ) : (
+    <div>Broken Link</div>
   );
 };
 
