@@ -57,6 +57,7 @@ function App() {
           <Route path='/blog/:slug' element={<BlogPost />} />
           <Route path='/about' element={<About />} />
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='*' element={<div>Broken Link</div>} />
         </Routes>
       </Suspense>
     </main>
