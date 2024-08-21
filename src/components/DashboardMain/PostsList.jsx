@@ -1,11 +1,13 @@
 import axios from '../../api/axios';
 import { useState, useEffect, lazy } from 'react';
-import DeleteIcon from '@mui/icons-material/Delete';
 const ConfirmationModal = lazy(() => import('./ConfirmationModal'));
+import CircleIcon from '@mui/icons-material/Circle';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function PostsList() {
-  const [postsMeta, setPostsMeta] = useState([]);
   const [open, setOpen] = useState(false);
+  const [postsMeta, setPostsMeta] = useState([]);
   const [postToDelete, setPostToDelete] = useState(null);
 
   const getPostsMeta = async () => {
@@ -68,11 +70,18 @@ function PostsList() {
                 day: 'numeric',
               })}
             </h4>
-            <DeleteIcon
-              fontSize='small'
-              onClick={() => handleOpen(post)}
-              className='cursor-pointer'
-            />
+            <span className='flex flex-row gap-[0.25rem]'>
+              <CircleIcon
+                fontSize='small'
+                color={`${post.published ? 'success' : 'error'}`}
+              />
+              <EditIcon fontSize='small' />
+              <DeleteIcon
+                fontSize='small'
+                onClick={() => handleOpen(post)}
+                className='cursor-pointer'
+              />
+            </span>
           </div>
         </article>
       ))}
@@ -82,6 +91,7 @@ function PostsList() {
         handleClose={handleClose}
         handleDelete={deletePost}
         postTitle={postToDelete?.title}
+        mode={'delete'}
       />
     </div>
   );
