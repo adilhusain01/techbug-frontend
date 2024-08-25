@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 //global
 
 import { global } from 'global';
+import { AuthProvider } from './context/authProvider';
 window.global = global;
 
 ReactGA.initialize('G-T0XMKBP3BZ');
@@ -36,7 +37,9 @@ if (container) {
 
   root.render(
     <BrowserRouter>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   );
 } else {
