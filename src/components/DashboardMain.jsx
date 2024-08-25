@@ -1,9 +1,10 @@
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const DashboardView = lazy(() =>
   import('../components/DashboardMain/DashboardView')
 );
-const BlogView = lazy(() => import('../components/DashboardMain/Blog'));
+const BlogView = lazy(() => import('../components/DashboardMain/BlogView'));
 const ServicesView = lazy(() =>
   import('../components/DashboardMain/ServicesView')
 );
@@ -35,7 +36,9 @@ function DashboardMain({ activeView }) {
 
   return (
     <section className='w-full col-span-10'>
-      <ViewComponent />
+      <Suspense fallback={<LoadingSpinner />}>
+        <ViewComponent />
+      </Suspense>
     </section>
   );
 }
