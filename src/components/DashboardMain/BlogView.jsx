@@ -1,12 +1,13 @@
 import { useState, useEffect, lazy } from 'react';
 import axios from '../../api/axios';
-const ConfirmationModal = lazy(() => import('./ConfirmationModal'));
+const BlogConfirmationModal = lazy(() => import('./BlogConfirmationModal'));
 import CircleIcon from '@mui/icons-material/Circle';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 const PostEditor = lazy(() => import('./PostEditor'));
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 
-function Blog() {
+function BlogView() {
   const [isEditing, setIsEditing] = useState(false);
   const [open, setOpen] = useState(false);
   const [postsMeta, setPostsMeta] = useState([]);
@@ -15,7 +16,7 @@ function Blog() {
 
   const getPostsMeta = async () => {
     try {
-      const response = await axios.get(`/blogposts/meta`);
+      const response = await axios.get(`/blogposts/allmeta`);
       const data = response.data;
       setPostsMeta(data);
     } catch (error) {
@@ -54,6 +55,7 @@ function Blog() {
       await axios.delete(`/blogposts/posts/${postToDelete._id}`);
       setPostsMeta(postsMeta.filter((post) => post._id !== postToDelete._id));
       handleClose();
+      toast.success('Post deleted successfully');
     } catch (error) {
       console.log(error);
     }
@@ -80,7 +82,6 @@ function Blog() {
           Add New Blog
         </button>
       </div>
-      {/* <PostsList /> */}
       <div className='m-0 p-[2rem] grid grid-cols-4 gap-[2rem]'>
         {postsMeta.map((post) => (
           <article
@@ -88,7 +89,7 @@ function Blog() {
             className='bg-white pb-[0.5rem] rounded-md shadow-lg flex flex-col gap-[0.75rem]'
           >
             <img
-              className='w-full h-auto object-cover'
+              className='w-full h-auto object-cover rounded-t-md'
               src={post.thumbnail}
               alt={post.title}
             />
@@ -124,16 +125,29 @@ function Blog() {
           </article>
         ))}
 
-        <ConfirmationModal
+        <BlogConfirmationModal
           open={open}
           handleClose={handleClose}
           handleDelete={deletePost}
           postTitle={postToDelete?.title}
           mode={'delete'}
         />
+        <ToastContainer
+          position='bottom-right'
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme='colored'
+          transition={Bounce}
+        />
       </div>
     </section>
   );
 }
 
-export default Blog;
+export default BlogView;
