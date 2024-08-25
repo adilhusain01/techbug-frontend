@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 import LoadingSpinner from '../src/components/LoadingSpinner';
+import RequireAuth from './components/RequireAuth';
+import PersistLogin from './components/PersistLogin';
 
 const Home = lazy(() => import('./pages/Home'));
 const Work = lazy(() => import('./pages/Work'));
@@ -16,6 +18,13 @@ const Blog = lazy(() => import('./pages/Blog'));
 const About = lazy(() => import('./pages/About'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
+const Login = lazy(() => import('./pages/Login'));
+
+const ROLES = {
+  Editor: 202530,
+  Manager: 152025,
+  Admin: 101525,
+};
 
 function App() {
   const action = useNavigationType();
@@ -56,7 +65,13 @@ function App() {
           <Route path='/blog' element={<Blog />} />
           <Route path='/blog/:slug' element={<BlogPost />} />
           <Route path='/about' element={<About />} />
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/login' element={<Login />} />
+
+          <Route element={<PersistLogin />}>
+            <Route element={<RequireAuth allowedRoles={[ROLES.Editor]} />}>
+              <Route path='/dashboard' element={<Dashboard />} />
+            </Route>
+          </Route>
           <Route path='*' element={<div>Broken Link</div>} />
         </Routes>
       </Suspense>
