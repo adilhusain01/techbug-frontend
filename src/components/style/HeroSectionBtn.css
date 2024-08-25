@@ -1,0 +1,21 @@
+.touch-btn:hover .img {
+    width: 14rem;
+}
+
+.touch-btn:hover .head {
+    opacity: -10;
+
+}
+
+
+.send-btn:hover .img {
+    left: 90px;
+    transition: all 3s linear;
+
+}
+
+
+.send-btn:hover .group {
+    opacity: 0;
+
+}

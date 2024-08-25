@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import TopNavBar from './TopNavBar';
 import MobileNavBar from './MobileNavBar';
 import PropTypes from 'prop-types';
+import './style/Header.css'
 
 const Header = ({ menu, theme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,12 +68,12 @@ const Header = ({ menu, theme }) => {
           <a
             href='#contact-form'
             onClick={handleClick}
-            className={`m-0 flex flex-col items-center justify-center py-[0.85rem] px-[2rem] text-[1.25rem] rounded-[10rem] hover:bg-[#F1CB47] ${currentTheme.callBg} ${currentTheme.callTextColor} duration-300 ease-in-out`}
+            className={`m-0 flex flex-col items-center justify-center py-[0.85rem] px-[2rem] text-[1.25rem] rounded-[10rem]  ${currentTheme.callBg} ${currentTheme.callTextColor} duration-400 ease-in-out book-button`}
             style={{
               textDecoration: 'none',
             }}
           >
-            Book Call
+            <span>Book Call</span>
           </a>
         </div>
       </header>

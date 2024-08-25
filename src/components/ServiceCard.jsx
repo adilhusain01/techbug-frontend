@@ -4,7 +4,7 @@ const ServiceCard = ({ title, image, description, features, index }) => {
   const isEven = index % 2 === 0;
 
   return isEven ? (
-    <article className='flex flex-col-reverse md:grid md:grid-cols-2 md:justify-items-end w-[90%] lg:w-[85%] gap-[1rem] md:gap-[5rem] lg:gap-[1rem] mx-auto'>
+    <article className='flex flex-col-reverse md:grid md:grid-cols-2 md:justify-items-end w-[90%] lg:w-[85%] gap-[1rem] md:gap-[5rem] lg:gap-[10rem] '>
       <div className='self-stretch flex flex-col items-center md:items-start justify-center gap-[0.5rem] md:gap-[1rem] lg:gap-[1.75rem]'>
         <h1 className='m-0 text-[1.5rem] md:text-[2.5rem] lg:text-[4rem] font-semibold text-transparent !bg-clip-text [background:linear-gradient(90deg,_#fff,_#9a8cfe)] text-center md:text-left'>
           {title}
@@ -38,7 +38,7 @@ const ServiceCard = ({ title, image, description, features, index }) => {
     <article className='m-0 grid grid-cols-1 md:grid-cols-2 justify-items-end w-[90%] lg:w-[85%] gap-[1rem] md:gap-[5rem] lg:gap-[1rem]'>
       <div className='w-full flex flex-col items-center justify-center md:items-start md:justify-start'>
         <img
-          className='h-[20rem] w-full max-w-[21.5rem] md:h-[30rem] md:max-w-[18rem] lg:h-[43.5rem] lg:max-w-[35rem] rounded-11xl object-cover'
+          className='h-[20rem] w-full max-w-[21.5rem] md:h-[30rem] md:max-w-[18rem] lg:h-[43.5rem] lg:max-w-[35rem] rounded-11xl object-cover '
           loading='lazy'
           alt={title}
           src={image}

@@ -61,7 +61,7 @@ function Job() {
         {text.split('').map((char, index) => (
           <span
             key={index}
-            style={{ color: index < blackLetters ? 'black' : 'white' }}
+            style={{ color: index < blackLetters ? 'white' : 'black' }}
           >
             {char}
           </span>

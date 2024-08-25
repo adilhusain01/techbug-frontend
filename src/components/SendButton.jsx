@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
 // const AnimatedSection = lazy(() => import('./AnimatedSection'));
+import './style/HeroSectionBtn.css'
+
 const SendButton = ({ color }) => {
   return (
     // <AnimatedSection>
     <button
       type='submit'
-      className={`mt-8 cursor-pointer py-0 md:py-[0.125rem] px-[0.25rem] bg-[transparent] w-[12rem] md:w-[16rem] rounded-37xl box-border flex flex-row items-center justify-start gap-[0.75rem] border-[1px] border-solid border-[#F1CB47] hover:border-[#967f2b] duration-300 mx-auto`}
+      className={`mt-8 cursor-pointer py-0 md:py-[0.125rem] px-[0.25rem] bg-[transparent] w-[12rem] md:w-[16rem] rounded-37xl box-border flex flex-row items-center justify-start gap-[0.75rem] border-[1px] border-solid border-[#F1CB47] hover:border-[#967f2b] duration-300 mx-auto hover:bg-[#F1CB47] send-btn  `}
     >
       <img
-        className='h-[2rem] w-[2rem] md:h-[3rem] md:w-[3rem] relative overflow-hidden shrink-0'
+        className='h-[2rem] w-[2rem] md:h-[3rem] md:w-[3rem] relative overflow-hidden shrink-0 img'
         alt='Send'
         src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ytryrgkpxv17uwjulsye'
       />
 
       <h2
-        className='text-[1rem] md:text-[1.25rem] font-medium'
+        className='text-[1rem] md:text-[1.25rem] font-medium group'
         style={{ color: color }}
       >
         Send your enquiry

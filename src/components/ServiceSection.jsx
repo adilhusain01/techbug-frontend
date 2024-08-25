@@ -23,7 +23,7 @@ const ServiceSection = () => {
 
   return (
     <section
-      className={`max-w-full flex flex-col items-center justify-center py-[2.5rem] md:py-[5rem] lg:py-[8rem] text-white gap-[4rem] md:gap-[5rem] mx-auto`}
+      className={`max-w-full flex flex-col items-center justify-center py-[1rem] md:py-[5rem] lg:py-[8rem] text-white gap-[4rem] md:gap-[5rem] lg:mx-[-40px] `}
     >
       {services.map((service, index) => (
         // <AnimatedSection>

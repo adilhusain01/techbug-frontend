@@ -42,8 +42,8 @@ const Home = () => {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               position: 'relative',
-              height: '1080px',
-              width: '1920px',
+              height: '105vh',
+              width: '100vw',
             }}
           >
             <div

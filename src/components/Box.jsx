@@ -1,7 +1,10 @@
 import { useMemo } from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 const Box = ({ title, icon, propOverflow }) => {
+
+  const navigate = useNavigate();
   let iconImage;
   switch (icon) {
     case 'web_icon':
@@ -39,7 +42,10 @@ const Box = ({ title, icon, propOverflow }) => {
   }, [propOverflow]);
 
   return (
-    <div className='rounded-2xl md:rounded-11xl [background:linear-gradient(233deg,_#1e1e1e_33.1%,_#5f5f5f_90%)] flex flex-col items-center justify-center p-[0.75rem] box-border h-[5rem] w-[5rem] md:h-[10rem] md:w-[10rem] lg:h-[12rem] lg:w-[12rem] text-center'>
+    <div 
+    onClick={()=>navigate('/work')}
+    
+    className='rounded-2xl md:rounded-11xl [background:linear-gradient(233deg,_#1e1e1e_33.1%,_#5f5f5f_90%)] flex flex-col items-center justify-center p-[0.75rem] box-border h-[5rem] w-[5rem] md:h-[10rem] md:w-[10rem] lg:h-[12rem] lg:w-[12rem] text-center transition-transform transform hover:scale-110 hover:bg-[#F1CB47] duration-300 ease-in-out'>
       <img
         className='h-auto w-full max-w-[1.75rem] md:max-w-[4rem] lg:max-w-[5rem] relative object-contain shrink-0'
         alt='icon'

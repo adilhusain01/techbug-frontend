@@ -42,9 +42,15 @@ const Expertise = () => {
 
         <div className='justify-items-center grid grid-cols-3 lg:grid-cols-6 gap-[0.3rem] md:gap-[1rem] lg:gap-[4rem] pb-[3rem] z-[1] mt-[-3rem] lg:mt-[-6rem] text-white px-[2rem] lg:px-[4.25rem]'>
           <Box
+          
+
             title='Web Development & Design'
             icon={'web_icon'}
             propOverflow='hidden'
+            className ='exp-box-1'
+
+          
+
           />
           <Box
             title='App Development & Design'
