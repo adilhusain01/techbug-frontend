@@ -1,5 +1,5 @@
 import { useEffect, useState, lazy } from 'react';
-const Blog = lazy(() => import('./Blog'));
+const BlogView = lazy(() => import('./BlogView'));
 import { TextField } from '@mui/material';
 import ImageIcon from '@mui/icons-material/Image';
 import draftToHtml from 'draftjs-to-html';
@@ -9,8 +9,9 @@ import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import axios from '../../api/axios';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
-const ConfirmationModal = lazy(() => import('./ConfirmationModal'));
+const BlogConfirmationModal = lazy(() => import('./BlogConfirmationModal'));
 import htmlToDraft from 'html-to-draftjs';
+import CircularProgress from '@mui/material/CircularProgress';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 function PostEditor({ post }) {
@@ -23,6 +24,7 @@ function PostEditor({ post }) {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [author, setAuthor] = useState('');
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (post) {
@@ -102,6 +104,7 @@ function PostEditor({ post }) {
   };
 
   const handleSubmit = async () => {
+    setLoading(true);
     const tags = selectedTags.map((tag) => tag.label);
     const body = draftToHtml(convertToRaw(editorState.getCurrentContent()));
 
@@ -142,6 +145,8 @@ function PostEditor({ post }) {
     } catch (error) {
       console.error(error);
       toast.error(error.response.data.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -150,6 +155,7 @@ function PostEditor({ post }) {
   };
 
   const saveDraft = async () => {
+    setLoading(true);
     const tags = selectedTags.map((tag) => tag.label) || [];
     const body =
       draftToHtml(convertToRaw(editorState.getCurrentContent())) || '';
@@ -191,6 +197,8 @@ function PostEditor({ post }) {
     } catch (error) {
       console.error(error);
       toast.error(error.response.data.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -203,7 +211,7 @@ function PostEditor({ post }) {
   };
 
   return isCancelled ? (
-    <Blog />
+    <BlogView />
   ) : (
     <section
       className='w-full max-w-full h-screen overflow-y-scroll box-border bg-[#F5F5F5] font-plus-jakarta-sans relative'
@@ -216,8 +224,9 @@ function PostEditor({ post }) {
           <button
             className='text-white bg-[#FF6E1F] hover:bg-[#af5c24] transition-all duration-300 text-[1rem] p-[0.75rem] rounded-sm'
             onClick={handleSubmit}
+            disabled={loading}
           >
-            Save
+            {loading ? <CircularProgress size={24} /> : 'Save'}
           </button>
           <button
             className='text-white bg-[#575757] hover:bg-[#272727] transition-all duration-300 text-[1rem] p-[0.75rem] rounded-sm'
@@ -346,7 +355,7 @@ function PostEditor({ post }) {
         /> */}
       </section>
 
-      <ConfirmationModal
+      <BlogConfirmationModal
         open={open}
         handleClose={handleClose}
         handleDiscard={discard}
