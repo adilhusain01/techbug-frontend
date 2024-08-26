@@ -61,41 +61,41 @@ const BlogPost = () => {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection>
-          <BlogPostHead post={blogpost} />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <BlogPostHead post={blogpost} />
+        {/* </AnimatedSection> */}
 
         <section className='pt-[2rem] md:pt-[3rem] lg:pt-[6rem] mt-[0.5rem] md:mt-[4rem] lg:mt-[8rem] w-full flex flex-col items-center justify-center text-black bg-white box-border'>
-          <AnimatedSection>
-            <div className='grid grid-cols-1 md:grid-cols-12 gap-[2rem] w-full'>
-              <BlogLeftBar post={blogpost} />
+          {/* <AnimatedSection> */}
+          <div className='grid grid-cols-1 md:grid-cols-12 gap-[2rem] w-full'>
+            <BlogLeftBar post={blogpost} />
 
-              <BlogCenterBar post={blogpost} />
+            <BlogCenterBar post={blogpost} />
 
-              <BlogRightBar post={blogpost} />
-            </div>
-          </AnimatedSection>
+            <BlogRightBar post={blogpost} />
+          </div>
+          {/* </AnimatedSection> */}
 
-          <AnimatedSection>
-            <div className='m-0 w-full'>
-              <TagArticles title={'Related Articles'} tags={tags} />
+          {/* <AnimatedSection> */}
+          <div className='m-0 w-full'>
+            <TagArticles title={'Related Articles'} tags={tags} />
 
-              <LatestArticles />
-            </div>
-          </AnimatedSection>
+            <LatestArticles />
+          </div>
+          {/* </AnimatedSection> */}
         </section>
 
-        <AnimatedSection>
-          <NewsLetter theme={'dark'} />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <NewsLetter theme={'dark'} />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <FormContact theme={'white'} />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <FormContact theme={'white'} />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <Footer />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Footer />
+        {/* </AnimatedSection> */}
       </Suspense>
     </main>
   ) : (

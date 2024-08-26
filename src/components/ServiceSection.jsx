@@ -1,10 +1,12 @@
 import ServiceCard from './ServiceCard';
 import axios from '../api/axios';
 import { useState, useEffect } from 'react';
-// const AnimatedSection = lazy(() => import('./AnimatedSection'));
+import { motion } from 'framer-motion';
+import useMousePosition from '../hooks/useMousePosition';
 
 const ServiceSection = () => {
   const [services, setServices] = useState([]);
+  const { x, y } = useMousePosition();
 
   const getServices = async () => {
     try {
@@ -23,20 +25,26 @@ const ServiceSection = () => {
 
   return (
     <section
-      className={`max-w-full flex flex-col items-center justify-center py-[2.5rem] md:py-[5rem] lg:py-[8rem] text-white gap-[4rem] md:gap-[5rem] mx-auto`}
+      className={`w-full max-w-full flex flex-col items-center justify-center`}
     >
-      {services.map((service, index) => (
-        // <AnimatedSection>
-        <ServiceCard
-          key={index}
-          title={service.title}
-          image={service.image}
-          description={service.description}
-          features={service.features}
-          index={index}
-        />
-        // </AnimatedSection>
-      ))}
+      <motion.div className=' mask'>
+        animate=
+        {{
+          WebkitMaskPosition: `${x}px ${y}px`,
+        }}
+      </motion.div>
+      <div className='max-w-full flex flex-col items-center justify-center text-white gap-[4rem] md:gap-[5rem] mx-auto'>
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            title={service.title}
+            image={service.image}
+            description={service.description}
+            features={service.features}
+            index={index}
+          />
+        ))}
+      </div>
     </section>
   );
 };

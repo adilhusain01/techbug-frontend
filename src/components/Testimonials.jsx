@@ -4,145 +4,38 @@ import Review from './Review';
 
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const scrollRef = useRef(null);
-  const [progressBarWidth, setProgressBarWidth] = useState(0);
-
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - scrollRef.current.offsetLeft);
-    setScrollLeft(scrollRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 3; // scroll-fast
-    scrollRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleTouchStart = (e) => {
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - scrollRef.current.offsetLeft);
-    setScrollLeft(scrollRef.current.scrollLeft);
-  };
-
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 1.2; // scroll-fast
-    scrollRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-  };
-
-  const handleWheel = (e) => {
-    if (e.deltaY !== 0) {
-      scrollRef.current.scrollLeft += e.deltaY;
-    }
-  };
 
   const getReviews = async () => {
     try {
       const response = await axios.get('/testimonials');
 
       const data = response.data;
-      setReviews(data);
+      setReviews([...data, ...data]);
     } catch (error) {
       console.error(error);
     }
   };
 
   useEffect(() => {
-    const updateProgressBar = () => {
-      if (scrollRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-        const scrollPercentage =
-          (scrollLeft / (scrollWidth - clientWidth)) * 100;
-        setProgressBarWidth(scrollPercentage);
-      }
-    };
-
-    const handleScroll = () => {
-      updateProgressBar();
-    };
-
-    scrollRef.current.addEventListener('scroll', handleScroll);
-
-    return () => {
-      if (scrollRef.current) {
-        scrollRef.current.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, [reviews]);
-
-  useEffect(() => {
     getReviews();
   }, []);
 
-  useEffect(() => {
-    const preventScroll = (e) => {
-      if (scrollRef.current && scrollRef.current.contains(e.target)) {
-        e.preventDefault();
-      }
-    };
-
-    document.addEventListener('wheel', preventScroll, { passive: false });
-    return () => {
-      document.removeEventListener('wheel', preventScroll);
-    };
-  }, []);
-
   return (
-    <section className='self-stretch flex flex-row items-start justify-start pt-[0rem] pl-[1.5rem] md:pl-[3.75rem] pb-[2.5rem] box-border max-w-full shrink-0 text-center text-white'>
-      <div className='flex-1 flex flex-col items-start justify-start gap-[2rem] max-w-full'>
-        <h1 className='self-stretch flex flex-row items-start justify-center py-[0rem] m-0 relative text-7xl md:text-[2rem] lg:text-[3rem] font-medium'>
-          Our Testimonials
-        </h1>
-
-        <div
-          className='overflow-x-auto flex flex-row items-center justify-start py-[0rem] px-[0rem] box-border gap-[1.25rem] w-full text-left text-[1.25rem] text-text-default-default'
-          style={{
-            overflowX: 'hidden',
-            overflowY: 'auto',
-            msOverflowStyle: 'none',
-            scrollbarWidth: 'none',
-            cursor: isDragging ? 'grabbing' : 'grab',
-          }}
-          ref={scrollRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          onWheel={handleWheel}
-        >
-          {reviews.map((review) => (
+    <section className='my-[1.25rem] md:my-[2.5rem] lg:my-[5rem] box-border max-w-full text-white '>
+      <h1 className='py-[1rem] md:py-[1.5rem] lg:py-[2rem] self-stretch flex flex-row items-start justify-center text-7xl md:text-[2rem] lg:text-[3rem] font-medium'>
+        Our Testimonials
+      </h1>
+      <div className='m-0 slides overflow-visible'>
+        <div className='flex flex-row gap-[2rem] w-full text-[1.25rem] text-text-default-default slide-list'>
+          {reviews.map((review, index) => (
             <Review
-              key={review._id}
+              key={index}
               name={review.name}
               designation={review.designation}
               image_uri={review.image_uri}
               review={review.review}
             />
           ))}
-        </div>
-        <div className='mx-auto h-[0.25rem] md-[0.375rem] lg:h-[0.5rem] w-[20rem] md:w-[38rem] bg-whitesmoke overflow-hidden shrink-0 flex flex-row items-start justify-start max-w-full'>
-          <div
-            className='h-[0.25rem] md:h-[0.375rem] lg:h-[0.5rem] bg-gold'
-            style={{ width: `${progressBarWidth}%` }}
-          />
         </div>
       </div>
     </section>

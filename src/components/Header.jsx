@@ -99,13 +99,12 @@ const Header = ({ menu, theme }) => {
           }`}
         >
           <div className='mt-6 md:mt-16 px-8 md:px-16 flex flex-row content-center justify-between'>
-            <span className='w-[2rem] h-[2rem]' />
             <Link to={'/'}>
               <img
                 className='pt-1 h-[1.85rem] w-[9rem] md:h-[2.05rem] md:w-[10rem] object-cover self-stretch relative overflow-hidden shrink-0'
                 loading='lazy'
                 alt='logo'
-                src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/ddhkrmchqvq2kbkzbkef'
+                src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/zuqbajuyhavubnv8l7le'
               />
             </Link>
             <img

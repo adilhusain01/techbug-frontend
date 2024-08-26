@@ -28,7 +28,7 @@ const About = () => {
         />
       </Helmet>
 
-      <Suspense fallback={LoadingSpinner}>
+      <Suspense fallback={<LoadingSpinner />}>
         <AnimatedSection>
           <section className='self-stretch flex flex-row items-start justify-start box-border max-w-full shrink-0'>
             <div className='flex-1 flex flex-col items-start justify-start px-[3.75rem] box-border gap-[5rem] md:gap-[10rem] lg:gap-[14rem] w-full'>
@@ -49,29 +49,29 @@ const About = () => {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection>
-          <Achievements />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Achievements />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <Founders />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Founders />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <Team />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Team />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <Brands />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Brands />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <FormContact theme={'white'} />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <FormContact theme={'white'} />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <Footer />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Footer />
+        {/* </AnimatedSection> */}
       </Suspense>
     </main>
   );

@@ -33,25 +33,25 @@ const Services = () => {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection>
-          <Canvas />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Canvas />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <ServiceSection />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <ServiceSection />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <BrandLogoGrid />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <BrandLogoGrid />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <FormContact theme={'black'} />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <FormContact theme={'black'} />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <Footer />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Footer />
+        {/* </AnimatedSection> */}
       </Suspense>
     </main>
   );

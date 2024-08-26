@@ -5,7 +5,7 @@ import TextareaField from './TextareaField';
 import SendButton from './SendButton';
 import axios from '../api/axios';
 import PropTypes from 'prop-types';
-// const AnimatedSection = lazy(() => import('./AnimatedSection'));
+import AnimatedSection from '../components/AnimatedSection';
 
 const FormContact = ({ theme }) => {
   const [formData, setFormData] = useState({
@@ -27,7 +27,6 @@ const FormContact = ({ theme }) => {
 
     let error = '';
 
-    // Validation
     if (name === 'email' && !emailRegex.test(value)) {
       error = 'Invalid email format';
     } else if (name === 'phone' && !phoneRegex.test(value)) {
@@ -100,21 +99,21 @@ const FormContact = ({ theme }) => {
   return (
     <section
       id='contact-form'
-      className='px-[2rem] md:px-[7.5rem] lg:px-0 py-[3rem] md:py-[4.25rem] lg:py-[6.25rem] w-full overflow-hidden flex flex-col items-center justify-center box-border shrink-0 text-center mx-auto'
+      className='mt-[-0.5rem] px-[2rem] md:px-[7.5rem] lg:px-0 py-[3rem] md:py-[4.25rem] lg:py-[6.25rem] w-full overflow-hidden flex flex-col items-center justify-center box-border shrink-0 text-center mx-auto'
       style={{
         backgroundColor: currentTheme.bg,
       }}
     >
-      {/* <AnimatedSection> */}
-      <div className='flex flex-row items-center justify-center mx-auto'>
-        <h1
-          className='m-0 relative font-medium font-inherit text-[1.5rem] md:text-[2rem] lg:text-[3rem]'
-          style={{ color: currentTheme.h1Color }}
-        >
-          Let’s get in touch
-        </h1>
-      </div>
-      {/* </AnimatedSection> */}
+      <AnimatedSection>
+        <div className='flex flex-row items-center justify-center mx-auto'>
+          <h1
+            className='m-0 relative font-medium font-inherit text-[1.5rem] md:text-[2rem] lg:text-[3rem]'
+            style={{ color: currentTheme.h1Color }}
+          >
+            Let’s get in touch
+          </h1>
+        </div>
+      </AnimatedSection>
       <form
         className='mt-[2rem] flex flex-col items-center justify-center relative max-w-full text-left text-[1rem] font-body-base'
         onSubmit={handleSubmit}

@@ -22,13 +22,22 @@ function PortfolioContent({ selectedMenu }) {
   useEffect(() => {
     getWorks();
   }, [selectedMenu]);
-
   return (
-    <section className='w-full py-[4rem] md:py-[8rem] lg:py-[12rem] self-stretch grid grid-cols-1 md:grid-cols-2 px-[1rem] lg:px-[5rem] gap-[2rem] lg:gap-[8rem] box-border [background:linear-gradient(180deg,_#ffe9dd,_#fff)] overflow-hidden mx-auto'>
-      {works.map((work, index) => (
-        <PortfolioCard key={index} work={work} index={index} />
-      ))}
-    </section>
+    <>
+      {works && works.length > 0 ? (
+        <section className='w-full py-[4rem] md:py-[8rem] lg:py-[12rem] self-stretch grid grid-cols-1 md:grid-cols-2 px-[1rem] lg:px-[5rem] gap-[2rem] lg:gap-[8rem] box-border [background:linear-gradient(180deg,_#ffe9dd,_#fff)] overflow-hidden mx-auto'>
+          {works.map((work, index) => (
+            <PortfolioCard key={index} work={work} index={index} />
+          ))}
+        </section>
+      ) : (
+        <section className='w-full py-[4rem] md:py-[8rem] lg:py-[12rem] px-[1rem] lg:px-[5rem] gap-[2rem] lg:gap-[8rem] box-border [background:linear-gradient(180deg,_#ffe9dd,_#fff)] overflow-hidden mx-auto'>
+          <h1 className='text-[2rem] text-center w-full py-[5rem]'>
+            <pre>{':( No Content'}</pre>
+          </h1>
+        </section>
+      )}
+    </>
   );
 }
 

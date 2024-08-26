@@ -33,55 +33,55 @@ const Blog = () => {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection>
-          <BlogHead />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <BlogHead />
+        {/* </AnimatedSection> */}
 
         <section className='w-full bg-white'>
-          <AnimatedSection>
-            <TagArticles
-              title={'Customer Experience'}
-              tags={'Customer Experience'}
-            />
-          </AnimatedSection>
+          {/* <AnimatedSection> */}
+          <TagArticles
+            title={'Customer Experience'}
+            tags={'Customer Experience'}
+          />
+          {/* </AnimatedSection> */}
 
-          <AnimatedSection>
-            <TagArticles
-              title={'Instagram Marketing'}
-              tags={'Instagram Marketing'}
-            />
-          </AnimatedSection>
+          {/* <AnimatedSection> */}
+          <TagArticles
+            title={'Instagram Marketing'}
+            tags={'Instagram Marketing'}
+          />
+          {/* </AnimatedSection> */}
 
-          <AnimatedSection>
-            <TagArticles
-              title={'Marketing Strategy'}
-              tags={'Marketing Strategy'}
-            />
-          </AnimatedSection>
+          {/* <AnimatedSection> */}
+          <TagArticles
+            title={'Marketing Strategy'}
+            tags={'Marketing Strategy'}
+          />
+          {/* </AnimatedSection> */}
 
-          <AnimatedSection>
-            <TagArticles
-              title={'Business Automation'}
-              tags={'Business Automation'}
-            />
-          </AnimatedSection>
+          {/* <AnimatedSection> */}
+          <TagArticles
+            title={'Business Automation'}
+            tags={'Business Automation'}
+          />
+          {/* </AnimatedSection> */}
 
-          <AnimatedSection>
-            <TagArticles title={'Custom Solutions'} tags={'Custom Solutions'} />
-          </AnimatedSection>
+          {/* <AnimatedSection> */}
+          <TagArticles title={'Custom Solutions'} tags={'Custom Solutions'} />
+          {/* </AnimatedSection> */}
         </section>
 
-        <AnimatedSection>
-          <NewsLetter theme={'light'} />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <NewsLetter theme={'light'} />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <FormContact theme={'white'} />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <FormContact theme={'white'} />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <Footer />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Footer />
+        {/* </AnimatedSection> */}
       </Suspense>
     </main>
   );

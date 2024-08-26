@@ -14,28 +14,54 @@ body {
   border-width: 0;
 }
 
-/* Greeting scroll */
+/* cursor */
 
-.greetings-container {
+.mask {
+  height: 100%;
+  width: 100%;
   display: flex;
-  animation: scroll 20s linear infinite;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  line-height: 66px;
+  position: absolute;
+  cursor: default;
+  mask-image: url('./assets//ellipse.svg');
+  color: #ec4e39;
+  mask-repeat: no-repeat;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
+/* infinite scroll */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-100%);
   }
+}
+
+.slides:hover .slide-list {
+  animation-play-state: paused;
+}
+
+.slide-list {
+  white-space: nowrap;
+  animation: 35s slide infinite linear;
+}
+
+.slide-list-greeting {
+  white-space: nowrap;
+  animation: 35s slide infinite linear;
 }
 
 /* Text Length exceeding */
 
 .text-overflow-ellipsis {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Blog Post Inner Sizes */

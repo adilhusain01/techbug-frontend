@@ -23,7 +23,7 @@ const Login = lazy(() => import('./pages/Login'));
 const ROLES = {
   Editor: 202530,
   Manager: 152025,
-  Admin: 101525,
+  Admin: 101520,
 };
 
 function App() {
@@ -80,10 +80,3 @@ function App() {
 }
 
 export default App;
-
-// useEffect(() => {
-//   ReactGA.event({
-//     category: 'User',
-//     action: 'Viewed SomeComponent',
-//   });
-// }, []);

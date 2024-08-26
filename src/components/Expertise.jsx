@@ -1,9 +1,18 @@
 import Box from './Box';
 
 const Expertise = () => {
+  const boxData = [
+    { title: 'Web Dev', icon: 'web_icon' },
+    { title: 'App Dev', icon: 'app_icon' },
+    { title: 'Digital Marketing', icon: 'marketing_icon' },
+    { title: 'Smart Business Cards', icon: 'cards_icon' },
+    { title: 'Business Automation', icon: 'automation_icon' },
+    { title: 'Custom Services', icon: 'services_icon' },
+  ];
+
   return (
     <section
-      className={`self-stretch flex flex-row items-start justify-start px-[0.5rem] pb-[4rem] lg:pb-[9rem] box-border shrink-0 text-center text-gray w-full max-w-full`}
+      className={`my-[1.25rem] md:my-[2.5rem] lg:my-[5rem] self-stretch flex flex-row items-start justify-start px-[0.5rem] box-border shrink-0 text-center text-gray w-full max-w-full`}
     >
       <div className='flex-1 flex flex-col items-center justify-start w-full'>
         <div
@@ -41,36 +50,14 @@ const Expertise = () => {
         </div>
 
         <div className='justify-items-center grid grid-cols-3 lg:grid-cols-6 gap-[0.3rem] md:gap-[1rem] lg:gap-[4rem] pb-[3rem] z-[1] mt-[-3rem] lg:mt-[-6rem] text-white px-[2rem] lg:px-[4.25rem]'>
-          <Box
-            title='Web Development & Design'
-            icon={'web_icon'}
-            propOverflow='hidden'
-          />
-          <Box
-            title='App Development & Design'
-            icon={'app_icon'}
-            propOverflow='hidden'
-          />
-          <Box
-            title='Digital Marketing'
-            icon={'marketing_icon'}
-            propOverflow='hidden'
-          />
-          <Box
-            title='Smart Business Cards'
-            icon={'cards_icon'}
-            propOverflow='hidden'
-          />
-          <Box
-            title='Business Automations'
-            icon={'automation_icon'}
-            propOverflow='hidden'
-          />
-          <Box
-            title='Custom Services'
-            icon={'services_icon'}
-            propOverflow='hidden'
-          />
+          {boxData.map((box, index) => (
+            <Box
+              key={index}
+              title={box.title}
+              icon={box.icon}
+              propOverflow='hidden'
+            />
+          ))}
         </div>
       </div>
     </section>

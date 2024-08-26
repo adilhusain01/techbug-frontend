@@ -64,17 +64,17 @@ const Home = () => {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection>
-          <Job />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Job />
+        {/* </AnimatedSection> */}
 
         <AnimatedSection>
           <Expertise />
         </AnimatedSection>
 
-        <AnimatedSection>
-          <ProgressContent />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <ProgressContent />
+        {/* </AnimatedSection> */}
 
         <AnimatedSection>
           <Testimonials />
@@ -84,13 +84,13 @@ const Home = () => {
           <Greeting />
         </AnimatedSection>
 
-        <AnimatedSection>
-          <FormContact theme={'white'} />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <FormContact theme={'white'} />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <Footer />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Footer />
+        {/* </AnimatedSection> */}
       </Suspense>
     </main>
   );

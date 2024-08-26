@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 import React, { lazy, Suspense } from 'react';
+import { useLocation } from 'react-router-dom';
 import LoadingSpinner from '../components/LoadingSpinner';
 import AnimatedSection from '../components/AnimatedSection';
 
@@ -9,6 +10,9 @@ const FormContact = lazy(() => import('../components/FormContact'));
 const Footer = lazy(() => import('../components/Footer'));
 
 const Work = () => {
+  const location = useLocation();
+  const { selectedMenu } = location.state || { selectedMenu: 'All Works' };
+
   return (
     <main
       className='w-full relative bg-white flex flex-col items-start justify-start box-border font-plus-jakarta-sans overflow-hidden'
@@ -31,17 +35,17 @@ const Work = () => {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection>
-          <WorkMenu />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <WorkMenu selectedMenu={selectedMenu} />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <FormContact theme={'black'} />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <FormContact theme={'black'} />
+        {/* </AnimatedSection> */}
 
-        <AnimatedSection>
-          <Footer />
-        </AnimatedSection>
+        {/* <AnimatedSection> */}
+        <Footer />
+        {/* </AnimatedSection> */}
       </Suspense>
     </main>
   );

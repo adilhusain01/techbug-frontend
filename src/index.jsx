@@ -5,11 +5,11 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './global.css';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthProvider } from './context/authProvider';
 
 //global
-
 import { global } from 'global';
-import { AuthProvider } from './context/authProvider';
+
 window.global = global;
 
 ReactGA.initialize('G-T0XMKBP3BZ');

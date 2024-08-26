@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import AnimatedSection from '../components/AnimatedSection';
 
 function Job() {
   const [blackLetters, setBlackLetters] = useState(0);
@@ -13,7 +14,7 @@ function Job() {
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = scrollTop / docHeight;
-      const totalLetters = 112; //letters in the h1
+      const totalLetters = 350; //letters per scroll
       const blackLettersCount = Math.floor(scrollPercent * totalLetters);
       setBlackLetters(blackLettersCount);
     };
@@ -49,24 +50,28 @@ function Job() {
   return (
     <section
       ref={sectionRef}
-      className='px-[2rem] lg:px-[3.5rem] py-[5rem] lg:py-[8rem] grid grid-cols-1 md:grid-cols-2 gap-[1rem] md:gap-[2.5rem] lg:gap-[5rem]'
+      className='px-[2rem] lg:px-[3.5rem] my-[1.25rem] md:my-[2.5rem] lg:my-[5rem] grid grid-cols-1 md:grid-cols-2 gap-[1rem] md:gap-[2.5rem] lg:gap-[5rem]'
     >
-      <img
-        className='h-auto w-full max-w-[365px] md:max-w-[350px] lg:max-w-[600px] rounded-[20px] md:rounded-[60px] object-cover'
-        loading='lazy'
-        alt='office'
-        src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/wgdo3slwrcib7ltszr1x'
-      />
-      <h1 className='text-2xl md:text-11xl lg:text-29xl font-medium tracking-tight md:tracking-normal lg:tracking-wider leading-tighter md:leading-tight lg:leading-relaxed text-center md:text-right my-auto'>
-        {text.split('').map((char, index) => (
-          <span
-            key={index}
-            style={{ color: index < blackLetters ? 'black' : 'white' }}
-          >
-            {char}
-          </span>
-        ))}
-      </h1>
+      <AnimatedSection>
+        <img
+          className='h-auto w-full max-w-[365px] md:max-w-[350px] lg:max-w-[600px] rounded-[20px] md:rounded-[60px] object-cover'
+          loading='lazy'
+          alt='office'
+          src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/wgdo3slwrcib7ltszr1x'
+        />
+      </AnimatedSection>
+      <AnimatedSection>
+        <h1 className='text-2xl md:text-11xl lg:text-29xl font-medium tracking-tight md:tracking-normal lg:tracking-wider leading-tighter md:leading-tight lg:leading-relaxed text-center md:text-right my-auto'>
+          {text.split('').map((char, index) => (
+            <span
+              key={index}
+              style={{ color: index < blackLetters ? 'white' : 'black' }}
+            >
+              {char}
+            </span>
+          ))}
+        </h1>
+      </AnimatedSection>
     </section>
   );
 }

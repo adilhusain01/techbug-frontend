@@ -1,66 +1,171 @@
-// const AnimatedSection = lazy(() => import('./AnimatedSection'));
+import AnimatedSection from '../components/AnimatedSection';
 
 const BrandLogoGrid = () => {
   return (
     <section
       className={`py-[2rem] lg:py-[5rem] bg-white flex flex-col items-center justify-center box-border w-full max-w-full`}
     >
-      {/* <AnimatedSection> */}
-      <h1 className='text-[1.5rem] md:text-[2rem] lg:text-[3rem] font-medium font-inherit mx-auto'>
-        Proud to have worked with
-      </h1>
-      {/* </AnimatedSection> */}
-      <div className='mt-[2rem] lg:mt-[4rem] w-full flex flex-row items-center justify-center gap-[0.5rem] md:gap-[2.5rem] lg:gap-[8rem] box-border relative max-w-full'>
-        {/* <AnimatedSection> */}
-        <img
-          className='mx-auto'
-          loading='lazy'
-          alt='brand'
-          src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ozemajl81oupw1x51iwo'
-        />
-        {/* </AnimatedSection> */}
-        {/* <AnimatedSection> */}
-        <img
-          className='mx-auto'
-          loading='lazy'
-          alt='brand'
-          src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/fma0wojjczkct9sjqoap'
-        />
-        {/* </AnimatedSection> */}
-        {/* <AnimatedSection> */}
-        <img
-          className='mx-auto'
-          loading='lazy'
-          alt='brand'
-          src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/rm1rylv8nflbutryrqlk'
-        />
-        {/* </AnimatedSection> */}
-        {/* <AnimatedSection> */}
-        <img
-          className='mx-auto'
-          loading='lazy'
-          alt='brand'
-          src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/v2kk4zn8vykqpdbijcee'
-        />
-        {/* </AnimatedSection> */}
-        {/* <AnimatedSection> */}
-        <img
-          className='mx-auto'
-          loading='lazy'
-          alt='brand'
-          src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ofx4bcc1bv8zqy9t55qp'
-        />
-        {/* </AnimatedSection> */}
+      <AnimatedSection>
+        <h1 className='text-[1.5rem] md:text-[2rem] lg:text-[3rem] font-medium font-inherit mx-auto'>
+          Proud to have worked with
+        </h1>
+      </AnimatedSection>
+      <AnimatedSection>
+        <div className='mt-[2rem] lg:mt-[4rem] gap-[0.5rem] md:gap-[2.5rem] lg:gap-[4rem] flex flex-row slides'>
+          <div className='m-0 flex flex-row gap-[0.5rem] md:gap-[2.5rem] lg:gap-[8rem] slide-list-greeting '>
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ozemajl81oupw1x51iwo'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/fma0wojjczkct9sjqoap'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/rm1rylv8nflbutryrqlk'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/v2kk4zn8vykqpdbijcee'
+            />
 
-        {/* <AnimatedSection> */}
-        <img
-          className='mx-auto'
-          loading='lazy'
-          alt='brand'
-          src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/krpy0ympowqrgva6rejr'
-        />
-        {/* </AnimatedSection> */}
-      </div>
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ofx4bcc1bv8zqy9t55qp'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/krpy0ympowqrgva6rejr'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ozemajl81oupw1x51iwo'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/fma0wojjczkct9sjqoap'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/rm1rylv8nflbutryrqlk'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/v2kk4zn8vykqpdbijcee'
+            />
+
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ofx4bcc1bv8zqy9t55qp'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/krpy0ympowqrgva6rejr'
+            />
+          </div>
+          <div className='m-0 flex flex-row gap-[0.5rem] md:gap-[2.5rem] lg:gap-[8rem] slide-list-greeting '>
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ozemajl81oupw1x51iwo'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/fma0wojjczkct9sjqoap'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/rm1rylv8nflbutryrqlk'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/v2kk4zn8vykqpdbijcee'
+            />
+
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ofx4bcc1bv8zqy9t55qp'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/krpy0ympowqrgva6rejr'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ozemajl81oupw1x51iwo'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/fma0wojjczkct9sjqoap'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/rm1rylv8nflbutryrqlk'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/v2kk4zn8vykqpdbijcee'
+            />
+
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/ofx4bcc1bv8zqy9t55qp'
+            />
+            <img
+              className='mx-auto'
+              loading='lazy'
+              alt='brand'
+              src='https://res.cloudinary.com/djxuqljgr/image/upload/f_auto,q_auto/v1/brands/krpy0ympowqrgva6rejr'
+            />
+          </div>
+        </div>
+      </AnimatedSection>
     </section>
   );
 };
